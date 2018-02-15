@@ -1,0 +1,2064 @@
+{
+    "$schema": "GRID",
+    "$definition": {
+        "_style_hasSassOverrides": false,
+        "SecurityModel": "Group Based",
+        "GUID": "a6204bb5-31c0-4c8b-aa21-47326dd77adf",
+        "DateFormatOnClient": "DD/MM/YY",
+        "clientSideDateFormat": "dd/MM/yyyy",
+        "flagTreeViewGrid": true,
+        "flagTreeViewDV": true,
+        "componentType": "Grid",
+        "Xbasic": "dim tmpl as p\ntmpl.ComponentName = \"penghargaan\"\ntmpl.ComponentType = \"Grid\"\ntmpl.AjaxOn = .t.\ntmpl.LayoutColumns = 1\ntmpl.useCompactTheme = .t.\ntmpl.queryEcho = .f.\ntmpl.connectToWebSocketServer = .f.\ntmpl.flagAddPKToORDER = .t.\ntmpl.saveFileType = \"Formatted JSON\"\ntmpl.captureJSErrorStackTrace = .f.\ntmpl.SecurityModel = \"Group Based\"\ntmpl.SecurityMode = \"\"\ntmpl.PreCalcMode = \"Standard\"\ntmpl.clientSideDateFormat = \"dd/MM/yyyy\"\ntmpl.datePicker.dayNames = \"Sun,Mon,Tue,Wed,Thu,Fri,Sat\"\ntmpl.datePicker.firstDayOfWeek = 1\ntmpl.datePicker.monthNames = \"January,February,March,April,May,June,July,August,September,October,November,December\"\ntmpl.datePicker.todayButtonText = \"Today\"\ntmpl.datePicker.closeButtonText = \"Close\"\ntmpl.publishedServerVariables = \"\"\ntmpl.customizationString.javascriptDialogs = \"\"\ntmpl.iconMapOverrides = <<%txt%\n{images.RowExpander.Open}=\"cssIcon=fa fa-plus-square\"\n{images.RowExpander.Close}=\"cssIcon=fa fa-minus-square\"\n{images.GridRow.NewRecordRow.NoFocus}=\"cssIcon=fa fa-plus\"\n{images.GridRow.NewRecordRow.HasFocus}=\"cssIcon=fa fa-plus\"\n{images.GridRow.SaveRecord}=\"cssIcon=fa fa-floppy-o\"\n{images.GridRow.SaveRecord.Disabled}=\"cssIcon=fa fa-floppy-o\"\n{images.GridRow.UndoChanges}=\"cssIcon=fa fa-undo\"\n{images.GridRow.UndoChanges.Disabled}=\"cssIcon=fa fa-undo\"\n{images.GridRow.EditRecord}=\"cssIcon=fa fa-pencil\"\n{images.GridRow.EditRecord.Disabled}=\"cssIcon=fa fa-pencil\"\n{images.GridRow.DeleteRecord}=\"cssIcon=fa fa-trash\"\n{images.GridRow.DeleteRecord.Disabled}=\"cssIcon=fa fa-trash\"\n{images.GridRow.CancelEditRecord}=\"cssIcon=fa fa-ban\"\n{images.GridRow.CancelEditRecord.Disabled}=\"cssIcon=fa fa-ban\"\n{images.GridRow.HasError}=\"cssIcon=fa fa-exclamation-circle\"\n{images.PopUpWindow.Lookup.Close}=\"cssIcon=fa fa-times\"\n{images.PopUpWindow.DetailView.Close}=\"cssIcon=fa fa-times\"\n{images.CollapseContainer.Open}=\"cssIcon=fa fa-plus-square\"\n{images.CollapseContainer.Close}=\"cssIcon=fa fa-minus-square\"\n{images.FieldHelpIcon}=\"cssIcon=fa fa-question-circle\"\n{images.SearchPart.SaveSearchCriteria}=\"cssIcon=fa fa-floppy-o\"\n{images.SearchPart.LoadSearchCriteria}=\"cssIcon=fa fa-folder-open-o\"\n{images.GridRow.SelectionPointer}=\"cssIcon=fa fa-caret-right\"\n{images.Grid.SortAsc}=\"cssIcon=fa fa-caret-up\"\n{images.Grid.SortAscDisabled}=\"cssIcon=fa fa-caret-up\"\n{images.Grid.sortDesc}=\"cssIcon=fa fa-caret-down\"\n{images.grid.sortDescDisabled}=\"cssIcon=fa fa-caret-down\"\n{images.grid.firstPage}=\"cssIcon=fa fa-angle-double-left\"\n{images.grid.firstPageDisabled}=\"cssIcon=fa fa-angle-double-left\"\n{images.grid.prevPage}=\"cssIcon=fa fa-angle-left\"\n{images.grid.prevPageDisabled}=\"cssIcon=fa fa-angle-left\"\n{images.grid.nextPage}=\"cssIcon=fa fa-angle-right\"\n{images.grid.nextPageDisabled}=\"cssIcon=fa fa-angle-right\"\n{images.grid.lastPage}=\"cssIcon=fa fa-angle-double-right\"\n{images.grid.lastPageDisabled}=\"cssIcon=fa fa-angle-double-right\"\n{images.edit.dropdownArrow}=\"cssIcon=fa fa-caret-down\"\n{images.edit.datePicker}=\"cssIcon=fa fa-calendar\"\n{images.edit.dateTimePicker}=\"cssIcon=fa fa-calendar-o\"\n{images.edit.timePicker}=\"cssIcon=fa fa-clock-o\"\n{images.edit.lookup}=\"cssIcon=fa fa-search\"\n%txt%\ntmpl.DataSourceType = \"CS\"\ntmpl.CS.database_type = \"CS\"\ntmpl.CS.type = \"connectionstring\"\ntmpl.cs.ConnectionString  = \"::name::Pegawai\"\ntmpl.CS.SQL = \"SELECT [ID], [NamaPenghargaan], [Tanggal] FROM [Penghargaan]\"\nDIM tmpl.Arguments[1] AS P\nwith tmpl.Arguments[1]\n\t.Name = \"\"\n\t.DataType = \"\"\n\t.Source = \"\"\n\t.SourceDisplay = \"\"\n\t.VariableScope = \"\"\n\t.VariableName = \"\"\n\t.VariableWithScope = \"\"\n\t.DefaultValue = \"\"\n\t.Prompt = .f.\n\t.PromptText = \"\"\n\t.PromptControlType = \"\"\n\t.PromptChoices = \"\"\n\t.PromptDlgTitle = \"\"\n\t.PromptTextAbove = \"\"\n\t.PreviewValue = \"\"\nend with\nDIM tmpl.ArgumentsPage AS P\nwith tmpl.ArgumentsPage\n\t.PromptTextAbove = \"\"\nend with\ntmpl.CS.PrimaryKeyColumns = \"ID\"\ntmpl.CS.IdentitySequenceName  = \"\"\ntmpl.CS.primaryKeyTopAliasIsAutoIncrement  = .t.\nDIM tmpl.update.tables[1] as p\nWith tmpl.update.tables[1]\n\t.Name = \"Penghargaan\"\n\t.Table_Alias = \"Penghargaan\"\n\t.PrimaryKey = \"ID\"\nEnd With\ntmpl.search.has_search_component = .t.\ntmpl.search.title = \"Pegawai \"\ntmpl.search.show_title = .t.\ntmpl.search.search_button_label = \"Cari\"\ntmpl.search.include_sorting_listbox = .f.\ntmpl.search.sort.prompt = \"Sort&nbsp;by\"\ntmpl.search.sorting_listbox_Label_position = \"Left\"\ntmpl.search.sort.promptInLineStyle = \"color: #000;\"\ntmpl.search.sort.listbox.fieldname_prompt = \"Select Value\"\ntmpl.search.sort.listbox.use_column_headings = .t.\ntmpl.search.customSortDefinition = \"\"\ntmpl.search.search_button.useIcon = .f.\ntmpl.search.clear_link.useIcon = .f.\ntmpl.search.sort.listbox.order_prompt = \"Select Order\"\ntmpl.search.sort.listbox.order_choices = \"Ascending,Descending\"\ntmpl.search.include_records_per_page_listbox = .f.\ntmpl.search.records_per_page.prompt = \"Records&nbsp;per&nbsp;page\"\ntmpl.search.records_per_page_Label_position = \"Left\"\ntmpl.search.records_per_page.promptInLineStyle = \"color: #000;\"\ntmpl.search.records_per_page.listbox.value_prompt = \"Select Value\"\ntmpl.search.records_per_page.listbox.choices = \"1,2,5,10,25,50,75,100\"\ntmpl.search.orientation = \"Horizontal\"\ntmpl.search.combine_criteria_using = 1\ntmpl.search.style = 2\ntmpl.search.allow_qbf_style = .t.\ntmpl.search.show_single_search_field = .f.\ntmpl.search.keyword_label = \"Search for?\"\ntmpl.search.has_Clear_link = .t.\ntmpl.search.Clear_link_Label = \"Hapus Pencarian\"\ntmpl.search.Clear_link_BubbleHelp = \"Clear Search\"\ntmpl.search.EnableShowHide  = .t.\ntmpl.search.InitialState = \"Closed\"\ntmpl.search.title_when_hidden = \"Cari Data\"\ntmpl.search.qbe_exclusions = \"\"\ntmpl.search.toolbarPosition = \"Above\"\ntmpl.search.disableAutoComplete = .f.\ntmpl.search.HideGridWhenNoActiveSearch = .f.\ntmpl.search.GridHTMLWhenHidden  = \"\"\ntmpl.search.showHideAnimation = \"fade\"\ntmpl.EditRegion.Search.Top = \"\"\ntmpl.EditRegion.Search.Bottom = \"\"\ntmpl.EditRegion.Search.Left = \"\"\ntmpl.EditRegion.Search.Right = \"\"\ntmpl.search.allowSearchCriteriaSave = .f.\ntmpl.search.allowSearchCriteriaLoad = .f.\ntmpl.SearchFields = 1\nDIM tmpl.SearchField_Info[tmpl.SearchFields] as P \nwith tmpl.searchfield_info[1]\n\t.Fieldname = \"NamaPenghargaan\"\n\t.SearchExpression = \"NamaPenghargaan\"\n\t.Initial_Value = \"NULL\"\n\t.Search_Style = 0\n\t.KeywordSearch = .f.\n\t.Scope = \"Local\"\n\t.ConditionalStyle = \"\"\n\t.ConditionalStyleLevel = \"Cell\"\n\t.ClientSideConditionalStyle = \"\"\n\t.ClientSideConditionalStyleLevel = \"Cell\"\n\t.QBEDisable = .f.\n\t.QBEInlineStyle = \"\"\n\t.QBEOptionsJSON = \"\"\n\t.canBeUsedInWhereClause = .t.\n\t.autoincrement = .f.\n\t.portableType = \"NationalVaryingCharacter\"\n\t.nativeType = \"Varying Wide Character\"\n\t.Type = \"C\"\n\t.UserDefinedClientSideValidationJavascript = \"\"\n\t.onChange_ValidationOption = \"None\"\n\t.Varname = \"NAMAPENGHARGAAN\"\n\t.Column.LabelPosition = \"Left\"\n\t.Controltype = \"TextBox\"\n\t.Textbox.Size = 40\n\t.Textbox.HTML5Type = \"\"\n\t.Textbox.customAttributes = \"\"\n\t.Textbox.MaxLength = 200\n\t.Textbox.InLineStyle = \"\"\n\t.Textbox.ContainerInlineStyle = \"\"\n\t.Textbox.IsPassword = .f.\n\t.hasWatermark= .f.\n\t.BreakType = \"None\"\n\t.nCols = 1\n\t.Column.Hide = .f.\n\t.BaseFieldExpression = \"NamaPenghargaan\"\n\t.SourceAlias = \"\"\n\t.Column.Heading = \"Nama Penghargaan\"\nend with\ntmpl.grid_layout_style = 1\ntmpl.add_records_only = .f.\ntmpl.rows = 10\ntmpl.maxRowsPerPage = 200\ntmpl.rowsWhenSearchActive = -1\ntmpl.suppress_empty_rows = .t.\ntmpl.has_row_separator = .t.\ntmpl.alternate_bands = .f.\ntmpl.even_band_size = 1\ntmpl.odd_band_size = 1\ntmpl.alternate_column_bands = .f.\ntmpl.even_column_band_size = 1\ntmpl.odd_column_band_size = 1\ntmpl.conditionalStyle = \"\"\ntmpl.clientSideConditionalStyle = \"\"\ntmpl.show_title = .t.\ntmpl.title = \"<font size=\\\"3\\\">Data Pegawai</font>\"\ntmpl.FontSize = \"Smallest\"\ntmpl.No_records_message = \"No records in query\"\ntmpl.total_records_row_position = 1\ntmpl.total_records_row = \"\"\ntmpl.show_column_titles = 1\ntmpl.suppress_titles_if_no_records = .f.\ntmpl.show_row_labels = .t.\ntmpl.snakingLayout_suppressRepeatedLabels = .f.\ntmpl.sort_style = 3\ntmpl.reset_page_number_when_sorting = .t.\ntmpl.allowGridBodyScrolling = .f.\ntmpl.scrollableRegionHeight = \"2in\"\ntmpl.scrollableRegionWidth = \"100%\"\ntmpl.fixedWidthColumns = .f.\ntmpl.defaultColumnWidth = \"1in\"\ntmpl.columnWidthSettings = \"\"\ntmpl.EditRegion.Grid.Top = <<%editregion%\n%editregion%\ntmpl.EditRegion.Grid.Bottom = <<%editregion%\n%editregion%\ntmpl.EditRegion.Grid.Left = <<%editregion%\n%editregion%\ntmpl.EditRegion.Grid.Right = <<%editregion%\n%editregion%\ntmpl.HasNewRecordsTitle = .f.\ntmpl.NewRecordsTitle = \"<tr><td class=\\\"[class.gridData]\\\" colspan=\\\"{a5_colspan}\\\" style=\\\"padding: 0px;\\\" >New Records</td></tr>\"\ntmpl.HasExistingRecordsTitle = .f.\ntmpl.ExistingRecordsTitle = \"<tr><td class=\\\"[class.gridData]\\\" colspan=\\\"{a5_colspan}\\\" style=\\\"padding: 0px;\\\" >Existing Records</td></tr>\"\ntmpl.Highlight_row_onHover =  .t.\ntmpl.Highlight_row_onSelect =  .f.\ntmpl.HasRecordsPerPageSelector = .f.\ntmpl.RecordsPerPageChoices =   \"1,2,5,10,25,50,75,100\"\ntmpl.RecordsPerPageSelectorTemplate = \"&nbsp;&nbsp;{Grid.RecordsPerPageSelector} Records per page\"\ntmpl.has_qbe_row = .f.\ntmpl.qbe.initial_display = \"Hidden\"\ntmpl.qbe.toggleQBERowHyperlinkText = \"Show/Hide QBE Row\"\ntmpl.hasLinkedContent = .f.\ntmpl.hasExternalNavigators = .f.\ntmpl.hasRowExpandColumn = .f.\ntmpl.hasSelectedRowColumn = .t.\ntmpl.hasCheckboxSelectColumn = .f.\ntmpl.AdditionalGridStyles = \"\"\ntmpl.LocalCss = \"\"\ntmpl.CSSLinkedFiles = \"\"\ntmpl.localsvg = \"\"\ntmpl.SVGLinkedFiles = \"\"\ntmpl.CSSIcons = \"font-awesome\"\ntmpl.JavaScriptLinkedFiles = \"\"\ntmpl.useMasterTemplate = .f.\ntmpl.MasterTemplateStyle = \"Table - Vertical Layout\"\ntmpl.MasterLayoutTemplate = \"\"\ntmpl.MasterLayoutTemplateJavascript = \"\"\ntmpl.MasterLayout.PaneLabel.Search = \"Search\"\ntmpl.MasterLayout.PaneLabel.Grid = \"Grid\"\ntmpl.MasterLayout.PaneLabel.DetailView = \"Detail\"\ntmpl.MasterLayout.AccordionStyle = \"Multiple\"\ntmpl.MasterLayout.InitialOpenPanes = \"Search,Grid,DetailView\"\ntmpl.verticalAlignDataInColumns = \"Middle\"\ntmpl.CanCollapseGrid = .f.\ntmpl.CollapseBar.Title = \"Collapse Grid\"\ntmpl.CollapseBar.OpenIcon = \"\"\ntmpl.CollapseBar.ClosedIcon = \"\"\ntmpl.CollapseBar.Style = \"\"\ntmpl.Collapsebar.Class = \"\"\ntmpl.Collapsebar.ContainerStyle = \"\"\ntmpl.Collapsebar.ContainerClass = \"\"\ntmpl.Collapsebar.InitialState = \"open\"\ntmpl.languageTags_RemoveUnConsumedTags = .t.\ntmpl.activeLanguage = \"<Default>\"\ntmpl.search.highlightSearchStrings = .f.\ntmpl.autoRefreshGrid = .f.\ntmpl.autoRefreshInterval = 60\ntmpl.helpTableType = \"DBF\"\ntmpl.helpTableName = \"\"\ntmpl.helpConnectionString = \"\"\ntmpl.helpIDfield = \"\"\ntmpl.helpContentsField = \"\"\ntmpl.fieldHelpWindowStyle = \"modal-resizeable\"\ntmpl.fields = 3\nDIM tmpl.field_info[tmpl.fields] as P \nwith tmpl.field_info[1]\n\t.Fieldname = \"ID\"\n\t.Scope = \"Local\"\n\t.DisplayFormat = \"\"\n\t.DisplayUnFormat = \"\"\n\t.ConditionalStyle = \"\"\n\t.ConditionalStyleLevel = \"Cell\"\n\t.ClientSideConditionalStyle = \"\"\n\t.ClientSideConditionalStyleLevel = \"Cell\"\n\t.QBEDisable = .f.\n\t.QBEInlineStyle = \"\"\n\t.QBEOptionsJSON = \"\"\n\t.canBeUsedInWhereClause = .t.\n\t.autoincrement = .f.\n\t.portableType = \"Double\"\n\t.nativeType = \"Double\"\n\t.Type = \"N\"\n\t.UserDefinedClientSideValidationJavascript = \"\"\n\t.onChange_ValidationOption = \"None\"\n\t.Varname = \"ID\"\n\t.Column.LabelPosition = \"Left\"\n\t.Controltype = \"Label\"\n\t.Label.InLineStyle = \"text-align: right;\"\n\t.BreakType = \"None\"\n\t.nCols = 1\n\t.Column.Hide = .f.\n\t.BaseFieldExpression = \"ID\"\n\t.SourceAlias = \"\"\n\t.Column.Heading = \"ID\"\n\t.Column.Sort = \"ID\"\n\t.Column.FirstClickDirection = \"A\"\nend with\nwith tmpl.field_info[2]\n\t.Fieldname = \"NamaPenghargaan\"\n\t.Scope = \"Local\"\n\t.DisplayFormat = \"\"\n\t.DisplayUnFormat = \"\"\n\t.ConditionalStyle = \"\"\n\t.ConditionalStyleLevel = \"Cell\"\n\t.ClientSideConditionalStyle = \"\"\n\t.ClientSideConditionalStyleLevel = \"Cell\"\n\t.QBEDisable = .f.\n\t.QBEInlineStyle = \"\"\n\t.QBEOptionsJSON = \"\"\n\t.canBeUsedInWhereClause = .t.\n\t.autoincrement = .f.\n\t.portableType = \"NationalVaryingCharacter\"\n\t.nativeType = \"Varying Wide Character\"\n\t.Type = \"C\"\n\t.UserDefinedClientSideValidationJavascript = \"\"\n\t.onChange_ValidationOption = \"None\"\n\t.Varname = \"NAMAPENGHARGAAN\"\n\t.Column.LabelPosition = \"Left\"\n\t.Controltype = \"Label\"\n\t.Label.InLineStyle = \"\"\n\t.BreakType = \"None\"\n\t.nCols = 1\n\t.Column.Hide = .f.\n\t.BaseFieldExpression = \"NamaPenghargaan\"\n\t.SourceAlias = \"\"\n\t.Column.Heading = \"Nama Penghargaan\"\n\t.Column.Sort = \"NamaPenghargaan\"\n\t.Column.FirstClickDirection = \"A\"\nend with\nwith tmpl.field_info[3]\n\t.Fieldname = \"Tanggal\"\n\t.Scope = \"Local\"\n\t.DisplayFormat = \"time(\\\"{grid.clientSideDateFormat}\\\",<value>)\"\n\t.DisplayUnFormat = \"\"\n\t.ConditionalStyle = \"\"\n\t.ConditionalStyleLevel = \"Cell\"\n\t.ClientSideConditionalStyle = \"\"\n\t.ClientSideConditionalStyleLevel = \"Cell\"\n\t.QBEDisable = .f.\n\t.QBEInlineStyle = \"\"\n\t.QBEOptionsJSON = \"\"\n\t.canBeUsedInWhereClause = .t.\n\t.autoincrement = .f.\n\t.portableType = \"DateTime\"\n\t.nativeType = \"Date\"\n\t.Type = \"T\"\n\t.UserDefinedClientSideValidationJavascript = \"\"\n\t.onChange_ValidationOption = \"None\"\n\t.Varname = \"TANGGAL\"\n\t.Column.LabelPosition = \"Left\"\n\t.Controltype = \"Label\"\n\t.Label.InLineStyle = \"\"\n\t.BreakType = \"None\"\n\t.nCols = 1\n\t.Column.Hide = .f.\n\t.BaseFieldExpression = \"Tanggal\"\n\t.SourceAlias = \"\"\n\t.Column.Heading = \"Tanggal\"\n\t.Column.Sort = \"Tanggal\"\n\t.Column.FirstClickDirection = \"A\"\nend with\ntmpl.RecordNavigationStyle = \"NavigationButtons\"\ntmpl.fetchMoreRecordsButton.text = \"More Records\"\ntmpl.fetchMoreRecordsButton.style = \"\"\ntmpl.RecNav.SuppressIfOnlyOnePage = .t.\ntmpl.RecNav.First_Label = \"First\"\ntmpl.RecNav.Has_First_Button = .t.\ntmpl.RecNav.Has_Last_Button = .t.\ntmpl.RecNav.Has_Next_Button = .t.\ntmpl.RecNav.Has_Prev_Button = .t.\ntmpl.RecNav.HTML_Template_source = \"Computed\"\ntmpl.RecNav.Justify = \"Left\"\ntmpl.RecNav.Last_Label = \"Last\"\ntmpl.RecNav.Next_Label = \"Next\"\ntmpl.RecNav.Number_of_page_links = 10\ntmpl.RecNav.Page_Numbering_Style = 3\ntmpl.RecNav.PagesTemplate_w_PageCount = \"{PageNumber} of {PageCount}\"\ntmpl.RecNav.PagesTemplate_wout_PageCount = \"{PageNumber}\"\ntmpl.RecNav.Position = 1\ntmpl.RecNav.suppress_recNavBar_if_no_records = .f.\ntmpl.RecNav.Prev_Label = \"Prev\"\ntmpl.RecNav.Show_disabled_controls = .t.\ntmpl.RecNav.Show_Page_Count = .t.\ntmpl.RecNav.Use_Images = .f.\ntmpl.gridToolbarTemplate = <<%html%\n%html%\ntmpl.gridToolbarTemplateEditable = <<%html%\n%html%\ntmpl.ToolbarActionButtons = <<%html%\n{ActionButton:IMPORT}\n{ActionButton:EXPORT}\n%html%\ntmpl.style_name = \"DDSJava\"\ntmpl.resolveAbstractClassNames = .t.\ntmpl.style_type = \"Alpha Five\"\ntmpl.UseSimpleStyles = .f.\ntmpl.overrideStylesForJavascriptObjects = .f.\ntmpl.searchBehavior = \"\"\ntmpl.DetailView.Has_DetailView = .t.\ntmpl.detailView.show_row_labels = .t.\ntmpl.DetailView.linkfield = \"\"\ntmpl.DetailView.editable = .t.\ntmpl.DetailView.edit.allow_update = .t.\ntmpl.DetailView.edit.allow_insert = .t.\ntmpl.DetailView.edit.allow_delete = .t.\ntmpl.DetailView.edit.validateFieldsSetting = \"Dirty Fields Only\"\ntmpl.DetailView.edit.updateWhichFields = \"Dirty Fields Only\"\ntmpl.DetailView.edit.Show_Update_Commands = .f.\ntmpl.DetailView.edit.Execute_Update_Commands = .t.\ntmpl.DetailView.AddNewLinkLabel  = \"Tambahkan\"\ntmpl.DetailView.LayoutColumns = 1\ntmpl.DetailView.UseSimpleStyles  = .t.\ntmpl.DetailView.SimpleStyleMode  = \"LayoutOnly\"\ntmpl.DetailView.HasTitle  = .f.\ntmpl.DetailView.SaveRecordButtonLabel  = \"Save\"\ntmpl.DetailView.Title  = \"Detail\"\ntmpl.DetailView.edit.Delete_TargetPage = \"<Self>\"\ntmpl.DetailView.edit.Save_TargetPage = \"<Self>\"\ntmpl.DetailView.edit.Add_TargetPage = \"<Self>\"\ntmpl.DetailView.Toolbar.Position = \"Below\"\ntmpl.DetailView.Toolbar.showRecordNavigatorLinks = .t.\ntmpl.customizationString.DetailView.toolbar = <<%txt%\n{images.dv.close}=\"cssIcon=fa fa-times\"\n{images.dv.firstRecord}=\"cssIcon=fa fa-angle-double-left\"\n{images.dv.prevRecord}=\"cssIcon=fa fa-angle-left\"\n{images.dv.nextRecord}=\"cssIcon=fa fa-angle-right\"\n{images.dv.lastRecord}=\"cssIcon=fa fa-angle-double-right\"\n{images.dv.newRecord}=\"cssIcon=fa fa-plus\"\n{images.dv.cancelEdits}=\"cssIcon=fa fa-ban\"\n{images.dv.deleteRecord}=\"cssIcon=fa fa-trash-o\"\n{images.dv.saveRecord}=\"cssIcon=fa fa-floppy-o\"\n{images.dv.saveAndEnter}=\"cssIcon=fa fa-file-o\"\n{images.dv.switchToEdit}=\"cssIcon=fa fa-pencil\"\n{images.dv.switchToView}=\"cssIcon=fa fa-eye\"\n{images.dv.cancelNewRecord}=\"cssIcon=fa fa-times\"\n{images.disabled.dv.cancelEdits}=\"cssIcon=fa fa-ban color: #ddd;\"\n{images.disabled.dv.deleteRecord}=\"cssIcon=fa fa-trash-o color: #ddd;\"\n{images.disabled.dv.saveRecord}=\"cssIcon=fa fa-floppy-o color: #ddd;\"\n{images.disabled.dv.saveAndEnter}=\"cssIcon=fa fa-file-o\"\n{imageTitle.dv.close}=\"Tutup\"\n{imageTitle.dv.firstRecord}=\"Awal\"\n{imageTitle.dv.prevRecord}=\"Sebelum\"\n{imageTitle.dv.nextRecord}=\"Berikutnya\"\n{imageTitle.dv.lastRecord}=\"Terakhir\"\n{imageTitle.dv.newRecord}=\"Tambahkan\"\n{imageTitle.dv.cancelEdits}=\"Batalkan Edit\"\n{imageTitle.dv.deleteRecord}=\"Hapus\"\n{imageTitle.dv.saveRecord}=\"Simpan\"\n{imageTitle.dv.saveAndEnter}=\"Simpan dan Tambah\"\n{imageTitle.dv.cancelNewRecord}=\"Batalkan Tambah Data\"%txt%\ntmpl.DetailView.edit.check_for_write_conflicts = .t.\ntmpl.DetailView.Toolbar.Buttons = \"\"\ntmpl.DetailView.ToolbarActionButtons = \"\"\ntmpl.detailView.window.animation.hasAnimation = .t.\ntmpl.detailView.window.animation.show.method = \"Fade\"\ntmpl.detailView.window.animation.show.speed = \"Slow\"\ntmpl.detailView.window.animation.hide.method = \"Clip\"\ntmpl.detailView.window.animation.hide.speed = \"Fast\"\ntmpl.DetailView.scrollIntoView = .f.\ntmpl.edit.field_error_style.type = \"Icon\"\ntmpl.edit.field_error_style.icon = \"images/$$generic.error.png.a5image\"\ntmpl.edit.field_error_style.control_classname = \"\"\ntmpl.edit.field_error_style.error_classname = \"\"\ntmpl.edit.field_error_style.control_hover_classname = \"\"\ntmpl.edit.field_error_style.error_hover_classname = \"\"\ntmpl.edit.show_row_errors_in_popup = .f.\ntmpl.edit.row_errors_window_title = \"Errors\"\ntmpl.edit.row_errors_window_style = \"color: red; width: 6in; height: 2in;\"\ntmpl.DetailView.edit.RefreshRowMethod = \"AutoSelect\"\ntmpl.DetailView.edit.Editable_GridRow_Options_Style = \"Icons\"\ntmpl.DetailView.edit.RefreshRowOnDirty = .t.\ntmpl.DetailView.edit.RowEditStyle = \"InitiallyEditable\"\ntmpl.DetailView.edit.LazyEdit = .t.\ntmpl.DetailView.displayStyle = \"PopupWindow-Modeless\"\ntmpl.DetailView.ajaxWindowPositionAttribute = \"'popup',objEle\"\ntmpl.DetailView.ajaxWindowWidth = \"\"\ntmpl.DetailView.ajaxWindowHeight = \"\"\ntmpl.DetailView.ShowNewRecordIfNoRecordsInQuery = .f.\ntmpl.DetailView.windowDragOpacity = 75\ntmpl.DetailView.PopupWindowTitle = \"Detail\"\ntmpl.DetailView.PopupWindowDirection = \"ltr\"\ntmpl.DetailView.OpenMethod = \"Click on a Grid row\"\ntmpl.DetailView.Toggle = .f.\ntmpl.DetailView.PopulateUsingJavaScript = .f.\ntmpl.DetailView.OnlyShowOnRequest = .t.\ntmpl.DetailView.HideGridIfDetailViewIsVisible = .f.\ntmpl.DetailView.HasCloseLink = .t.\ntmpl.DetailView.CloseDetailViewLinkLabel = \"Close\"\ntmpl.DetailView.CanClose = .t.\ntmpl.DetailView.total_records_row = \"\"\ntmpl.DetailView.CloseAfterSubmit = .f.\ntmpl.EditRegion.DetailView.Top = <<%editregion%\n%editregion%\ntmpl.EditRegion.DetailView.Bottom = <<%editregion%\n%editregion%\ntmpl.EditRegion.DetailView.Left = <<%editregion%\n%editregion%\ntmpl.EditRegion.DetailView.Right = <<%editregion%\n%editregion%\n\ntmpl.DetailFields = 3\nDIM tmpl.DetailField_Info[tmpl.DetailFields] as P \nwith tmpl.detailfield_info[1]\n\t.Fieldname = \"ID\"\n\t.Scope = \"Local\"\n\t.DisplayFormat = \"\"\n\t.DisplayUnFormat = \"\"\n\t.ConditionalStyle = \"\"\n\t.ConditionalStyleLevel = \"Cell\"\n\t.ClientSideConditionalStyle = \"\"\n\t.ClientSideConditionalStyleLevel = \"Cell\"\n\t.QBEDisable = .f.\n\t.QBEInlineStyle = \"\"\n\t.QBEOptionsJSON = \"\"\n\t.canBeUsedInWhereClause = .t.\n\t.autoincrement = .f.\n\t.portableType = \"Double\"\n\t.nativeType = \"Double\"\n\t.Type = \"N\"\n\t.UserDefinedClientSideValidationJavascript = \"\"\n\t.onChange_ValidationOption = \"None\"\n\t.Updateable = .t.\n\t.TreatBlankAsNull = .f.\n\t.Table_Alias = \"Penghargaan\"\n\t.FieldToUpdate = \"ID\"\n\t.Varname = \"ID\"\n\t.Initial_Value = \"NULL\"\n\t.Column.LabelPosition = \"Left\"\n\t.Controltype = \"TextBox\"\n\t.Textbox.Size = 17\n\t.Textbox.HTML5Type = \"\"\n\t.Textbox.customAttributes = \"\"\n\t.Textbox.MaxLength = 17\n\t.Textbox.InLineStyle = \"text-align: right;\"\n\t.Textbox.ContainerInlineStyle = \"\"\n\t.Textbox.IsPassword = .f.\n\t.hasWatermark= .f.\n\t.BreakType = \"None\"\n\t.nCols = 1\n\t.Column.Hide = .t.\n\t.BaseFieldExpression = \"ID\"\n\t.SourceAlias = \"\"\nend with\nwith tmpl.detailfield_info[2]\n\t.Fieldname = \"NamaPenghargaan\"\n\t.Scope = \"Local\"\n\t.DisplayFormat = \"\"\n\t.DisplayUnFormat = \"\"\n\t.ConditionalStyle = \"\"\n\t.ConditionalStyleLevel = \"Cell\"\n\t.ClientSideConditionalStyle = \"\"\n\t.ClientSideConditionalStyleLevel = \"Cell\"\n\t.QBEDisable = .f.\n\t.QBEInlineStyle = \"\"\n\t.QBEOptionsJSON = \"\"\n\t.canBeUsedInWhereClause = .t.\n\t.autoincrement = .f.\n\t.portableType = \"NationalVaryingCharacter\"\n\t.nativeType = \"Varying Wide Character\"\n\t.Type = \"C\"\n\t.UserDefinedClientSideValidationJavascript = \"\"\n\t.onChange_ValidationOption = \"None\"\n\t.Updateable = .t.\n\t.TreatBlankAsNull = .f.\n\t.Table_Alias = \"Penghargaan\"\n\t.FieldToUpdate = \"NamaPenghargaan\"\n\t.Varname = \"NAMAPENGHARGAAN\"\n\t.Initial_Value = \"NULL\"\n\t.Column.LabelPosition = \"Left\"\n\t.Controltype = \"TextBox\"\n\t.Textbox.Size = 21\n\t.Textbox.HTML5Type = \"\"\n\t.Textbox.customAttributes = \"\"\n\t.Textbox.MaxLength = 255\n\t.Textbox.InLineStyle = \"\"\n\t.Textbox.ContainerInlineStyle = \"\"\n\t.Textbox.IsPassword = .f.\n\t.hasWatermark= .f.\n\t.BreakType = \"None\"\n\t.nCols = 1\n\t.Column.Hide = .f.\n\t.BaseFieldExpression = \"NamaPenghargaan\"\n\t.SourceAlias = \"\"\n\t.Column.Heading = \"Nama Penghargaan\"\n\t.Column.Sort = \"Namapenghargaan\"\n\t.Column.FirstClickDirection = \"A\"\nend with\nwith tmpl.detailfield_info[3]\n\t.Fieldname = \"Tanggal\"\n\t.Scope = \"Local\"\n\t.DisplayFormat = \"time(\\\"{grid.clientSideDateFormat}\\\",<value>)\"\n\t.DisplayUnFormat = \"\"\n\t.ConditionalStyle = \"\"\n\t.ConditionalStyleLevel = \"Cell\"\n\t.ClientSideConditionalStyle = \"\"\n\t.ClientSideConditionalStyleLevel = \"Cell\"\n\t.QBEDisable = .f.\n\t.QBEInlineStyle = \"\"\n\t.QBEOptionsJSON = \"\"\n\t.canBeUsedInWhereClause = .t.\n\t.autoincrement = .f.\n\t.portableType = \"DateTime\"\n\t.nativeType = \"Date\"\n\t.Type = \"T\"\n\t.UserDefinedClientSideValidationJavascript = \"\"\n\t.onChange_ValidationOption = \"None\"\n\t.Updateable = .t.\n\t.TreatBlankAsNull = .f.\n\t.Table_Alias = \"Penghargaan\"\n\t.FieldToUpdate = \"Tanggal\"\n\t.Varname = \"TANGGAL\"\n\t.Initial_Value = \"NULL\"\n\t.Column.LabelPosition = \"Left\"\n\t.Controltype = \"TextBox\"\n\t.Textbox.Size = 18\n\t.Textbox.HTML5Type = \"\"\n\t.Textbox.customAttributes = \"\"\n\t.Textbox.MaxLength = 17\n\t.Textbox.InLineStyle = \"\"\n\t.Textbox.ContainerInlineStyle = \"\"\n\t.Textbox.IsPassword = .f.\n\t.hasWatermark= .f.\n\t.DatePicker.Display = .t.\n\t.DatePicker.UseComboBoxes = .t.\n\t.DatePicker.DateFormat = \"<DefaultDateOnlyFormat>\"\n\t.DatePicker.LowYear = 1950\n\t.DatePicker.HighYear = 2050\n\t.DatePicker.SwitchYear = 20\n\t.DatePicker.IconNumber = 2\n\t.DatePicker.OpenMethod = \"ClickIcon\"\n\t.DatePicker.lowDate = \"\"\n\t.DatePicker.highDate = \"\"\n\t.DatePicker.disabledDays = \"\"\n\t.DatePicker.showDaysOfWeek = .t.\n\t.DatePicker.showTodayButton = .t.\n\t.DatePicker.showWeeksOfYear = .f.\n\t.DatePicker.OKButtonLabel = \"OK\"\n\t.DatePicker.CancelButtonLabel = \"Cancel\"\n\t.DatePicker.lockColumnWidths = .f.\n\t.DatePicker.userMustSelectFromDatePicker = .f.\n\t.DatePicker.hasEvents = .f.\n\t.DatePicker.event.onItemDraw = \"\"\n\t.DatePicker.event.onClick = \"\"\n\t.DatePicker.event.onRightClick = \"\"\n\t.DatePicker.event.onSelect = \"\"\n\t.DatePicker.event.onNavigate = \"\"\n\t.DatePicker.event.onMonthNavigate = \"\"\n\t.DatePicker.event.onYearNavigate = \"\"\n\t.DatePicker.showPreDefinedDates = .f.\n\t.DatePicker.preDefinedDatesJSON = \"\"\n\t.BreakType = \"None\"\n\t.nCols = 1\n\t.Column.Hide = .f.\n\t.BaseFieldExpression = \"Tanggal\"\n\t.SourceAlias = \"\"\n\t.Column.Heading = \"Tanggal\"\n\t.Column.Sort = \"Tanggal\"\n\t.Column.FirstClickDirection = \"A\"\nend with\ntmpl.GUID = \"a6204bb5-31c0-4c8b-aa21-47326dd77adf\"\ntmpl.onlyIncludeSelectedFieldsInQuery = .t.\nDIM tmpl.controls[2] as P\nwith  tmpl.controls[1]\n\t.idInternal = \"d5fbee76-53fb-4bce-af4f-bc34abb635aa\"\n\t.type = \"Button\"\n\t.Name = \"IMPORT\"\n\t.trailingSeparator = .T.\n\t.bubbleHelp = \"\"\n\t.readDataFrom = \"GridPart\"\n\t.actionJSAttribute = <<%str%\n/* actionJavascript:4aa2ca46-3147-45ab-b35b-301ef25b5a08 */\nFileUploadUserDefined_e0f5db0646e94447aee2b458314a5f18(this);%str%\n\t.actionJSGlobal = <<%str%\nwindow['FileUploadUserDefined_e0f5db0646e94447aee2b458314a5f18'] = function(objEle) {\nvar rowNum = {grid.object}._selectedRow;\nvar rowId = $u.s.tran(rowNum,'-','_');\nvar bodyType = 'url';\nvar uploadFunc = function() {$(this.getWindowId('body')).contentWindow.A5.fileUpload.upload(); }\nif({grid.object}._embeddedMode) {\n\tvar componentType = {grid.object}._componentType;\n\tif(typeof componentType != 'undefined') { \n\t\tif(componentType == 'UX') {\n\t\t\talert('Notice. This action is not supported in Working Preview. Please use Live Preview');\n\t\t\treturn false;\n\t\t}\n\t}\n\tbodyType = 'static';\n\tuploadFunc = function() {A5.fileUpload.upload(); }\n}\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'] = {grid.object}.createWindow('{grid.componentName}_WINDOW_ACTIONBUTTON_IMPORT_eylnd','modal-url',\n{\theight: '3in',\n\twidth: '5in',\n\ttitle: {html: '<span id=\"___windowTitle\">Select File</span><span id=\"59af7793798c41e6b0fcc4ac81c5b3d2\"></span>' },\n\tbody: {content: {type: bodyType,\n\turl: 'about:blank'}},\n\tbuttons: {\n\t\titems: [\n\t\t\t{html: '<div style=\"width:1in;cursor:default;\">Upload</div>', width: '', name: 'UPLOAD', action: uploadFunc},\n\t\t\t{html: '<div style=\"width:1in;cursor:default;\">OK</div>', width: '', name: 'OK', action: function() {$(this.getWindowId('body')).contentWindow.okToSave(); }},\n\t\t\t{html: '<span id=\"____cancelbutton\"><span id=\"___cancelButton\">Cancel</span></span>',width: '', name: 'Cancel', action: function() { this.hide(); } }\n\t\t]\n\t},\n\tonHide: function() {   ; this.refresh(); }\n} \n);\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].clearTools();\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].setButtonDisplay('OK',false);\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].setButtonDisplay('UPLOAD',true);\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].getButton('Cancel').refresh();\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].show();\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].rowNumber = rowNum;\nvar data = {grid.object}._getRowKey(rowNum);\nvar fileUploadUrlQueryString \t= 'fileUploadUrl=' + urlencode({grid.object}.ajaxURL);\nvar queryString = '';\nqueryString = queryString + '&rowNumber=' + rowNum ;\nqueryString = queryString + '&part=G';\nqueryString = queryString + '&fileUploadAutoUpload=N';\nqueryString = queryString + '&fileUploadAllowMultiple=false';\n//queryString = queryString + '&uploadButtonLabel=Upload';\nqueryString = queryString + '&fileBoxWaterMark=Click%20button%20to%20select%20file%2e%2e%2e';\nqueryString = queryString + '&fileUploadWaitMessage=<img src=\"css/A5System/Images/wait.gif\" /> Uploading files...';\nqueryString = queryString + '&fileSelectImg=images/$$folder.open.png.a5image';\nqueryString = queryString + '&selectFileButtonImage=images/$$folder.open.png.a5image';\nqueryString = queryString + '&stylesheetName={grid.style}';\nqueryString = queryString + '&filePromptSingular=File%3a';\nqueryString = queryString + '&filePromptPlural=Files%3a';\nqueryString = queryString + '&removeButton=Remove';\nqueryString = queryString + '&GridFieldName={gridField}';\nqueryString = queryString + '&__xbfunction=FileUpload_d5cc8f0563634f50bba1451cae510960';\nqueryString = queryString + '&maxfilesize=1000000';\nqueryString = queryString + '&maxsizemsg=The%20file%20%27%7bfilename%7d%27%20exceeds%20the%20maximum%20allowed%20file%20size%20of%20%7bfilesize%7d%20bytes%2e';\nqueryString = queryString + '&fswindowname=59af7793798c41e6b0fcc4ac81c5b3d2';\nqueryString = queryString + '&__showProgress=yes';\nqueryString = queryString + '&maxFileSizeCombined=1000000';\nqueryString = queryString + '&maxFileSizeCombinedMsg=The combined file size of the file(s) you have selected exceeds the maximum allowed size of {filesize} bytes.';\nqueryString = queryString + '&uploadAbortMsg=Abort%20file%20upload';\nqueryString = queryString + '&abortButtonLabel=Abort';\nqueryString = queryString + '&progressBarType=A5';\nqueryString = queryString + '&_allowedFileTypes=.xls,.xlsx,.asc,.txt,.csv';\nqueryString = queryString + '&_invalidTypeMsg={filename} is not an allowed file type.';\nqueryString = queryString + '&' + data ;\n//queryString = queryString + '&' + $gvs('{grid.componentname}.STATEINFO') ;\nqueryString = queryString + '&__componentType=grid&__componentAlias=' + {grid.object}.gridId\nvar formActionQueryString \t\t= '&__formAction=UploadFileMultiple';\nif({grid.object}._embeddedMode) {\n\tvar windowDiv = window['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].getWindowId('body');\n\t{grid.Object}.ajaxCallback('G',rowNum,'a5GridHelper__a5WorkingPreviewUpload','','__xbfunctionMetaData=FileUpload_d5cc8f0563634f50bba1451cae510960&_getData=true&windowDiv='+windowDiv+'&'+ queryString);\n} else {\n\tvar callBackData = '';\n\tcallBackData = fileUploadUrlQueryString + queryString + formActionQueryString;\n\twindow._tempUploadVariables = $gvs('{grid.componentname}.STATEINFO')  ;\n\t$(window['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].getWindowId('body')).src = '__a5FileUploadMasterPage.a5w?' + callBackData;\n}\n}%str%\n\t.actionXbasic = <<%str%\nfunction FileUpload_d5cc8f0563634f50bba1451cae510960 as p()\nDIM p as P\nDIM p.uploadProperties as P\nDIM p.uploadProperties.specialMode as C = \"ImportExcel\"\nDIM p.uploadProperties.allowedImageExtensions as C\nDIM p.uploadProperties.allowedFileExtensions as C = \".xls,.xlsx,.asc,.txt,.csv\"\nDIM p.uploadProperties.targetType as C = \"<External>\"\nDIM p.uploadProperties.external_type as C = \"SQL\"\nDIM p.uploadProperties.external_connectionstring as C = \"::Name::Pegawai\"\nDIM p.uploadProperties.external_tablename_sql as C = \"Penghargaan\"\nDIM p.uploadProperties.external_tablename_dbf as C\nDIM p.uploadProperties.honorGridEvents as L\nDIM p.uploadProperties.closeButtonLabel as C = \"Close\"\nDIM p.uploadProperties.confirmationWindowTitle as C = \"Import Records\"\nDIM p.uploadProperties.maxRecordsToProcess as N = 100\nDIM p.uploadProperties.messages as P\nDIM p.uploadProperties.messages.maxRecordsExceeded as C = \"The file you are processing has too many records. A maximum of {maxrecords} records can be imported at once. <br><br>The file you uploaded has {actualCount} records in it.\"\nDIM p.uploadProperties.messages.successMessage as C = \"Success - number of records imported: {recordsImported}\"\nDIM p.uploadProperties.messages.partialSuccess as C = \"Number of records imported: {recordsImported}.<br><br>Records not imported because of errors: {recordsWithErrors}.<br><br>{errorMessages}\"\nDIM p.uploadProperties.xbasicValidationFunction as C\nDIM p.uploadProperties.xbasicPreProcessUploadedFileFunction as C\nDIM p.uploadProperties.uploadFolder as C\nDIM p.uploadProperties.fileExistAction as C = \"Overwrite\"\nDIM p.uploadProperties.maxFileSize as C = \"1000000\"\nDIM p.uploadProperties.maxFileSizeExceededMessage as C = \"The file '{filename}' exceeds the maximum allowed file size of {filesize} bytes.\"\nDIM p.uploadProperties.disallowedfileextensions as C\nDIM p.uploadProperties.invalidExtensionErrorText as C = \"{filename} is not an allowed file type.\"\nDIM p.uploadProperties.title as C = \"Select File\"\nDIM p.uploadProperties.uploadButtonText as C = \"Upload\"\nDIM p.uploadProperties.fileBoxWaterMark as C = \"Click button to select file...\"\nDIM p.uploadProperties.selectFileButtonImage as C = \"images/$$folder.open.png.a5image\"\nDIM p.uploadProperties.prompt as C = \"File:\"\nDIM p.uploadProperties.promptForMultipleFiles as C = \"Files:\"\nDIM p.uploadProperties.removeFileButtonLabel as C = \"Remove\"\nDIM p.uploadProperties.height as C = \"3in\"\nDIM p.uploadProperties.width as C = \"5in\"\nDIM p.uploadProperties.autoUpload as L\nDIM p.uploadProperties.fileUploadWaitMessage as C = \"<img src=\\\"css/A5System/Images/wait.gif\\\" /> Uploading files...\"\nDIM p.uploadProperties.events as P\nDIM p.uploadProperties.events.serverside as P\nDIM p.uploadProperties.events.serverside.afterUpload as C\nDIM p.uploadProperties.events.clientSide as P\nDIM p.uploadProperties.events.clientSide.afterUpload as C\nDIM p.uploadProperties.events.clientSide.beforeUpload as C\nDIM p.uploadProperties.serverSideArrayOption as C = \"Filename\"\nDIM p.uploadProperties.showProgress as L = .T.\nDIM p.uploadProperties.uploadAbortMsg as C = \"Abort file upload\"\nDIM p.uploadProperties.abortButtonLabel as C = \"Abort\"\nDIM p.uploadProperties.maxFileSizeCombined as C = \"1000000\"\nDIM p.uploadProperties.maxFileSizeCombinedExceededMessage as C = \"The combined file size of the file(s) you have selected exceeds the maximum allowed size of {filesize} bytes.\"\nDIM p.uploadProperties.progressBarType as C = \"A5\"\nDIM p.uploadProperties.fileSelectWindowName as C = \"59af7793798c41e6b0fcc4ac81c5b3d2\"\nFileUpload_d5cc8f0563634f50bba1451cae510960= p\nend function%str%\n\t.actionClientSideXbasic = \"\"\n\t.buttonStyle = \"Text only\"\n\t.buttonClass = \"[class.gridButton]\"\n\t.buttonClassHover = \"[class.gridButtonHover]\"\n\t.buttonClassPressed = \"[class.gridButtonPressed]\"\n\t.buttonClassDisabled = \"[class.gridButtonDisabled]\"\n\t.buttonInlineStyle = \"\"\n\t.buttonText = \"IMPORT\"\n\t.hyperlinkClass = \"[class.gridHyperlinkButton]\"\n\t.hyperlinkInlineStyle = \"\"\n\t.hyperlinkImagePosition = \"None\"\n\t.textClass = \"\"\n\t.textInlineStyle = \"\"\n\t.imageName = \"\"\n\t.hoverImageName = \"\"\n\t.pressedImageName = \"\"\n\t.disabledimageName = \"\"\n\t.imageClass = \"\"\n\t.imageInlineStyle = \"\"\n\t.securityGroups = \"\"\n\t.serverSideShowHideExpression = \"\"\n\t.readDataFromForClientSideExpns = \"GridPart\"\n\t.clientSideShowHideExpression = \"\"\n\t.clientSideEnableExpression = \"\"\n\t.precalc.watchJavascriptShowHide = \"\"\n\t.precalc.watchJavascriptEnable = \"\"\n\t.precalc.watchColumnsShowHide = \"\"\n\t.precalc.watchColumnsEnable = \"\"\n\t.precalc.JStoSetupWatchEvents = \"\"\n\t.precalc.buttonObjectJavascript = <<%str%\nwindow['{grid.componentName}_BUTTONS_IMPORT'] = new A5.Button({\n\tlayout: 'text',\n\tclassName: '[class.gridButton]',\n\thoverClassName: '[class.gridButtonHover]',\n\tpressedClassName: '[class.gridButtonPressed]',\n\tdisabledClassName: '[class.gridButtonDisabled]',\n\thtml: 'IMPORT',\n\tonClick: function() { /* actionJavascript:4aa2ca46-3147-45ab-b35b-301ef25b5a08 */\nFileUploadUserDefined_e0f5db0646e94447aee2b458314a5f18(this);\n},\n\ttheme: '{grid.style}'\n});%str%\n\t.precalc.objectHTML = \"<button type=\\\"button\\\" id=\\\"{id}\\\"></button>&nbsp;\"\n\t.precalc.objectName = \"{grid.componentName}_BUTTONS_IMPORT\"\n\t.precalc.bindJS = \"{grid.componentName}_BUTTONS_IMPORT.bind({bindIdList});\"\nend with\nwith  tmpl.controls[2]\n\t.idInternal = \"a2ed0494-038b-46f9-9539-e687764d2096\"\n\t.type = \"Button\"\n\t.Name = \"EXPORT\"\n\t.trailingSeparator = .T.\n\t.bubbleHelp = \"\"\n\t.readDataFrom = \"GridPart\"\n\t.actionJSAttribute = <<%str%\n/* actionJavascript:81eb9003-c62c-4768-b1e2-efbb623c32a2 */\n{grid.componentName}_G_ACTIONBUTTON_EXPORT_1(this);%str%\n\t.actionJSGlobal = <<%str%\nwindow['{grid.componentName}_G_ACTIONBUTTON_EXPORT_1'] = function(objEle) {\nvar rowNum = {grid.object}._selectedRow;\nvar rowId = $u.s.tran(rowNum,'-','_');\nvar placeHolderValues = '';\nvar arguments = '';\nvar callbackData = '_csfilename=%3cDefault%3e&_exportDataType=Excel&_recordSelection=Records%20in%20current%20query&_exportSource=4&_maxRecords=10000&_exportHiddenFields=Y&_useColHeadings=Y&_zip=N&_customType=SQL&_connectionstring=%3a%3aName%3a%3aPegawai&_sqlselect=SELECT%20%2a%20%20FROM%20Penghargaan';\ncallbackData = callbackData + '&_placeholderValues='+placeHolderValues + '&_arguments='+arguments;\n{grid.Object}.ajaxCallback('G',rowNum,'__a5systemfileExport','',callbackData);\n}%str%\n\t.actionXbasic = \"\"\n\t.actionClientSideXbasic = \"\"\n\t.buttonStyle = \"Text only\"\n\t.buttonClass = \"[class.gridButton]\"\n\t.buttonClassHover = \"[class.gridButtonHover]\"\n\t.buttonClassPressed = \"[class.gridButtonPressed]\"\n\t.buttonClassDisabled = \"[class.gridButtonDisabled]\"\n\t.buttonInlineStyle = \"\"\n\t.buttonText = \"EXPORT\"\n\t.hyperlinkClass = \"[class.gridHyperlinkButton]\"\n\t.hyperlinkInlineStyle = \"\"\n\t.hyperlinkImagePosition = \"None\"\n\t.textClass = \"\"\n\t.textInlineStyle = \"\"\n\t.imageName = \"\"\n\t.hoverImageName = \"\"\n\t.pressedImageName = \"\"\n\t.disabledimageName = \"\"\n\t.imageClass = \"\"\n\t.imageInlineStyle = \"\"\n\t.securityGroups = \"\"\n\t.serverSideShowHideExpression = \"\"\n\t.readDataFromForClientSideExpns = \"GridPart\"\n\t.clientSideShowHideExpression = \"\"\n\t.clientSideEnableExpression = \"\"\n\t.precalc.watchJavascriptShowHide = \"\"\n\t.precalc.watchJavascriptEnable = \"\"\n\t.precalc.watchColumnsShowHide = \"\"\n\t.precalc.watchColumnsEnable = \"\"\n\t.precalc.JStoSetupWatchEvents = \"\"\n\t.precalc.buttonObjectJavascript = <<%str%\nwindow['{grid.componentName}_BUTTONS_EXPORT'] = new A5.Button({\n\tlayout: 'text',\n\tclassName: '[class.gridButton]',\n\thoverClassName: '[class.gridButtonHover]',\n\tpressedClassName: '[class.gridButtonPressed]',\n\tdisabledClassName: '[class.gridButtonDisabled]',\n\thtml: 'EXPORT',\n\tonClick: function() { /* actionJavascript:81eb9003-c62c-4768-b1e2-efbb623c32a2 */\n{grid.componentName}_G_ACTIONBUTTON_EXPORT_1(this);\n},\n\ttheme: '{grid.style}'\n});%str%\n\t.precalc.objectHTML = \"<button type=\\\"button\\\" id=\\\"{id}\\\"></button>&nbsp;\"\n\t.precalc.objectName = \"{grid.componentName}_BUTTONS_EXPORT\"\n\t.precalc.bindJS = \"{grid.componentName}_BUTTONS_EXPORT.bind({bindIdList});\"\nend with\ntmpl.hasGroupBreaks = .f.\ntmpl.groupBreaks.expression1 = \"\"\ntmpl.groupBreaks.direction1 = \"\"\ntmpl.groupBreaks.header1 = <<%HTML%\n%HTML%\ntmpl.groupBreaks.footer1 = <<%HTML%\n%HTML%\ntmpl.groupBreaks.collapseAllGroupsOnInitialDisplay = .f.\ntmpl.timestamp = \"2018-02-07:13-34-52.009\"\ntmpl.resolveAbstractClassNamesAtDesignTime  = .f.\ntmpl.resolveAbstractIconNamesAtDesignTime = .f. \ntmpl.useLegacyDatePicker = .f.\ntmpl.javascriptUnboundActionDefinitions = <<%javascriptActions%\n%javascriptActions%\n\ntmpl.precalc.sessionVarsInShowHideExpns = <<%sessionvars%\n%sessionvars%\ntmpl.precalc.unboundActionsXbasicFunctions = \"\"\ntmpl.precalc.includeS3Javascript = .f.",
+        "datasourceType": 3,
+        "componentName": "penghargaan",
+        "query_ado": {
+            "mdb_or_cs": 1,
+            "connection_type": 1,
+            "base_on": 1,
+            "Arguments": [
+                {}
+            ]
+        },
+        "query_cs": {
+            "connection_type": 1,
+            "connection_name": "Pegawai",
+            "base_on": 1,
+            "table_name": "Penghargaan",
+            "table_alias": "Penghargaan",
+            "database_type": "CS",
+            "surrogate_primary_key": "ID",
+            "FieldInfo": "<a_expn<[1]<a5_type=\"Numeric\">\n<a5_shorttype=\"N\">\n<CS_type=\"Double\">\n<portable_type=\"Double\">\n<autoincrement=.F.>\n<identity=.F.>\n<identitySequenceName=\"\">\n<definedsize=17>\n<name=\"ID\">\n<basecolumn=\"ID\">\n<varname=\"ID\">\n<basetable=\"Penghargaan\">\n<alias_to_update=\"Penghargaan\">\n<Precision=17>\n<NumericScale=4>\n<CanBeUsedInWhereClause=.T.>\n<SQLExpression=\"\">\n<basealias=\"\">\n<searchSortExpression=\"ID\">\n<searchExpression=\"ID\">\n>\n<[2]<a5_type=\"Character\">\n<a5_shorttype=\"C\">\n<CS_type=\"Varying Wide Character\">\n<portable_type=\"NationalVaryingCharacter\">\n<autoincrement=.F.>\n<identity=.F.>\n<identitySequenceName=\"\">\n<definedsize=255>\n<name=\"NamaPenghargaan\">\n<basecolumn=\"NamaPenghargaan\">\n<varname=\"NamaPenghargaan\">\n<basetable=\"Penghargaan\">\n<alias_to_update=\"Penghargaan\">\n<Precision=255>\n<NumericScale=0>\n<CanBeUsedInWhereClause=.T.>\n<SQLExpression=\"\">\n<basealias=\"\">\n<searchSortExpression=\"NamaPenghargaan\">\n<searchExpression=\"NamaPenghargaan\">\n>\n<[3]<a5_type=\"Time\">\n<a5_shorttype=\"T\">\n<CS_type=\"Date\">\n<portable_type=\"DateTime\">\n<autoincrement=.F.>\n<identity=.F.>\n<identitySequenceName=\"\">\n<definedsize=17>\n<name=\"Tanggal\">\n<basecolumn=\"Tanggal\">\n<varname=\"Tanggal\">\n<basetable=\"Penghargaan\">\n<alias_to_update=\"Penghargaan\">\n<Precision=17>\n<NumericScale=0>\n<CanBeUsedInWhereClause=.T.>\n<SQLExpression=\"\">\n<basealias=\"\">\n<searchSortExpression=\"Tanggal\">\n<searchExpression=\"Tanggal\">\n>\n>\n",
+            "SurrogatePrimaryKeyData": "<arrTables<[1]<Primary_Key=\"ID\">\n<Name=\"Penghargaan\">\n<Alias=\"Penghargaan\">\n>\n>\n",
+            "SQLBuilder": {
+                "ColumnAliases": "ID|||||||ID\nNamaPenghargaan|||||||NamaPenghargaan\nTanggal|||||||Tanggal\n",
+                "ColumnTypes": "ID=N\nNamaPenghargaan=C\nTanggal=T\n",
+                "ColumnNativeTypes": "ID=Double\nNamaPenghargaan=Varying Wide Character\nTanggal=Date\n",
+                "ColumnPortableTypes": "ID=Double\nNamaPenghargaan=NationalVaryingCharacter\nTanggal=DateTime\n",
+                "CanBeUsedInWhereClauseFields": "ID\nNamaPenghargaan\nTanggal\n"
+            },
+            "Arguments": [
+                {}
+            ],
+            "table_type": "Table",
+            "primaryKeyTopAliasIsAutoIncrement": true
+        },
+        "query_dbf": {
+            "type": "Table",
+            "Direction": "Ascending",
+            "Arguments": [
+                {}
+            ]
+        },
+        "fields": {
+            "a_fields": [
+                {
+                    "fieldname": "ID",
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "onChange_ValidationOption": "None",
+                    "Layout": {
+                        "Title": "Tab label",
+                        "TabPane": {
+                            "show": true
+                        },
+                        "TabControl": {
+                            "useModernTabs": true,
+                            "Type": "Tab",
+                            "TabPosition": "Top",
+                            "AccordionType": "Single",
+                            "InitialPane": 1,
+                            "BreakType": "After",
+                            "animation": {
+                                "show": {
+                                    "method": "Suggested",
+                                    "speed": "Slow"
+                                },
+                                "hide": {
+                                    "method": "Suggested",
+                                    "speed": "Slow"
+                                }
+                            }
+                        },
+                        "FrameTitle": "Frame Label",
+                        "Frame": {
+                            "BreakType": "After",
+                            "type": "Simple",
+                            "initialState": "Shown"
+                        },
+                        "Container": {
+                            "BreakType": "After"
+                        },
+                        "ButtonText": "Button",
+                        "HyperlinkText": "Hyperlink",
+                        "Spacer": {
+                            "Horizontal": ".1in",
+                            "Vertical": ".1in"
+                        },
+                        "nCols": 1
+                    },
+                    "controltype": "Label",
+                    "Search": {
+                        "FromLabel": "From:",
+                        "ToLabel": "To:"
+                    },
+                    "Label": {
+                        "InLineStyle": "text-align: right;"
+                    },
+                    "Image": {
+                        "noImageFoundImage": "<None>",
+                        "newRecordImage": "<None>"
+                    },
+                    "calendar": {
+                        "DateFormat": "mm/dd/yy",
+                        "SwitchYear": 20,
+                        "UseComboBoxes": true,
+                        "LowYear": 1950,
+                        "HighYear": 2050
+                    },
+                    "TextBox": {
+                        "InLineStyle": "text-align: right;",
+                        "Size": 20,
+                        "MaxLength": 20,
+                        "stylefieldiferror": true
+                    },
+                    "Watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "TextArea": {
+                        "rows": 2,
+                        "cols": 20,
+                        "RichText": {
+                            "display": {
+                                "height": "1in",
+                                "width": "2in"
+                            },
+                            "style": "font: 9pt Arial;",
+                            "editButtonText": "Edit...",
+                            "toolbaricons": "",
+                            "toolbardefinition": ""
+                        }
+                    },
+                    "radiobutton": {
+                        "datasource": "DBF-Table",
+                        "NotInListRule": "Add to List",
+                        "orientation": "Horizontal",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3,
+                        "stylefieldiferror": true,
+                        "type": "Static"
+                    },
+                    "CheckBox": {
+                        "type": "Static",
+                        "datasource": "DBF-Table",
+                        "stylefieldiferror": true,
+                        "NotInListRule": "Add to List",
+                        "orientation": "Horizontal",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3,
+                        "initial_value": "False"
+                    },
+                    "connection_type": "Access Database",
+                    "dropdownbox": {
+                        "Size": 1,
+                        "type": "Static",
+                        "selectStyle": "Single",
+                        "datasource": "DBF-Table",
+                        "stylefieldiferror": true,
+                        "NotInListRule": "Add to List",
+                        "fieldNameOfFieldLinkedToParentControl": "<Auto>",
+                        "methodForComputingCascadingFilter": "<Auto>"
+                    },
+                    "DatePicker": {
+                        "OpenMethod": "ClickIcon",
+                        "UseComboBoxes": true,
+                        "DateFormat": "<DefaultTimeFormat>",
+                        "LowYear": 1950,
+                        "HighYear": 2050,
+                        "SwitchYear": 20,
+                        "IconNumber": 2,
+                        "showDaysOfWeek": true,
+                        "showTodayButton": true,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "showPreDefinedDates": false,
+                        "preDefinedDatesJSON": ""
+                    },
+                    "column": {
+                        "heading": "ID",
+                        "LabelPosition": "Left",
+                        "CanSort": true,
+                        "sort": "ID",
+                        "firstclickdirection": "Ascending"
+                    },
+                    "initial_value": "NULL",
+                    "BreakType": "None",
+                    "nCols": 1,
+                    "link": {
+                        "StaticImageInlineStyle": "border-style: none;",
+                        "DisplayType": "Value in Field",
+                        "Type": "Field value is link address",
+                        "ajaxWindowType": "Modal-Popup",
+                        "ajaxWindowTitle": "Window",
+                        "ajaxWindowHeight": "3in",
+                        "ajaxWindowWidth": "4in",
+                        "ajaxWindowisResizable": true,
+                        "ajaxWindowWorkingMessage": "Working...",
+                        "ajaxWindowWorkingMessageIcon": "css/A5System/Images/wait.gif",
+                        "ajaxWindowRefreshGridOnClose": "None",
+                        "targetDIVHideHyperlink": "Close"
+                    },
+                    "BaseFieldExpression": "ID",
+                    "type": "N",
+                    "ConditionalStyleLevel": "Cell",
+                    "ClientSideConditionalStyleLevel": "Cell",
+                    "Updateable": true,
+                    "TableAlias": "Penghargaan",
+                    "canBeUsedInWhereClause": true,
+                    "nativeType": "Double",
+                    "table": "Penghargaan",
+                    "FieldToUpdate": "ID",
+                    "summary": {
+                        "total": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "count": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "average": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "min": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "max": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "StdDev": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "Var": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "First": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "Last": {
+                            "inlinestyle": "text-align: right;"
+                        }
+                    },
+                    "PortableType": "Double",
+                    "width": 17,
+                    "dec": 4,
+                    "varname": "ID",
+                    "Display": "ID",
+                    "displayOD": "{F=Tahoma,8}{I:'a5_blue_text'}{T=.2}{C=}{DATA=ID}ID",
+                    "displayODFlat": "{F=Tahoma,8}{I:'a5_blue_text'}{T=.2}{C=}{DATA=ID}ID",
+                    "scope": "Local",
+                    "tmplTxtComputed": true,
+                    "tmplTxt": "with tmpl.field_info[_fieldNumber_]\n\t.Fieldname = \"ID\"\n\t.Scope = \"Local\"\n\t.DisplayFormat = \"\"\n\t.DisplayUnFormat = \"\"\n\t.ConditionalStyle = \"\"\n\t.ConditionalStyleLevel = \"Cell\"\n\t.ClientSideConditionalStyle = \"\"\n\t.ClientSideConditionalStyleLevel = \"Cell\"\n\t.QBEDisable = .f.\n\t.QBEInlineStyle = \"\"\n\t.QBEOptionsJSON = \"\"\n\t.canBeUsedInWhereClause = .t.\n\t.autoincrement = .f.\n\t.portableType = \"Double\"\n\t.nativeType = \"Double\"\n\t.Type = \"N\"\n\t.UserDefinedClientSideValidationJavascript = \"\"\n\t.onChange_ValidationOption = \"None\"\n\t.Varname = \"ID\"\n\t.Column.LabelPosition = \"Left\"\n\t.Controltype = \"Label\"\n\t.Label.InLineStyle = \"text-align: right;\"\n\t.BreakType = \"None\"\n\t.nCols = 1\n\t.Column.Hide = .f.\n\t.BaseFieldExpression = \"ID\"\n\t.SourceAlias = \"\"\n\t.Column.Heading = \"ID\"\n\t.Column.Sort = \"ID\"\n\t.Column.FirstClickDirection = \"A\"\nend with\n\n\n\n\n\n",
+                    "columnQBEOptionsJSON": ""
+                },
+                {
+                    "fieldname": "NamaPenghargaan",
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "onChange_ValidationOption": "None",
+                    "Layout": {
+                        "Title": "Tab label",
+                        "TabPane": {
+                            "show": true
+                        },
+                        "TabControl": {
+                            "useModernTabs": true,
+                            "Type": "Tab",
+                            "TabPosition": "Top",
+                            "AccordionType": "Single",
+                            "InitialPane": 1,
+                            "BreakType": "After",
+                            "animation": {
+                                "show": {
+                                    "method": "Suggested",
+                                    "speed": "Slow"
+                                },
+                                "hide": {
+                                    "method": "Suggested",
+                                    "speed": "Slow"
+                                }
+                            }
+                        },
+                        "FrameTitle": "Frame Label",
+                        "Frame": {
+                            "BreakType": "After",
+                            "type": "Simple",
+                            "initialState": "Shown"
+                        },
+                        "Container": {
+                            "BreakType": "After"
+                        },
+                        "ButtonText": "Button",
+                        "HyperlinkText": "Hyperlink",
+                        "Spacer": {
+                            "Horizontal": ".1in",
+                            "Vertical": ".1in"
+                        },
+                        "nCols": 1
+                    },
+                    "controltype": "Label",
+                    "Search": {
+                        "FromLabel": "From:",
+                        "ToLabel": "To:"
+                    },
+                    "Image": {
+                        "noImageFoundImage": "<None>",
+                        "newRecordImage": "<None>"
+                    },
+                    "calendar": {
+                        "DateFormat": "mm/dd/yy",
+                        "SwitchYear": 20,
+                        "UseComboBoxes": true,
+                        "LowYear": 1950,
+                        "HighYear": 2050
+                    },
+                    "TextBox": {
+                        "Size": 20,
+                        "MaxLength": 20,
+                        "stylefieldiferror": true
+                    },
+                    "Watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "TextArea": {
+                        "rows": 2,
+                        "cols": 20,
+                        "RichText": {
+                            "display": {
+                                "height": "1in",
+                                "width": "2in"
+                            },
+                            "style": "font: 9pt Arial;",
+                            "editButtonText": "Edit...",
+                            "toolbaricons": "",
+                            "toolbardefinition": ""
+                        }
+                    },
+                    "radiobutton": {
+                        "datasource": "DBF-Table",
+                        "NotInListRule": "Add to List",
+                        "orientation": "Horizontal",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3,
+                        "stylefieldiferror": true,
+                        "type": "Static"
+                    },
+                    "CheckBox": {
+                        "type": "Static",
+                        "datasource": "DBF-Table",
+                        "stylefieldiferror": true,
+                        "NotInListRule": "Add to List",
+                        "orientation": "Horizontal",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3,
+                        "initial_value": "False"
+                    },
+                    "connection_type": "Access Database",
+                    "dropdownbox": {
+                        "Size": 1,
+                        "type": "Static",
+                        "selectStyle": "Single",
+                        "datasource": "DBF-Table",
+                        "stylefieldiferror": true,
+                        "NotInListRule": "Add to List",
+                        "fieldNameOfFieldLinkedToParentControl": "<Auto>",
+                        "methodForComputingCascadingFilter": "<Auto>"
+                    },
+                    "DatePicker": {
+                        "OpenMethod": "ClickIcon",
+                        "UseComboBoxes": true,
+                        "DateFormat": "<DefaultTimeFormat>",
+                        "LowYear": 1950,
+                        "HighYear": 2050,
+                        "SwitchYear": 20,
+                        "IconNumber": 2,
+                        "showDaysOfWeek": true,
+                        "showTodayButton": true,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "showPreDefinedDates": false,
+                        "preDefinedDatesJSON": ""
+                    },
+                    "column": {
+                        "heading": "Nama Penghargaan",
+                        "LabelPosition": "Left",
+                        "CanSort": true,
+                        "sort": "NamaPenghargaan",
+                        "firstclickdirection": "Ascending"
+                    },
+                    "initial_value": "NULL",
+                    "BreakType": "None",
+                    "nCols": 1,
+                    "link": {
+                        "StaticImageInlineStyle": "border-style: none;",
+                        "DisplayType": "Value in Field",
+                        "Type": "Field value is link address",
+                        "ajaxWindowType": "Modal-Popup",
+                        "ajaxWindowTitle": "Window",
+                        "ajaxWindowHeight": "3in",
+                        "ajaxWindowWidth": "4in",
+                        "ajaxWindowisResizable": true,
+                        "ajaxWindowWorkingMessage": "Working...",
+                        "ajaxWindowWorkingMessageIcon": "css/A5System/Images/wait.gif",
+                        "ajaxWindowRefreshGridOnClose": "None",
+                        "targetDIVHideHyperlink": "Close"
+                    },
+                    "BaseFieldExpression": "NamaPenghargaan",
+                    "type": "C",
+                    "ConditionalStyleLevel": "Cell",
+                    "ClientSideConditionalStyleLevel": "Cell",
+                    "Updateable": true,
+                    "TableAlias": "Penghargaan",
+                    "canBeUsedInWhereClause": true,
+                    "nativeType": "Varying Wide Character",
+                    "table": "Penghargaan",
+                    "FieldToUpdate": "NamaPenghargaan",
+                    "summary": {
+                        "total": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "count": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "average": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "min": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "max": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "StdDev": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "Var": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "First": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "Last": {
+                            "inlinestyle": "text-align: right;"
+                        }
+                    },
+                    "PortableType": "NationalVaryingCharacter",
+                    "width": 255,
+                    "varname": "NamaPenghargaan",
+                    "Display": "NamaPenghargaan",
+                    "displayOD": "{F=Tahoma,8}{I:'a5_blue_text'}{T=.2}{C=}{DATA=NamaPenghargaan}NamaPenghargaan",
+                    "displayODFlat": "{F=Tahoma,8}{I:'a5_blue_text'}{T=.2}{C=}{DATA=NamaPenghargaan}NamaPenghargaan",
+                    "scope": "Local",
+                    "tmplTxtComputed": true,
+                    "tmplTxt": "with tmpl.field_info[_fieldNumber_]\n\t.Fieldname = \"NamaPenghargaan\"\n\t.Scope = \"Local\"\n\t.DisplayFormat = \"\"\n\t.DisplayUnFormat = \"\"\n\t.ConditionalStyle = \"\"\n\t.ConditionalStyleLevel = \"Cell\"\n\t.ClientSideConditionalStyle = \"\"\n\t.ClientSideConditionalStyleLevel = \"Cell\"\n\t.QBEDisable = .f.\n\t.QBEInlineStyle = \"\"\n\t.QBEOptionsJSON = \"\"\n\t.canBeUsedInWhereClause = .t.\n\t.autoincrement = .f.\n\t.portableType = \"NationalVaryingCharacter\"\n\t.nativeType = \"Varying Wide Character\"\n\t.Type = \"C\"\n\t.UserDefinedClientSideValidationJavascript = \"\"\n\t.onChange_ValidationOption = \"None\"\n\t.Varname = \"NAMAPENGHARGAAN\"\n\t.Column.LabelPosition = \"Left\"\n\t.Controltype = \"Label\"\n\t.Label.InLineStyle = \"\"\n\t.BreakType = \"None\"\n\t.nCols = 1\n\t.Column.Hide = .f.\n\t.BaseFieldExpression = \"NamaPenghargaan\"\n\t.SourceAlias = \"\"\n\t.Column.Heading = \"Nama Penghargaan\"\n\t.Column.Sort = \"NamaPenghargaan\"\n\t.Column.FirstClickDirection = \"A\"\nend with\n\n\n\n\n\n",
+                    "columnQBEOptionsJSON": ""
+                },
+                {
+                    "fieldname": "Tanggal",
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "onChange_ValidationOption": "None",
+                    "Layout": {
+                        "Title": "Tab label",
+                        "TabPane": {
+                            "show": true
+                        },
+                        "TabControl": {
+                            "useModernTabs": true,
+                            "Type": "Tab",
+                            "TabPosition": "Top",
+                            "AccordionType": "Single",
+                            "InitialPane": 1,
+                            "BreakType": "After",
+                            "animation": {
+                                "show": {
+                                    "method": "Suggested",
+                                    "speed": "Slow"
+                                },
+                                "hide": {
+                                    "method": "Suggested",
+                                    "speed": "Slow"
+                                }
+                            }
+                        },
+                        "FrameTitle": "Frame Label",
+                        "Frame": {
+                            "BreakType": "After",
+                            "type": "Simple",
+                            "initialState": "Shown"
+                        },
+                        "Container": {
+                            "BreakType": "After"
+                        },
+                        "ButtonText": "Button",
+                        "HyperlinkText": "Hyperlink",
+                        "Spacer": {
+                            "Horizontal": ".1in",
+                            "Vertical": ".1in"
+                        },
+                        "nCols": 1
+                    },
+                    "controltype": "Label",
+                    "Search": {
+                        "FromLabel": "From:",
+                        "ToLabel": "To:"
+                    },
+                    "Image": {
+                        "noImageFoundImage": "<None>",
+                        "newRecordImage": "<None>"
+                    },
+                    "calendar": {
+                        "DateFormat": "mm/dd/yy",
+                        "SwitchYear": 20,
+                        "UseComboBoxes": true,
+                        "LowYear": 1950,
+                        "HighYear": 2050
+                    },
+                    "TextBox": {
+                        "Size": 20,
+                        "MaxLength": 20,
+                        "stylefieldiferror": true
+                    },
+                    "Watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "TextArea": {
+                        "rows": 2,
+                        "cols": 20,
+                        "RichText": {
+                            "display": {
+                                "height": "1in",
+                                "width": "2in"
+                            },
+                            "style": "font: 9pt Arial;",
+                            "editButtonText": "Edit...",
+                            "toolbaricons": "",
+                            "toolbardefinition": ""
+                        }
+                    },
+                    "radiobutton": {
+                        "datasource": "DBF-Table",
+                        "NotInListRule": "Add to List",
+                        "orientation": "Horizontal",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3,
+                        "stylefieldiferror": true,
+                        "type": "Static"
+                    },
+                    "CheckBox": {
+                        "type": "Static",
+                        "datasource": "DBF-Table",
+                        "stylefieldiferror": true,
+                        "NotInListRule": "Add to List",
+                        "orientation": "Horizontal",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3,
+                        "initial_value": "False"
+                    },
+                    "connection_type": "Access Database",
+                    "dropdownbox": {
+                        "Size": 1,
+                        "type": "Static",
+                        "selectStyle": "Single",
+                        "datasource": "DBF-Table",
+                        "stylefieldiferror": true,
+                        "NotInListRule": "Add to List",
+                        "fieldNameOfFieldLinkedToParentControl": "<Auto>",
+                        "methodForComputingCascadingFilter": "<Auto>"
+                    },
+                    "DatePicker": {
+                        "Display": true,
+                        "OpenMethod": "ClickIcon",
+                        "UseComboBoxes": true,
+                        "DateFormat": "<DefaultDateOnlyFormat>",
+                        "LowYear": 1950,
+                        "HighYear": 2050,
+                        "SwitchYear": 20,
+                        "IconNumber": 2,
+                        "showDaysOfWeek": true,
+                        "showTodayButton": true,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "showPreDefinedDates": false,
+                        "preDefinedDatesJSON": ""
+                    },
+                    "column": {
+                        "heading": "Tanggal",
+                        "LabelPosition": "Left",
+                        "CanSort": true,
+                        "sort": "Tanggal",
+                        "firstclickdirection": "Ascending"
+                    },
+                    "initial_value": "NULL",
+                    "BreakType": "None",
+                    "nCols": 1,
+                    "link": {
+                        "StaticImageInlineStyle": "border-style: none;",
+                        "DisplayType": "Value in Field",
+                        "Type": "Field value is link address",
+                        "ajaxWindowType": "Modal-Popup",
+                        "ajaxWindowTitle": "Window",
+                        "ajaxWindowHeight": "3in",
+                        "ajaxWindowWidth": "4in",
+                        "ajaxWindowisResizable": true,
+                        "ajaxWindowWorkingMessage": "Working...",
+                        "ajaxWindowWorkingMessageIcon": "css/A5System/Images/wait.gif",
+                        "ajaxWindowRefreshGridOnClose": "None",
+                        "targetDIVHideHyperlink": "Close"
+                    },
+                    "BaseFieldExpression": "Tanggal",
+                    "type": "T",
+                    "DisplayFormat": "time(\"{grid.clientSideDateFormat}\",<value>)",
+                    "ConditionalStyleLevel": "Cell",
+                    "ClientSideConditionalStyleLevel": "Cell",
+                    "Updateable": true,
+                    "TableAlias": "Penghargaan",
+                    "canBeUsedInWhereClause": true,
+                    "nativeType": "Date",
+                    "table": "Penghargaan",
+                    "FieldToUpdate": "Tanggal",
+                    "summary": {
+                        "total": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "count": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "average": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "min": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "max": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "StdDev": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "Var": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "First": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "Last": {
+                            "inlinestyle": "text-align: right;"
+                        }
+                    },
+                    "PortableType": "DateTime",
+                    "width": 17,
+                    "varname": "Tanggal",
+                    "Display": "Tanggal",
+                    "displayOD": "{F=Tahoma,8}{I:'a5_blue_text'}{T=.2}{C=}{DATA=Tanggal}Tanggal",
+                    "displayODFlat": "{F=Tahoma,8}{I:'a5_blue_text'}{T=.2}{C=}{DATA=Tanggal}Tanggal",
+                    "scope": "Local",
+                    "tmplTxtComputed": true,
+                    "tmplTxt": "with tmpl.field_info[_fieldNumber_]\n\t.Fieldname = \"Tanggal\"\n\t.Scope = \"Local\"\n\t.DisplayFormat = \"time(\\\"{grid.clientSideDateFormat}\\\",<value>)\"\n\t.DisplayUnFormat = \"\"\n\t.ConditionalStyle = \"\"\n\t.ConditionalStyleLevel = \"Cell\"\n\t.ClientSideConditionalStyle = \"\"\n\t.ClientSideConditionalStyleLevel = \"Cell\"\n\t.QBEDisable = .f.\n\t.QBEInlineStyle = \"\"\n\t.QBEOptionsJSON = \"\"\n\t.canBeUsedInWhereClause = .t.\n\t.autoincrement = .f.\n\t.portableType = \"DateTime\"\n\t.nativeType = \"Date\"\n\t.Type = \"T\"\n\t.UserDefinedClientSideValidationJavascript = \"\"\n\t.onChange_ValidationOption = \"None\"\n\t.Varname = \"TANGGAL\"\n\t.Column.LabelPosition = \"Left\"\n\t.Controltype = \"Label\"\n\t.Label.InLineStyle = \"\"\n\t.BreakType = \"None\"\n\t.nCols = 1\n\t.Column.Hide = .f.\n\t.BaseFieldExpression = \"Tanggal\"\n\t.SourceAlias = \"\"\n\t.Column.Heading = \"Tanggal\"\n\t.Column.Sort = \"Tanggal\"\n\t.Column.FirstClickDirection = \"A\"\nend with\n\n\n\n\n\n",
+                    "columnQBEOptionsJSON": ""
+                }
+            ]
+        },
+        "field_index": 1,
+        "DetailView": {
+            "editable": true,
+            "has_DetailView": true,
+            "LayoutColumns": 1,
+            "AddNewLinkLabel": "Tambahkan",
+            "SaveRecordButtonLabel": "Save",
+            "DeleteRecordButtonLabel": "Delete",
+            "AddRecordButtonLabel": "Add",
+            "Title": "Detail",
+            "show_row_labels": true,
+            "edit": {
+                "Execute_Update_Commands": true,
+                "allow_update": true,
+                "allow_insert": true,
+                "allow_delete": true,
+                "validateFieldsSetting": "Dirty Fields Only",
+                "updateWhichFields": "Dirty Fields Only",
+                "Number_Of_Insert_Rows": 1,
+                "cancel_button_text": "Cancel",
+                "close_button_text": "Close",
+                "save_confirm_before_submit_message": "Update record?",
+                "delete_confirm_before_submit_message": "Delete record?",
+                "add_confirm_before_submit_message": "Add record?",
+                "check_for_write_conflicts": true,
+                "write_conflict_check_type": 2,
+                "save_original_values": true,
+                "Delete_TargetPage": "<Self>",
+                "Save_TargetPage": "<Self>",
+                "Add_TargetPage": "<Self>",
+                "field_error_style": {
+                    "type": "Icon",
+                    "icon": "images/$$generic.error.png.a5image"
+                },
+                "RefreshRowMethod": "AutoSelect",
+                "row_errors_window_title": "Errors",
+                "row_errors_window_style": "color: red; width: 6in; height: 2in;",
+                "FocusAfterFullPageRefreshForInsert": "First record",
+                "FocusAfterFullPageRefreshForUpdate": "Current page",
+                "FocusAfterFullPageRefreshForDelete": "Current page",
+                "Editable_GridRow_Options_Style": "Icons",
+                "RefreshRowOnDirty": true,
+                "RowEditStyle": "InitiallyEditable",
+                "LazyEdit": true
+            },
+            "OnlyShowOnRequest": true,
+            "HasCloseLink": true,
+            "CloseDetailViewLinkLabel": "Close",
+            "CanClose": true,
+            "Toolbar": {
+                "Position": "Below",
+                "showRecordNavigatorLinks": true
+            },
+            "UseSimpleStyles": true,
+            "SimpleStyleMode": "LayoutOnly",
+            "displayStyle": "PopupWindow-Modeless",
+            "ajaxWindowPositionAttribute": "'popup',objEle",
+            "windowDragOpacity": 75,
+            "PopupWindowTitle": "Detail",
+            "PopupWindowDirection": "ltr",
+            "OpenMethod": "Click on a Grid row",
+            "window": {
+                "animation": {
+                    "hasAnimation": true,
+                    "show": {
+                        "method": "Fade",
+                        "speed": "Slow"
+                    },
+                    "hide": {
+                        "method": "Clip",
+                        "speed": "Fast"
+                    }
+                }
+            }
+        },
+        "detailfields": {
+            "a_fields": [
+                {
+                    "fieldname": "ID",
+                    "Layout": {
+                        "Title": "Tab label",
+                        "TabPane": {
+                            "show": true
+                        },
+                        "TabControl": {
+                            "useModernTabs": true,
+                            "Type": "Tab",
+                            "TabPosition": "Top",
+                            "AccordionType": "Single",
+                            "InitialPane": 1,
+                            "BreakType": "After",
+                            "animation": {
+                                "show": {
+                                    "method": "Suggested",
+                                    "speed": "Slow"
+                                },
+                                "hide": {
+                                    "method": "Suggested",
+                                    "speed": "Slow"
+                                }
+                            }
+                        },
+                        "FrameTitle": "Frame Label",
+                        "Frame": {
+                            "BreakType": "After",
+                            "type": "Simple",
+                            "initialState": "Shown"
+                        },
+                        "Container": {
+                            "BreakType": "After"
+                        },
+                        "ButtonText": "Button",
+                        "HyperlinkText": "Hyperlink",
+                        "Spacer": {
+                            "Horizontal": ".1in",
+                            "Vertical": ".1in"
+                        },
+                        "nCols": 1
+                    },
+                    "controltype": "TextBox",
+                    "Search": {
+                        "FromLabel": "From:",
+                        "ToLabel": "To:"
+                    },
+                    "Label": {
+                        "InLineStyle": "text-align: right;"
+                    },
+                    "Image": {
+                        "noImageFoundImage": "<None>",
+                        "newRecordImage": "<None>"
+                    },
+                    "calendar": {
+                        "DateFormat": "mm/dd/yy",
+                        "SwitchYear": 20,
+                        "UseComboBoxes": true,
+                        "LowYear": 1950,
+                        "HighYear": 2050
+                    },
+                    "TextBox": {
+                        "InLineStyle": "text-align: right;",
+                        "Size": 17,
+                        "MaxLength": 17,
+                        "stylefieldiferror": true
+                    },
+                    "Watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "Lookup": {
+                        "Type": "Grid Component"
+                    },
+                    "TextArea": {
+                        "rows": 2,
+                        "cols": 20,
+                        "RichText": {
+                            "display": {
+                                "height": "1in",
+                                "width": "2in"
+                            },
+                            "style": "font: 9pt Arial;",
+                            "editButtonText": "Edit...",
+                            "toolbaricons": "",
+                            "toolbardefinition": ""
+                        }
+                    },
+                    "radiobutton": {
+                        "datasource": "DBF-Table",
+                        "NotInListRule": "Add to List",
+                        "orientation": "Horizontal",
+                        "stylefieldiferror": true,
+                        "type": "Static",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3
+                    },
+                    "CheckBox": {
+                        "type": "Static",
+                        "datasource": "DBF-Table",
+                        "stylefieldiferror": true,
+                        "NotInListRule": "Add to List",
+                        "orientation": "Horizontal",
+                        "initial_value": "False",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3
+                    },
+                    "connection_type": "Access Database",
+                    "dropdownbox": {
+                        "Size": 1,
+                        "type": "Static",
+                        "selectStyle": "Single",
+                        "datasource": "DBF-Table",
+                        "stylefieldiferror": true,
+                        "NotInListRule": "Add to List",
+                        "fieldNameOfFieldLinkedToParentControl": "<Auto>",
+                        "methodForComputingCascadingFilter": "<Auto>"
+                    },
+                    "DatePicker": {
+                        "UseComboBoxes": true,
+                        "DateFormat": "<DefaultTimeFormat>",
+                        "LowYear": 1950,
+                        "HighYear": 2050,
+                        "SwitchYear": 20,
+                        "IconNumber": 2,
+                        "OpenMethod": "ClickIcon",
+                        "showDaysOfWeek": true,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "showTodayButton": true,
+                        "showPreDefinedDates": false,
+                        "preDefinedDatesJSON": ""
+                    },
+                    "column": {
+                        "Hide": true,
+                        "heading": "ID",
+                        "LabelPosition": "Left",
+                        "CanSort": true,
+                        "sort": "Id",
+                        "firstclickdirection": "Ascending"
+                    },
+                    "initial_value": "NULL",
+                    "BreakType": "None",
+                    "nCols": 1,
+                    "link": {
+                        "StaticImageInlineStyle": "border-style: none;",
+                        "DisplayType": "Value in Field",
+                        "Type": "Field value is link address",
+                        "ajaxWindowType": "Modal-Popup",
+                        "ajaxWindowTitle": "Window",
+                        "ajaxWindowHeight": "3in",
+                        "ajaxWindowWidth": "4in",
+                        "ajaxWindowisResizable": true,
+                        "ajaxWindowWorkingMessage": "Working...",
+                        "ajaxWindowWorkingMessageIcon": "css/A5System/Images/wait.gif",
+                        "ajaxWindowRefreshGridOnClose": "None",
+                        "targetDIVHideHyperlink": "Close"
+                    },
+                    "BaseFieldExpression": "ID",
+                    "type": "N",
+                    "ConditionalStyleLevel": "Cell",
+                    "ClientSideConditionalStyleLevel": "Cell",
+                    "Updateable": true,
+                    "TableAlias": "Penghargaan",
+                    "canBeUsedInWhereClause": true,
+                    "nativeType": "Double",
+                    "table": "Penghargaan",
+                    "FieldToUpdate": "ID",
+                    "summary": {
+                        "total": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "count": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "average": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "min": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "max": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "StdDev": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "Var": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "First": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "Last": {
+                            "inlinestyle": "text-align: right;"
+                        }
+                    },
+                    "display": "ID",
+                    "varname": "ID",
+                    "scope": "Local",
+                    "tmplTxtComputed": true,
+                    "tmplTxt": "with tmpl.detailfield_info[_fieldNumber_]\n\t.Fieldname = \"ID\"\n\t.Scope = \"Local\"\n\t.DisplayFormat = \"\"\n\t.DisplayUnFormat = \"\"\n\t.ConditionalStyle = \"\"\n\t.ConditionalStyleLevel = \"Cell\"\n\t.ClientSideConditionalStyle = \"\"\n\t.ClientSideConditionalStyleLevel = \"Cell\"\n\t.QBEDisable = .f.\n\t.QBEInlineStyle = \"\"\n\t.QBEOptionsJSON = \"\"\n\t.canBeUsedInWhereClause = .t.\n\t.autoincrement = .f.\n\t.portableType = \"Double\"\n\t.nativeType = \"Double\"\n\t.Type = \"N\"\n\t.UserDefinedClientSideValidationJavascript = \"\"\n\t.onChange_ValidationOption = \"None\"\n\t.Updateable = .t.\n\t.TreatBlankAsNull = .f.\n\t.Table_Alias = \"Penghargaan\"\n\t.FieldToUpdate = \"ID\"\n\t.Varname = \"ID\"\n\t.Initial_Value = \"NULL\"\n\t.Column.LabelPosition = \"Left\"\n\t.Controltype = \"TextBox\"\n\t.Textbox.Size = 17\n\t.Textbox.HTML5Type = \"\"\n\t.Textbox.customAttributes = \"\"\n\t.Textbox.MaxLength = 17\n\t.Textbox.InLineStyle = \"text-align: right;\"\n\t.Textbox.ContainerInlineStyle = \"\"\n\t.Textbox.IsPassword = .f.\n\t.hasWatermark= .f.\n\t.BreakType = \"None\"\n\t.nCols = 1\n\t.Column.Hide = .t.\n\t.BaseFieldExpression = \"ID\"\n\t.SourceAlias = \"\"\nend with\n\n\n",
+                    "DisplayOD": "{F=Tahoma,8}{I:'$a5_control_field'}{T=.2}{C=#130,130,130}{DATA=ID}ID",
+                    "DisplayODFlat": "{F=Tahoma,8}{I:'$a5_control_field'}{T=.2}{C=#130,130,130}{DATA=ID}ID",
+                    "displayODtree": "{F=Tahoma,8}{I:'$a5_control_field'} {C=}{DATA=ID}ID",
+                    "PortableType": "Double",
+                    "onChange_ValidationOption": "None",
+                    "parentContainer": -1,
+                    "repeatingSectionParentId": -1,
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "columnQBEOptionsJSON": "",
+                    "errorInDefinition": false,
+                    "childTabPanes": "2\n13\n"
+                },
+                {
+                    "fieldname": "NamaPenghargaan",
+                    "Layout": {
+                        "Title": "Tab label",
+                        "TabPane": {
+                            "show": true
+                        },
+                        "TabControl": {
+                            "useModernTabs": true,
+                            "Type": "Tab",
+                            "TabPosition": "Top",
+                            "AccordionType": "Single",
+                            "InitialPane": 1,
+                            "BreakType": "After",
+                            "animation": {
+                                "show": {
+                                    "method": "Suggested",
+                                    "speed": "Slow"
+                                },
+                                "hide": {
+                                    "method": "Suggested",
+                                    "speed": "Slow"
+                                }
+                            }
+                        },
+                        "FrameTitle": "Frame Label",
+                        "Frame": {
+                            "BreakType": "After",
+                            "type": "Simple",
+                            "initialState": "Shown"
+                        },
+                        "Container": {
+                            "BreakType": "After"
+                        },
+                        "ButtonText": "Button",
+                        "HyperlinkText": "Hyperlink",
+                        "Spacer": {
+                            "Horizontal": ".1in",
+                            "Vertical": ".1in"
+                        },
+                        "nCols": 1
+                    },
+                    "controltype": "TextBox",
+                    "Search": {
+                        "FromLabel": "From:",
+                        "ToLabel": "To:"
+                    },
+                    "Image": {
+                        "noImageFoundImage": "<None>",
+                        "newRecordImage": "<None>"
+                    },
+                    "calendar": {
+                        "DateFormat": "mm/dd/yy",
+                        "SwitchYear": 20,
+                        "UseComboBoxes": true,
+                        "LowYear": 1950,
+                        "HighYear": 2050
+                    },
+                    "TextBox": {
+                        "Size": 21,
+                        "MaxLength": 255,
+                        "stylefieldiferror": true
+                    },
+                    "Watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "Lookup": {
+                        "Type": "Grid Component"
+                    },
+                    "TextArea": {
+                        "rows": 2,
+                        "cols": 20,
+                        "RichText": {
+                            "display": {
+                                "height": "1in",
+                                "width": "2in"
+                            },
+                            "style": "font: 9pt Arial;",
+                            "editButtonText": "Edit...",
+                            "toolbaricons": "",
+                            "toolbardefinition": ""
+                        }
+                    },
+                    "radiobutton": {
+                        "datasource": "DBF-Table",
+                        "NotInListRule": "Add to List",
+                        "orientation": "Horizontal",
+                        "stylefieldiferror": true,
+                        "type": "Static",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3
+                    },
+                    "CheckBox": {
+                        "type": "Static",
+                        "datasource": "DBF-Table",
+                        "stylefieldiferror": true,
+                        "NotInListRule": "Add to List",
+                        "orientation": "Horizontal",
+                        "initial_value": "False",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3
+                    },
+                    "connection_type": "Access Database",
+                    "dropdownbox": {
+                        "Size": 1,
+                        "type": "Static",
+                        "selectStyle": "Single",
+                        "datasource": "DBF-Table",
+                        "stylefieldiferror": true,
+                        "NotInListRule": "Add to List",
+                        "fieldNameOfFieldLinkedToParentControl": "<Auto>",
+                        "methodForComputingCascadingFilter": "<Auto>"
+                    },
+                    "DatePicker": {
+                        "UseComboBoxes": true,
+                        "DateFormat": "<DefaultTimeFormat>",
+                        "LowYear": 1950,
+                        "HighYear": 2050,
+                        "SwitchYear": 20,
+                        "IconNumber": 2,
+                        "OpenMethod": "ClickIcon",
+                        "showDaysOfWeek": true,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "showTodayButton": true,
+                        "showPreDefinedDates": false,
+                        "preDefinedDatesJSON": ""
+                    },
+                    "column": {
+                        "heading": "Nama Penghargaan",
+                        "LabelPosition": "Left",
+                        "CanSort": true,
+                        "sort": "Namapenghargaan",
+                        "firstclickdirection": "Ascending"
+                    },
+                    "initial_value": "NULL",
+                    "BreakType": "None",
+                    "nCols": 1,
+                    "link": {
+                        "StaticImageInlineStyle": "border-style: none;",
+                        "DisplayType": "Value in Field",
+                        "Type": "Field value is link address",
+                        "ajaxWindowType": "Modal-Popup",
+                        "ajaxWindowTitle": "Window",
+                        "ajaxWindowHeight": "3in",
+                        "ajaxWindowWidth": "4in",
+                        "ajaxWindowisResizable": true,
+                        "ajaxWindowWorkingMessage": "Working...",
+                        "ajaxWindowWorkingMessageIcon": "css/A5System/Images/wait.gif",
+                        "ajaxWindowRefreshGridOnClose": "None",
+                        "targetDIVHideHyperlink": "Close"
+                    },
+                    "BaseFieldExpression": "NamaPenghargaan",
+                    "type": "C",
+                    "ConditionalStyleLevel": "Cell",
+                    "ClientSideConditionalStyleLevel": "Cell",
+                    "Updateable": true,
+                    "TableAlias": "Penghargaan",
+                    "canBeUsedInWhereClause": true,
+                    "nativeType": "Varying Wide Character",
+                    "table": "Penghargaan",
+                    "FieldToUpdate": "NamaPenghargaan",
+                    "summary": {
+                        "total": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "count": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "average": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "min": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "max": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "StdDev": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "Var": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "First": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "Last": {
+                            "inlinestyle": "text-align: right;"
+                        }
+                    },
+                    "display": "NamaPenghargaan",
+                    "varname": "NamaPenghargaan",
+                    "scope": "Local",
+                    "tmplTxtComputed": true,
+                    "tmplTxt": "with tmpl.detailfield_info[_fieldNumber_]\n\t.Fieldname = \"NamaPenghargaan\"\n\t.Scope = \"Local\"\n\t.DisplayFormat = \"\"\n\t.DisplayUnFormat = \"\"\n\t.ConditionalStyle = \"\"\n\t.ConditionalStyleLevel = \"Cell\"\n\t.ClientSideConditionalStyle = \"\"\n\t.ClientSideConditionalStyleLevel = \"Cell\"\n\t.QBEDisable = .f.\n\t.QBEInlineStyle = \"\"\n\t.QBEOptionsJSON = \"\"\n\t.canBeUsedInWhereClause = .t.\n\t.autoincrement = .f.\n\t.portableType = \"NationalVaryingCharacter\"\n\t.nativeType = \"Varying Wide Character\"\n\t.Type = \"C\"\n\t.UserDefinedClientSideValidationJavascript = \"\"\n\t.onChange_ValidationOption = \"None\"\n\t.Updateable = .t.\n\t.TreatBlankAsNull = .f.\n\t.Table_Alias = \"Penghargaan\"\n\t.FieldToUpdate = \"NamaPenghargaan\"\n\t.Varname = \"NAMAPENGHARGAAN\"\n\t.Initial_Value = \"NULL\"\n\t.Column.LabelPosition = \"Left\"\n\t.Controltype = \"TextBox\"\n\t.Textbox.Size = 21\n\t.Textbox.HTML5Type = \"\"\n\t.Textbox.customAttributes = \"\"\n\t.Textbox.MaxLength = 255\n\t.Textbox.InLineStyle = \"\"\n\t.Textbox.ContainerInlineStyle = \"\"\n\t.Textbox.IsPassword = .f.\n\t.hasWatermark= .f.\n\t.BreakType = \"None\"\n\t.nCols = 1\n\t.Column.Hide = .f.\n\t.BaseFieldExpression = \"NamaPenghargaan\"\n\t.SourceAlias = \"\"\n\t.Column.Heading = \"Nama Penghargaan\"\n\t.Column.Sort = \"Namapenghargaan\"\n\t.Column.FirstClickDirection = \"A\"\nend with\n\n\n",
+                    "DisplayOD": "{F=Tahoma,8}{I:'$a5_control_field'}{T=.2}{C=}{DATA=NamaPenghargaan}NamaPenghargaan",
+                    "DisplayODFlat": "{F=Tahoma,8}{I:'$a5_control_field'}{T=.2}{C=}{DATA=NamaPenghargaan}NamaPenghargaan",
+                    "displayODtree": "{F=Tahoma,8}{I:'$a5_control_field'} {C=}{DATA=NamaPenghargaan}NamaPenghargaan",
+                    "PortableType": "NationalVaryingCharacter",
+                    "onChange_ValidationOption": "None",
+                    "parentContainer": -1,
+                    "repeatingSectionParentId": -1,
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "columnQBEOptionsJSON": "",
+                    "errorInDefinition": false,
+                    "childTabPanes": "2\n13\n"
+                },
+                {
+                    "fieldname": "Tanggal",
+                    "Layout": {
+                        "Title": "Tab label",
+                        "TabPane": {
+                            "show": true
+                        },
+                        "TabControl": {
+                            "useModernTabs": true,
+                            "Type": "Tab",
+                            "TabPosition": "Top",
+                            "AccordionType": "Single",
+                            "InitialPane": 1,
+                            "BreakType": "After",
+                            "animation": {
+                                "show": {
+                                    "method": "Suggested",
+                                    "speed": "Slow"
+                                },
+                                "hide": {
+                                    "method": "Suggested",
+                                    "speed": "Slow"
+                                }
+                            }
+                        },
+                        "FrameTitle": "Frame Label",
+                        "Frame": {
+                            "BreakType": "After",
+                            "type": "Simple",
+                            "initialState": "Shown"
+                        },
+                        "Container": {
+                            "BreakType": "After"
+                        },
+                        "ButtonText": "Button",
+                        "HyperlinkText": "Hyperlink",
+                        "Spacer": {
+                            "Horizontal": ".1in",
+                            "Vertical": ".1in"
+                        },
+                        "nCols": 1
+                    },
+                    "controltype": "TextBox",
+                    "Search": {
+                        "FromLabel": "From:",
+                        "ToLabel": "To:"
+                    },
+                    "Image": {
+                        "noImageFoundImage": "<None>",
+                        "newRecordImage": "<None>"
+                    },
+                    "calendar": {
+                        "DateFormat": "mm/dd/yy",
+                        "SwitchYear": 20,
+                        "UseComboBoxes": true,
+                        "LowYear": 1950,
+                        "HighYear": 2050
+                    },
+                    "TextBox": {
+                        "Size": 18,
+                        "MaxLength": 17,
+                        "stylefieldiferror": true
+                    },
+                    "Watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "Lookup": {
+                        "Type": "Grid Component"
+                    },
+                    "TextArea": {
+                        "rows": 2,
+                        "cols": 20,
+                        "RichText": {
+                            "display": {
+                                "height": "1in",
+                                "width": "2in"
+                            },
+                            "style": "font: 9pt Arial;",
+                            "editButtonText": "Edit...",
+                            "toolbaricons": "",
+                            "toolbardefinition": ""
+                        }
+                    },
+                    "radiobutton": {
+                        "datasource": "DBF-Table",
+                        "NotInListRule": "Add to List",
+                        "orientation": "Horizontal",
+                        "stylefieldiferror": true,
+                        "type": "Static",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3
+                    },
+                    "CheckBox": {
+                        "type": "Static",
+                        "datasource": "DBF-Table",
+                        "stylefieldiferror": true,
+                        "NotInListRule": "Add to List",
+                        "orientation": "Horizontal",
+                        "initial_value": "False",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3
+                    },
+                    "connection_type": "Access Database",
+                    "dropdownbox": {
+                        "Size": 1,
+                        "type": "Static",
+                        "selectStyle": "Single",
+                        "datasource": "DBF-Table",
+                        "stylefieldiferror": true,
+                        "NotInListRule": "Add to List",
+                        "fieldNameOfFieldLinkedToParentControl": "<Auto>",
+                        "methodForComputingCascadingFilter": "<Auto>"
+                    },
+                    "DatePicker": {
+                        "Display": true,
+                        "UseComboBoxes": true,
+                        "DateFormat": "<DefaultDateOnlyFormat>",
+                        "LowYear": 1950,
+                        "HighYear": 2050,
+                        "SwitchYear": 20,
+                        "IconNumber": 2,
+                        "OpenMethod": "ClickIcon",
+                        "showDaysOfWeek": true,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "showTodayButton": true,
+                        "showPreDefinedDates": false,
+                        "preDefinedDatesJSON": ""
+                    },
+                    "column": {
+                        "heading": "Tanggal",
+                        "LabelPosition": "Left",
+                        "CanSort": true,
+                        "sort": "Tanggal",
+                        "firstclickdirection": "Ascending"
+                    },
+                    "initial_value": "NULL",
+                    "BreakType": "None",
+                    "nCols": 1,
+                    "link": {
+                        "StaticImageInlineStyle": "border-style: none;",
+                        "DisplayType": "Value in Field",
+                        "Type": "Field value is link address",
+                        "ajaxWindowType": "Modal-Popup",
+                        "ajaxWindowTitle": "Window",
+                        "ajaxWindowHeight": "3in",
+                        "ajaxWindowWidth": "4in",
+                        "ajaxWindowisResizable": true,
+                        "ajaxWindowWorkingMessage": "Working...",
+                        "ajaxWindowWorkingMessageIcon": "css/A5System/Images/wait.gif",
+                        "ajaxWindowRefreshGridOnClose": "None",
+                        "targetDIVHideHyperlink": "Close"
+                    },
+                    "BaseFieldExpression": "Tanggal",
+                    "type": "T",
+                    "DisplayFormat": "time(\"{grid.clientSideDateFormat}\",<value>)",
+                    "ConditionalStyleLevel": "Cell",
+                    "ClientSideConditionalStyleLevel": "Cell",
+                    "Updateable": true,
+                    "TableAlias": "Penghargaan",
+                    "canBeUsedInWhereClause": true,
+                    "nativeType": "Date",
+                    "table": "Penghargaan",
+                    "FieldToUpdate": "Tanggal",
+                    "summary": {
+                        "total": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "count": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "average": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "min": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "max": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "StdDev": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "Var": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "First": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "Last": {
+                            "inlinestyle": "text-align: right;"
+                        }
+                    },
+                    "display": "Tanggal",
+                    "varname": "Tanggal",
+                    "scope": "Local",
+                    "tmplTxtComputed": true,
+                    "tmplTxt": "with tmpl.detailfield_info[_fieldNumber_]\n\t.Fieldname = \"Tanggal\"\n\t.Scope = \"Local\"\n\t.DisplayFormat = \"time(\\\"{grid.clientSideDateFormat}\\\",<value>)\"\n\t.DisplayUnFormat = \"\"\n\t.ConditionalStyle = \"\"\n\t.ConditionalStyleLevel = \"Cell\"\n\t.ClientSideConditionalStyle = \"\"\n\t.ClientSideConditionalStyleLevel = \"Cell\"\n\t.QBEDisable = .f.\n\t.QBEInlineStyle = \"\"\n\t.QBEOptionsJSON = \"\"\n\t.canBeUsedInWhereClause = .t.\n\t.autoincrement = .f.\n\t.portableType = \"DateTime\"\n\t.nativeType = \"Date\"\n\t.Type = \"T\"\n\t.UserDefinedClientSideValidationJavascript = \"\"\n\t.onChange_ValidationOption = \"None\"\n\t.Updateable = .t.\n\t.TreatBlankAsNull = .f.\n\t.Table_Alias = \"Penghargaan\"\n\t.FieldToUpdate = \"Tanggal\"\n\t.Varname = \"TANGGAL\"\n\t.Initial_Value = \"NULL\"\n\t.Column.LabelPosition = \"Left\"\n\t.Controltype = \"TextBox\"\n\t.Textbox.Size = 18\n\t.Textbox.HTML5Type = \"\"\n\t.Textbox.customAttributes = \"\"\n\t.Textbox.MaxLength = 17\n\t.Textbox.InLineStyle = \"\"\n\t.Textbox.ContainerInlineStyle = \"\"\n\t.Textbox.IsPassword = .f.\n\t.hasWatermark= .f.\n\t.DatePicker.Display = .t.\n\t.DatePicker.UseComboBoxes = .t.\n\t.DatePicker.DateFormat = \"<DefaultDateOnlyFormat>\"\n\t.DatePicker.LowYear = 1950\n\t.DatePicker.HighYear = 2050\n\t.DatePicker.SwitchYear = 20\n\t.DatePicker.IconNumber = 2\n\t.DatePicker.OpenMethod = \"ClickIcon\"\n\t.DatePicker.lowDate = \"\"\n\t.DatePicker.highDate = \"\"\n\t.DatePicker.disabledDays = \"\"\n\t.DatePicker.showDaysOfWeek = .t.\n\t.DatePicker.showTodayButton = .t.\n\t.DatePicker.showWeeksOfYear = .f.\n\t.DatePicker.OKButtonLabel = \"OK\"\n\t.DatePicker.CancelButtonLabel = \"Cancel\"\n\t.DatePicker.lockColumnWidths = .f.\n\t.DatePicker.userMustSelectFromDatePicker = .f.\n\t.DatePicker.hasEvents = .f.\n\t.DatePicker.event.onItemDraw = \"\"\n\t.DatePicker.event.onClick = \"\"\n\t.DatePicker.event.onRightClick = \"\"\n\t.DatePicker.event.onSelect = \"\"\n\t.DatePicker.event.onNavigate = \"\"\n\t.DatePicker.event.onMonthNavigate = \"\"\n\t.DatePicker.event.onYearNavigate = \"\"\n\t.DatePicker.showPreDefinedDates = .f.\n\t.DatePicker.preDefinedDatesJSON = \"\"\n\t.BreakType = \"None\"\n\t.nCols = 1\n\t.Column.Hide = .f.\n\t.BaseFieldExpression = \"Tanggal\"\n\t.SourceAlias = \"\"\n\t.Column.Heading = \"Tanggal\"\n\t.Column.Sort = \"Tanggal\"\n\t.Column.FirstClickDirection = \"A\"\nend with\n\n\n",
+                    "DisplayOD": "{F=Tahoma,8}{I:'$a5_control_field'}{T=.2}{C=}{DATA=Tanggal}Tanggal",
+                    "DisplayODFlat": "{F=Tahoma,8}{I:'$a5_control_field'}{T=.2}{C=}{DATA=Tanggal}Tanggal",
+                    "displayODtree": "{F=Tahoma,8}{I:'$a5_control_field'} {C=}{DATA=Tanggal}Tanggal",
+                    "PortableType": "DateTime",
+                    "onChange_ValidationOption": "None",
+                    "parentContainer": -1,
+                    "repeatingSectionParentId": -1,
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "columnQBEOptionsJSON": "",
+                    "errorInDefinition": false,
+                    "childTabPanes": "2\n13\n"
+                }
+            ]
+        },
+        "customizationString": {
+            "DetailView": {
+                "toolbar": "{images.dv.close}=\"cssIcon=fa fa-times\"\n{images.dv.firstRecord}=\"cssIcon=fa fa-angle-double-left\"\n{images.dv.prevRecord}=\"cssIcon=fa fa-angle-left\"\n{images.dv.nextRecord}=\"cssIcon=fa fa-angle-right\"\n{images.dv.lastRecord}=\"cssIcon=fa fa-angle-double-right\"\n{images.dv.newRecord}=\"cssIcon=fa fa-plus\"\n{images.dv.cancelEdits}=\"cssIcon=fa fa-ban\"\n{images.dv.deleteRecord}=\"cssIcon=fa fa-trash-o\"\n{images.dv.saveRecord}=\"cssIcon=fa fa-floppy-o\"\n{images.dv.saveAndEnter}=\"cssIcon=fa fa-file-o\"\n{images.dv.switchToEdit}=\"cssIcon=fa fa-pencil\"\n{images.dv.switchToView}=\"cssIcon=fa fa-eye\"\n{images.dv.cancelNewRecord}=\"cssIcon=fa fa-times\"\n{images.disabled.dv.cancelEdits}=\"cssIcon=fa fa-ban color: #ddd;\"\n{images.disabled.dv.deleteRecord}=\"cssIcon=fa fa-trash-o color: #ddd;\"\n{images.disabled.dv.saveRecord}=\"cssIcon=fa fa-floppy-o color: #ddd;\"\n{images.disabled.dv.saveAndEnter}=\"cssIcon=fa fa-file-o\"\n{imageTitle.dv.close}=\"Tutup\"\n{imageTitle.dv.firstRecord}=\"Awal\"\n{imageTitle.dv.prevRecord}=\"Sebelum\"\n{imageTitle.dv.nextRecord}=\"Berikutnya\"\n{imageTitle.dv.lastRecord}=\"Terakhir\"\n{imageTitle.dv.newRecord}=\"Tambahkan\"\n{imageTitle.dv.cancelEdits}=\"Batalkan Edit\"\n{imageTitle.dv.deleteRecord}=\"Hapus\"\n{imageTitle.dv.saveRecord}=\"Simpan\"\n{imageTitle.dv.saveAndEnter}=\"Simpan dan Tambah\"\n{imageTitle.dv.cancelNewRecord}=\"Batalkan Tambah Data\""
+            }
+        },
+        "detailViewToolbar": {
+            "helpButtonIcon": "images/$$generic.help.png.a5image",
+            "helpButtonBubbleHelp": "Open help window."
+        },
+        "HasSearchPart": true,
+        "search": {
+            "HTML_Template_source": "Computed",
+            "title": "Pegawai ",
+            "title_when_hidden": "Cari Data",
+            "show_title": true,
+            "search_button_label": "Cari",
+            "form_method": "Get",
+            "sorting_listbox_label_position": "Left",
+            "sort": {
+                "prompt": "Sort&nbsp;by",
+                "promptInLineStyle": "color: #000;",
+                "listbox": {
+                    "fieldname_prompt": "Select Value",
+                    "use_column_headings": true,
+                    "order_prompt": "Select Order",
+                    "order_choices": "Ascending,Descending"
+                }
+            },
+            "records_per_page_label_position": "Left",
+            "records_per_page": {
+                "prompt": "Records&nbsp;per&nbsp;page",
+                "promptInLineStyle": "color: #000;",
+                "listbox": {
+                    "value_prompt": "Select Value",
+                    "choices": "1,2,5,10,25,50,75,100"
+                }
+            },
+            "orientation": "Horizontal",
+            "combine_criteria_using": 1,
+            "style": 2,
+            "allow_qbf_style": true,
+            "keyword_label": "Search for?",
+            "has_Clear_link": true,
+            "Clear_link_Label": "Hapus Pencarian",
+            "Clear_link_BubbleHelp": "Clear Search",
+            "TargetPage": "<Self>",
+            "EnableShowHide": true,
+            "InitialState": "Closed",
+            "embedInGridPosition": "Above Titles",
+            "embedded": {
+                "hasFreeformLayout": true,
+                "showHideEmbeddedSearchIcon": "images/$$filter.png.a5image",
+                "showHideEmbeddedSearchBubbleHelp": "Show/hide the Search Part",
+                "showSearchIconsInRowSelector": true,
+                "searchIconBubbleHelp": "Search for records",
+                "clearSearchIconBubbleHelp": "Clear search criteria",
+                "searchIcon": "images/$$filter.records.png.a5image",
+                "clearSearchIcon": "images/$$filter.clear.png.a5image"
+            },
+            "embeddedStyle": "Free-form region for each column",
+            "showHideAnimation": "fade",
+            "toolbarPosition": "Above",
+            "savedSearches": {
+                "loadSearchPrompt": "Saved search to load:",
+                "saveSearchPrompt": "Name:",
+                "listboxHeading": "Existing Saved Searches",
+                "promptToLoadChoices": "Click to load choices...",
+                "loadButtonLabel": "Load",
+                "saveButtonLabel": "Save",
+                "cancelButtonLabel": "Cancel",
+                "listBoxHeight": "1in",
+                "dialogWidth": "2in",
+                "executeSearchOnLoad": true,
+                "saveSearchBubbleHelp": "Save search criteria",
+                "loadSearchBubbleHelp": "Load search criteria",
+                "warningBlankName": "You have not specifed a name.",
+                "warningDuplicateName": "Search not saved. Please specify a unique name."
+            }
+        },
+        "searchToolbar": {
+            "helpButtonIcon": "images/$$generic.help.png.a5image",
+            "helpButtonBubbleHelp": "Open help window."
+        },
+        "searchFields": {
+            "a_fields": [
+                {
+                    "controltype": "TextBox",
+                    "Image": {
+                        "noImageFoundImage": "<None>",
+                        "newRecordImage": "<None>"
+                    },
+                    "TextBox": {
+                        "Size": 40,
+                        "MaxLength": 200,
+                        "stylefieldiferror": true
+                    },
+                    "TextArea": {
+                        "rows": 2,
+                        "cols": 20,
+                        "RichText": {
+                            "display": {
+                                "height": "1in",
+                                "width": "2in"
+                            },
+                            "style": "font: 9pt Arial;",
+                            "editButtonText": "Edit...",
+                            "css": "",
+                            "toolbaricons": "",
+                            "toolbardefinition": ""
+                        }
+                    },
+                    "radiobutton": {
+                        "datasource": "DBF-Table",
+                        "NotInListRule": "Add To List if Not Null",
+                        "orientation": "Horizontal",
+                        "stylefieldiferror": true,
+                        "type": "Static",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3
+                    },
+                    "CheckBox": {
+                        "type": "Static",
+                        "datasource": "DBF-Table",
+                        "stylefieldiferror": true,
+                        "NotInListRule": "Add To List if Not Null",
+                        "orientation": "Horizontal",
+                        "initial_value": "False",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3
+                    },
+                    "connection_type": "Access Database",
+                    "dropdownbox": {
+                        "Size": 1,
+                        "type": "Static",
+                        "selectStyle": "Single",
+                        "datasource": "DBF-Table",
+                        "dbf": {
+                            "displayValueFieldType": ""
+                        },
+                        "stylefieldiferror": true,
+                        "NotInListRule": "Add To List if Not Null",
+                        "fieldNameOfFieldLinkedToParentControl": "<Auto>",
+                        "methodForComputingCascadingFilter": "<Auto>"
+                    },
+                    "DatePicker": {
+                        "UseComboBoxes": true,
+                        "DateFormat": "<DefaultTimeFormat>",
+                        "LowYear": 1950,
+                        "HighYear": 2050,
+                        "SwitchYear": 20,
+                        "IconNumber": 2,
+                        "OpenMethod": "ClickIcon",
+                        "showDaysOfWeek": true,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "showPreDefinedDates": false,
+                        "preDefinedDatesJSON": "",
+                        "showTodayButton": true
+                    },
+                    "column": {
+                        "heading": "Nama Penghargaan",
+                        "sort": "Namapenghargaan",
+                        "LabelPosition": "Left",
+                        "canSort": true,
+                        "firstclickdirection": "Ascending"
+                    },
+                    "initial_value": "NULL",
+                    "link": {
+                        "StaticImageInlineStyle": "border-style: none;",
+                        "ajaxWindowType": "Modal-Popup",
+                        "ajaxWindowTitle": "Window",
+                        "ajaxWindowHeight": "3in",
+                        "ajaxWindowWidth": "4in",
+                        "ajaxWindowisResizable": true,
+                        "ajaxWindowWorkingMessage": "Working...",
+                        "ajaxWindowWorkingMessageIcon": "css/A5System/Images/wait.gif",
+                        "ajaxWindowRefreshGridOnClose": "None",
+                        "targetDIVHideHyperlink": "Close",
+                        "DisplayValue": "",
+                        "TargetWindow": "",
+                        "TargetPage": ""
+                    },
+                    "type": "C",
+                    "display": "NamaPenghargaan",
+                    "TableAlias": "Penghargaan",
+                    "updateable": true,
+                    "table": "Penghargaan",
+                    "FieldToUpdate": "NamaPenghargaan",
+                    "varname": "NamaPenghargaan",
+                    "fieldname": "NamaPenghargaan",
+                    "BreakType": "None",
+                    "DisplayOD": "{F=Tahoma,8}{I:'$a5_control_field'} {C=}{DATA=NamaPenghargaan}NamaPenghargaan",
+                    "DisplayODFlat": "{F=Tahoma,8}{I:'$a5_control_field'}{T=.2}{C=}{DATA=NamaPenghargaan}NamaPenghargaan",
+                    "displayODtree": "{F=Tahoma,8}{I:'$a5_control_field'} {C=}{DATA=NamaPenghargaan}NamaPenghargaan",
+                    "Search": {
+                        "FromLabel": "From:",
+                        "ToLabel": "To:"
+                    },
+                    "scope": "Local",
+                    "conditionalStyleLevel": "Cell",
+                    "clientSideconditionalStyleLevel": "Cell",
+                    "Watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "lookup": {
+                        "type": "Edit-Combo List"
+                    },
+                    "nCols": 1,
+                    "BaseFieldExpression": "NamaPenghargaan",
+                    "summary": {
+                        "total": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "count": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "average": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "min": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "max": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "StdDev": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "Var": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "First": {
+                            "inlinestyle": "text-align: right;"
+                        },
+                        "Last": {
+                            "inlinestyle": "text-align: right;"
+                        }
+                    },
+                    "tmplTxtComputed": true,
+                    "tmplTxt": "with tmpl.searchfield_info[_fieldNumber_]\n\t.Fieldname = \"NamaPenghargaan\"\n\t.SearchExpression = \"NamaPenghargaan\"\n\t.Initial_Value = \"NULL\"\n\t.Search_Style = 0\n\t.KeywordSearch = .f.\n\t.Scope = \"Local\"\n\t.ConditionalStyle = \"\"\n\t.ConditionalStyleLevel = \"Cell\"\n\t.ClientSideConditionalStyle = \"\"\n\t.ClientSideConditionalStyleLevel = \"Cell\"\n\t.QBEDisable = .f.\n\t.QBEInlineStyle = \"\"\n\t.QBEOptionsJSON = \"\"\n\t.canBeUsedInWhereClause = .t.\n\t.autoincrement = .f.\n\t.portableType = \"NationalVaryingCharacter\"\n\t.nativeType = \"Varying Wide Character\"\n\t.Type = \"C\"\n\t.UserDefinedClientSideValidationJavascript = \"\"\n\t.onChange_ValidationOption = \"None\"\n\t.Varname = \"NAMAPENGHARGAAN\"\n\t.Column.LabelPosition = \"Left\"\n\t.Controltype = \"TextBox\"\n\t.Textbox.Size = 40\n\t.Textbox.HTML5Type = \"\"\n\t.Textbox.customAttributes = \"\"\n\t.Textbox.MaxLength = 200\n\t.Textbox.InLineStyle = \"\"\n\t.Textbox.ContainerInlineStyle = \"\"\n\t.Textbox.IsPassword = .f.\n\t.hasWatermark= .f.\n\t.BreakType = \"None\"\n\t.nCols = 1\n\t.Column.Hide = .f.\n\t.BaseFieldExpression = \"NamaPenghargaan\"\n\t.SourceAlias = \"\"\n\t.Column.Heading = \"Nama Penghargaan\"\nend with\n\n\n\n\n\n",
+                    "canBeUsedInWhereClause": true,
+                    "NativeType": "Varying Wide Character",
+                    "PortableType": "NationalVaryingCharacter",
+                    "onChange_ValidationOption": "None",
+                    "repeatingSectionParentId": -1,
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "Layout": {
+                        "Title": "Tab label",
+                        "TabPane": {
+                            "show": true
+                        },
+                        "TabControl": {
+                            "useModernTabs": true,
+                            "Type": "Tab",
+                            "TabPosition": "Top",
+                            "AccordionType": "Single",
+                            "InitialPane": 1,
+                            "BreakType": "After",
+                            "animation": {
+                                "show": {
+                                    "method": "Suggested",
+                                    "speed": "Slow"
+                                },
+                                "hide": {
+                                    "method": "Suggested",
+                                    "speed": "Slow"
+                                }
+                            }
+                        },
+                        "FrameTitle": "Frame Label",
+                        "Frame": {
+                            "BreakType": "After",
+                            "type": "Simple",
+                            "initialState": "Shown"
+                        },
+                        "Container": {
+                            "BreakType": "After"
+                        },
+                        "ButtonText": "Button",
+                        "HyperlinkText": "Hyperlink",
+                        "Spacer": {
+                            "Horizontal": ".1in",
+                            "Vertical": ".1in"
+                        },
+                        "nCols": 1
+                    },
+                    "calendar": {
+                        "DateFormat": "mm/dd/yy",
+                        "SwitchYear": 20,
+                        "UseComboBoxes": true,
+                        "LowYear": 1950,
+                        "HighYear": 2050
+                    },
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "SearchExpression": "NamaPenghargaan",
+                    "index": 1000,
+                    "parentContainer": -1,
+                    "columnQBEOptionsJSON": "",
+                    "flagWindowContainer": false,
+                    "javascriptOnShow": "",
+                    "errorInDefinition": false,
+                    "childTabPanes": "2\n13\n"
+                }
+            ]
+        },
+        "searchField_index": 1,
+        "eventIndex": 1,
+        "activeLanguage": "<Default>",
+        "LayoutColumns": 1,
+        "DetailLayoutColumns": 1,
+        "style_name": "DDSJava",
+        "PreCalcMode": "Standard",
+        "FontSize": "Smallest",
+        "show_title": true,
+        "title": "<font size=\"3\">Data Pegawai</font>",
+        "style_type": "Alpha Five",
+        "useCompactTheme": true,
+        "overrideStyleName": "Default",
+        "resolveAbstractClassNames": true,
+        "odd_band_size": 1,
+        "even_band_size": 1,
+        "odd_column_band_size": 1,
+        "even_column_band_size": 1,
+        "rows": 10,
+        "maxRowsPerPage": 200,
+        "rowsWhenSearchActive": -1,
+        "suppress_empty_rows": true,
+        "has_row_separator": true,
+        "show_column_titles": 1,
+        "show_row_labels": true,
+        "sort_style": 3,
+        "reset_page_number_when_sorting": true,
+        "RepeatingColumns": 1,
+        "snaking": "TBLR",
+        "total_records_row_position": 1,
+        "grid_layout_style": 1,
+        "grid_layout_template_computation_method": "Automatic",
+        "No_records_message": "No records in query",
+        "Show_Add_Records_Confirmation_Message": true,
+        "summary": {
+            "total": {
+                "label": "Total",
+                "LblInlineStyle": "text-align: right;"
+            },
+            "count": {
+                "label": "Count",
+                "LblInlineStyle": "text-align: right;"
+            },
+            "average": {
+                "label": "Average",
+                "LblInlineStyle": "text-align: right;"
+            },
+            "min": {
+                "label": "Minimum",
+                "LblInlineStyle": "text-align: right;"
+            },
+            "max": {
+                "label": "Maximum",
+                "LblInlineStyle": "text-align: right;"
+            },
+            "StdDev": {
+                "label": "Std. Dev.",
+                "LblInlineStyle": "text-align: right;"
+            },
+            "Var": {
+                "label": "Variance",
+                "LblInlineStyle": "text-align: right;"
+            },
+            "First": {
+                "label": "First",
+                "LblInlineStyle": "text-align: right;"
+            },
+            "Last": {
+                "label": "Last",
+                "LblInlineStyle": "text-align: right;"
+            },
+            "RowOrder": "Total,Count,Average,Min,Max,StdDev,Var,First,Last",
+            "ShowOnLastPageOnly": true,
+            "repeatColumnHeadingAboveSummaryValues": false
+        },
+        "NewRecordsTitle": "<tr><td class=\"[class.gridData]\" colspan=\"{a5_colspan}\" style=\"padding: 0px;\" >New Records</td></tr>",
+        "ExistingRecordsTitle": "<tr><td class=\"[class.gridData]\" colspan=\"{a5_colspan}\" style=\"padding: 0px;\" >Existing Records</td></tr>",
+        "row_separator": "<tr><td class=\"{a5_style}SeparatorTD\" colspan=\"{a5_colspan}\" style=\"padding: 0px;\" ></td></tr>",
+        "highlight_row_onHover": true,
+        "RecordsPerPageChoices": "1,2,5,10,25,50,75,100",
+        "RecordsPerPageSelectorTemplate": "&nbsp;&nbsp;{Grid.RecordsPerPageSelector} Records per page",
+        "alphabet_button": {
+            "style": "Hyperlink",
+            "has_ALL_option": true,
+            "ALL_Label": "All",
+            "alignment": "Left",
+            "SearchBarType": "Alphabet Buttons"
+        },
+        "qbe": {
+            "menu_internationalization": "None",
+            "initial_display": "Hidden",
+            "toggleQBERowHyperlinkText": "Show/Hide QBE Row"
+        },
+        "SimpleStyleMode": "FieldsOnly",
+        "RowExpand": {
+            "ExpandMethod": "Click icon",
+            "Type": "LinkedContent",
+            "WorkingMessage": "<div style=\"width: 4in; height: .5in\">\n\t<img src=\"css/A5System/Images/wait.gif\" /> Working...\n</div> \n",
+            "Mode": "Multiple"
+        },
+        "linkedContent": {
+            "lockWindowText": "<div style=\"padding: 5pt;\"><img style=\"vertical-align:middle;\" src=\"css/A5System/Images/wait.gif\" /> Please wait...</div>",
+            "lockWindowClassName": "A5WindowLock"
+        },
+        "hasSelectedRowColumn": true,
+        "CheckboxSelectType": "SinglePage",
+        "cssIcons": "font-awesome",
+        "MasterTemplateStyle": "Table - Vertical Layout",
+        "MasterLayout": {
+            "PaneLabel": {
+                "Search": "Search",
+                "Grid": "Grid",
+                "DetailView": "Detail"
+            },
+            "AccordionStyle": "Multiple",
+            "InitialOpenPanes": "Search,Grid,DetailView"
+        },
+        "verticalAlignDataInColumns": "Middle",
+        "CollapseBar": {
+            "Title": "Collapse Grid",
+            "InitialState": "open"
+        },
+        "honorDBFFieldRules": true,
+        "languageTags_RemoveUnConsumedTags": true,
+        "onlyIncludeSelectedFieldsInQuery": true,
+        "flagAddPKToORDER": true,
+        "saveFileType": "Formatted JSON",
+        "captureJSErrorStackTrace": false,
+        "datePicker": {
+            "dayNames": "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+            "monthNames": "January,February,March,April,May,June,July,August,September,October,November,December",
+            "firstDayOfWeek": 1,
+            "todayButtonText": "Today",
+            "closeButtonText": "Close"
+        },
+        "ToolbarActionButtons": "{ActionButton:IMPORT}\n{ActionButton:EXPORT}\n",
+        "iconMapOverrides": "{images.RowExpander.Open}=\"cssIcon=fa fa-plus-square\"\n{images.RowExpander.Close}=\"cssIcon=fa fa-minus-square\"\n{images.GridRow.NewRecordRow.NoFocus}=\"cssIcon=fa fa-plus\"\n{images.GridRow.NewRecordRow.HasFocus}=\"cssIcon=fa fa-plus\"\n{images.GridRow.SaveRecord}=\"cssIcon=fa fa-floppy-o\"\n{images.GridRow.SaveRecord.Disabled}=\"cssIcon=fa fa-floppy-o\"\n{images.GridRow.UndoChanges}=\"cssIcon=fa fa-undo\"\n{images.GridRow.UndoChanges.Disabled}=\"cssIcon=fa fa-undo\"\n{images.GridRow.EditRecord}=\"cssIcon=fa fa-pencil\"\n{images.GridRow.EditRecord.Disabled}=\"cssIcon=fa fa-pencil\"\n{images.GridRow.DeleteRecord}=\"cssIcon=fa fa-trash\"\n{images.GridRow.DeleteRecord.Disabled}=\"cssIcon=fa fa-trash\"\n{images.GridRow.CancelEditRecord}=\"cssIcon=fa fa-ban\"\n{images.GridRow.CancelEditRecord.Disabled}=\"cssIcon=fa fa-ban\"\n{images.GridRow.HasError}=\"cssIcon=fa fa-exclamation-circle\"\n{images.PopUpWindow.Lookup.Close}=\"cssIcon=fa fa-times\"\n{images.PopUpWindow.DetailView.Close}=\"cssIcon=fa fa-times\"\n{images.CollapseContainer.Open}=\"cssIcon=fa fa-plus-square\"\n{images.CollapseContainer.Close}=\"cssIcon=fa fa-minus-square\"\n{images.FieldHelpIcon}=\"cssIcon=fa fa-question-circle\"\n{images.SearchPart.SaveSearchCriteria}=\"cssIcon=fa fa-floppy-o\"\n{images.SearchPart.LoadSearchCriteria}=\"cssIcon=fa fa-folder-open-o\"\n{images.GridRow.SelectionPointer}=\"cssIcon=fa fa-caret-right\"\n{images.Grid.SortAsc}=\"cssIcon=fa fa-caret-up\"\n{images.Grid.SortAscDisabled}=\"cssIcon=fa fa-caret-up\"\n{images.Grid.sortDesc}=\"cssIcon=fa fa-caret-down\"\n{images.grid.sortDescDisabled}=\"cssIcon=fa fa-caret-down\"\n{images.grid.firstPage}=\"cssIcon=fa fa-angle-double-left\"\n{images.grid.firstPageDisabled}=\"cssIcon=fa fa-angle-double-left\"\n{images.grid.prevPage}=\"cssIcon=fa fa-angle-left\"\n{images.grid.prevPageDisabled}=\"cssIcon=fa fa-angle-left\"\n{images.grid.nextPage}=\"cssIcon=fa fa-angle-right\"\n{images.grid.nextPageDisabled}=\"cssIcon=fa fa-angle-right\"\n{images.grid.lastPage}=\"cssIcon=fa fa-angle-double-right\"\n{images.grid.lastPageDisabled}=\"cssIcon=fa fa-angle-double-right\"\n{images.edit.dropdownArrow}=\"cssIcon=fa fa-caret-down\"\n{images.edit.datePicker}=\"cssIcon=fa fa-calendar\"\n{images.edit.dateTimePicker}=\"cssIcon=fa fa-calendar-o\"\n{images.edit.timePicker}=\"cssIcon=fa fa-clock-o\"\n{images.edit.lookup}=\"cssIcon=fa fa-search\"\n",
+        "gridToolbar": {
+            "ExportButtonIcon": "images/$$application.ms.excel.png.a5image",
+            "ExportButtonHelp": "Export data in Grid to Excel",
+            "ExportButtonFormat": "Excel-XLSX",
+            "ExportButtonMaxRows": "10000",
+            "exportHiddenColumns": true,
+            "exportUseColumnHeadings": true,
+            "helpButtonIcon": "images/$$generic.help.png.a5image",
+            "helpButtonBubbleHelp": "Open help window."
+        },
+        "helpTableType": "DBF",
+        "fieldHelpWindowStyle": "modal-resizeable",
+        "autoRefreshInterval": 60,
+        "genericDataStoreTableType": "DBF",
+        "RecordNavigationStyle": "NavigationButtons",
+        "fetchMoreRecordsButton": {
+            "text": "More Records"
+        },
+        "namedLayout": {
+            "selectorPosition": "AboveGrid"
+        },
+        "scrollableRegionHeight": "2in",
+        "scrollableRegionWidth": "100%",
+        "defaultColumnWidth": "1in",
+        "RecNav": {
+            "HTML_Template_source": "Computed",
+            "Position": 1,
+            "Show_disabled_controls": true,
+            "Show_Page_Count": true,
+            "Page_Numbering_Style": 3,
+            "PagesTemplate_w_PageCount": "{PageNumber} of {PageCount}",
+            "PagesTemplate_wout_PageCount": "{PageNumber}",
+            "Has_First_Button": true,
+            "Has_Prev_Button": true,
+            "Has_Next_Button": true,
+            "Has_Last_Button": true,
+            "Number_of_page_links": 10,
+            "First_Label": "First",
+            "Prev_Label": "Prev",
+            "Next_Label": "Next",
+            "Last_Label": "Last",
+            "Justify": "Left",
+            "SuppressIfOnlyOnePage": true,
+            "First_on_Image_name": "{css_path_reference}/{a5_style}/FirstOn.png",
+            "First_off_Image_name": "{css_path_reference}/{a5_style}/FirstOff.png",
+            "Prev_on_Image_name": "{css_path_reference}/{a5_style}/PrevOn.png",
+            "Prev_off_Image_name": "{css_path_reference}/{a5_style}/PrevOff.png",
+            "Next_on_Image_name": "{css_path_reference}/{a5_style}/NextOn.png",
+            "Next_off_Image_name": "{css_path_reference}/{a5_style}/NextOff.png",
+            "Last_on_Image_name": "{css_path_reference}/{a5_style}/LastOn.png",
+            "Last_off_Image_name": "{css_path_reference}/{a5_style}/LastOff.png"
+        },
+        "edit": {
+            "Execute_Update_Commands": true,
+            "allow_update": true,
+            "allow_insert": true,
+            "number_of_insert_rows": 3,
+            "allow_delete": true,
+            "validateFieldsSetting": "All Fields",
+            "delete_checkbox_label": "Delete",
+            "delete_checkbox_label_position": "Left",
+            "delete_checkbox_allowDeleteAll": false,
+            "cancel_button_text": "Cancel",
+            "submit_button_text": "Submit",
+            "confirm_before_submit_message": "Submit changes?",
+            "check_for_write_conflicts": true,
+            "write_conflict_check_type": 2,
+            "save_original_values": true,
+            "TargetPage": "<Self>",
+            "field_error_style": {
+                "type": "Icon",
+                "icon": "images/$$generic.error.png.a5image"
+            },
+            "RefreshRowMethod": "AutoSelect",
+            "Editable_GridRow_Options_Style": "Icons",
+            "RefreshRowOnFocus": true,
+            "RefreshRowOnDirty": true,
+            "row_errors_window_title": "Errors",
+            "row_errors_window_style": "color: red; width: 6in; height: 2in;",
+            "RowEditStyle": "AllRows",
+            "NewRecordsEditStyle": "AlwaysShown",
+            "NewRecordsButtonLabel": "New Records",
+            "DeleteRecordControl": "Icon",
+            "HasRowStatusColumn": true,
+            "OneEditableRowAtATime": true,
+            "LazyEdit": true
+        },
+        "ValidationSettingsErrorTemplate": "Field '{Fieldlabel}', Value '{Value}' : {Error}",
+        "ValidationSettingsMessage": "Click the 'Back' button and correct the errors.",
+        "ValidationErrorsRowColumnTitle": "Row",
+        "ValidationErrorsErrorColumnTitle": "Error",
+        "OnlyValidateEditedFields": true,
+        "AddNewRecordRowsPosition": "Bottom",
+        "autoNumberColumnLabel": "Auto",
+        "QuickSearch": {
+            "QuickSearchPosition": "In Grid",
+            "QuickSearchAlign": "Left",
+            "ControlType": "Textbox",
+            "AutoSubmit": true,
+            "Label": "Search for:",
+            "SearchButtonLabel": "Search",
+            "AllowQBFStyleSearch": true,
+            "SearchStyle": "Wildcard",
+            "Height": 1,
+            "SelectStyle": "Single",
+            "Size": 20,
+            "MaxLength": -1,
+            "Orientation": "Horizontal",
+            "choices": {
+                "type": "Static",
+                "datasource": "DBF-Table"
+            },
+            "connection_type": "Access Database",
+            "HasShowAllButton": true,
+            "ShowAllButtonLabel": "All"
+        },
+        "info": {
+            "createdBy": "yuliusd",
+            "LastUpdatedBy": "yuliusd",
+            "DateUpdated": "07/02/2018 01:35:06 10 pm",
+            "DateCreated": "29/01/2018 09:53:50 34 am"
+        },
+        "BuilderVersion": 2,
+        "current_pane_tree": "Grid.Properties",
+        "hasActionButtons": true,
+        "embeddedMode": false,
+        "_style_versionNumber": 4,
+        "AjaxOn": true,
+        "fpInstalled": "QoKgoySniCzPGskZSTngR3G9Ctug7BRBvYDjPHZS4pgWNzbNrKLkPhWCepZxLrtwpiXMBIK0Vx0n5a7J0Rw7UcjK8XuaGaG4W2I4+4n17vjYP2TWMx+zoaTv8LtEmOzJ5oNi3h0n4wVjW3gUIKBi67UOQ0D2ffcn1YoiZjuRyLgj41hmvo+Fw3iEP3wuYZYwE564foce+NUjxEE0Sux+yTkpFwum2noANGZHT+T19A36ZZuBwNNt85v8CbYOBdWymSJ6lysqBWdOt/2IbXA7FjpqiRS8SjCEOVuAJQd/doxfhbR8cqirIW6t4C945XJX4qP+Wx4Fkz5W1HJg5vURAU8/y0YiKMMSkfZaJC/UMWzm7PTwWgeCKL2Q6kzKReITHbKdlWgEVdiSo678FsA2U3yjVweFvpZedbKCy9kggHuQtXRgYsfnGJeRZzTD5CzltVO3DK246//wdM8pkdt3SZ4ooNi43E+Itrn4J/c0+w+eOxjXlIDd91XGcD+aU+8cH1qtPeoRzrYgjRGbhh0HadsOrmfXeza3MFM4ZSGXRxl4BtSUIzP77nNWRkR2833f0PdZ11UvJ0mBJpZCk3BJLYsnJi2KvDjwXmZwZhOtjpe/IKi/CtASoGe53yGE20FC6yS0cm0NptPxG4E29qJ7c2cKS7lRGWthUXvOZ8Ia5q8UIVYWtnQWA1kI90aD4gqU5xyOa792YXiESkQQfDM6cA4UmYtyleHXLjhtPCh/W402aQ+kk8Bb1kjc5KXtNXoIr9cxU/hCxukV8yKdHAshc1Gwf6TaY95oNK9taOYhnY+y0A9njQM2GswTrLkVsnIl9yIOF6Ztytsu8GzqdPz1Of/Mm7yQ6H+hgsKRabWRm392furoIW54yF1WKJzRnEf7lxMSKDPb8ZowA4xrXUNuwGoZtczF66ZvUS1IunZPOBFBE2uR9AbjndjBNqdEdFfSccxM0uRcdm4uKWpeqgUFwQ67+7FUASQSmSKJqze55TPgf5f6/c/TVx4gU/bOcjAghwqZsNy8Hd4uR//L0WIXCwwkxtphCaMJmsZYXJH5wvcS4QynditGC5ILm+Ugca6JCA+i9pUrl+NN+VsDqyj1bSQQxqpXZ5pFMWn4BSM3F3Skl+IU5ZgK07Xu/netMWDEwionG7EM2uJyAgCgPzz+tBBdwHrfX4wq4W9gkNscg8SykdJ1xWCtjhYuSnGWZAhF3QsoZKSeTLFzFpp9OZEvb0KmhTyc1a2Y4DHCWi57YId60kIATGKab4NeoaYXy9RGjs8oD5vLG7Le2uyyD1kGpWFzy7558MMEW1Eb7OhiHHwVzR24ErPy2dVvymWQYWA65kmGrgc1ZtOafYEhqhMd1yXBY21AcyRJNbZWyckx5+Z0TdEwq4D/YrZsqHnf/ETEcZAzEVhjO29OqngZ3qko8NVBD10gmBB3hH3g5TYtwQAV212wajw6hdqhlxmOGYz9fNf/MZ5Rc7dc0qCLQ1qUs3f339ghds2WtcO33FnxnYGD4KTvt0Ik10rQ/LDHl0jAWzVBcL3mJKRh/5lDyaUImeYe+MSk0Xk3hzRRCXWmPI3mwBvq5cLrguBAkzD/iTXANhtPotW6iGzi/Mbk0jSKEYtf2HfW0Q1LNXVq/6EQ/DZ9bQKwXD5hMxSZHlMkTTOOCCX4w/gLcvLGSBdwXMj7GnGfRAZiJdOiX+Se54hoaq0ix/9lP3MBj6a2DUMS/hDfAn0PEbwr8P1xW0Q5iPlnrxg4+emkLIjuCL20sQGBgSvhmWd+g9KqDOu/FBERS7bpcwVdL3phUT2Qja4vtEiY5LLMKcXGC/G1Hd5h7ZdynA3rfPF346lDLeg4PFojC3SdEssqoWesANL9DWF7CEG+rT83EbwzHXW0bRfYugurHxC0axqALiau6yedOUTHVQeYKNWyQ/v24Y1cPk6ACr+8QPvSNNT+LYXKpAba1pRbib3UhMGVpgT70iwSLhMecW+4y0WqDd1lg8Z8GvyBfwQTRXSB2Zsb9/KC+ujxfXlqIJ0Y+LYBGfEJoV/r/RjPex0P89rYQuGzilCM6RIC2Z95nGWdXoY83F5jESrZH338/rBLaQCQy1b1g98iLKwgYp5s72KiZkc9x6YpQLbKw07pTMClPvfaBwGVXGwXeruMMjZEF51Do3HlS9wJCKgWtFkpRsZXKq1P3qbcagfRs6syJV/g0SgIgliKKcArehPuXrPhumbxaFbOr0Uh6kbQDLdsRBtNgJ7c86iLes4h2uMsx6bIubPa6yeODDGB6amM/eqF3R/esj5WeJliF47nVs23JTmjniSbyi8jdBcDGMlgDyMMRh4CYBVM/FYU6JDDJ/G+6snIvNZhTz71MjDs0ZpRT3dnV0crsLVQB+P6o/eYeQTKYjHhs/D0y9Bi+C/zgch38MOHMtraWZFKOTXAUVpXEmEQV8qIACZlsBtf6KXnRCFMzX+ivy9fWASGPB51Tq8KbahYs5+Z9J4bK6cPtvuwLzhV+I0PFjMlzXHp0K0X1VK4psZussNx6q/PXkDLfuQfRbgnzmB5pI46qejX/gqgauWe7hILkO8MhR6/aNiB6Zu9bn7G/wtuOXrO7cyiDL/G5wZEqNYtDm5oHtfZ8xgDV1nq+w0dS4WGgqc4juDrAv6lc99/gteFp+/IrfanRr+SdQWkn1xfBOSGSD3QhMrCvRK1iJafncX6AzRbtfojdxaSx9mWeO+OMYMqdKRkQYnHYvMFdVCJuG0QQb+4VWDu9bysQPZyC3R5PrXAY1ztiK9U5oskBQIby7iskXGCR/5dRXq8xLoC1Hlp4zY34oP55K0x/2IYR5cSBk7xqGjmayAVXNsZ7AsjvzdXVl8GTlJCxqcaRrVN4Mgy0aMXIWKao+7EnGJrHYpil1cdRkE5XW0ePf4eWKusCCAa1Jz1H8H6Ngy8wbxsQ//a29nr4T/mWYp69vQbewQRWCNVLnUnc2L7zMRiv3V62ywv8KZG7DIakb1SWBdpeDCFTSRjT4ICVV+PmTzi++wGMY1Osb1ukRgRSrqPdFV6DPWULdmwiUCdeZRgEu6acNXX+P9zlYB6MkTBTaTse4R3oY8fsu8o6k1C/QsDRTs1sSGgWYmDqpR+AnKOOaGdSwA9SNqlCS/h3K1GI58H9aqxBHpiK5Ge5GbXQpTpUzMEDbJ5pHXp4VrkwQaFCUufP8CIBppNwBLw0CK2NLRxBfdQKS/K+NA8BRHdNcdfAgZJvfp56uIHMbQebBZdq8PLHY13FPrQsh0+lM0CfD9S4wPYnVwUwq41IxSB3+g063TrCJyb0H/F2kfG8YHdW5LvgZQe4WdkKepfwNWVjfw12GuAc0aDFemeYO76ZKbV300I",
+        "componentFilename": "C:\\Users\\yuliusd\\Desktop\\SIP\\SIP.WebProjects\\Default.WebProject\\penghargaan.a5wcmp",
+        "PAliases": {
+            "alias": "[PathAlias.ADB_Path]\n",
+            "alias_expanded": "C:\\Users\\yuliusd\\Desktop\\SIP\n",
+            "alias_aliasExpanded": "[PathAlias.ADB_Path]|C:\\Users\\yuliusd\\Desktop\\SIP"
+        },
+        "_row_onHover": true,
+        "ADB_PATH": "C:\\Users\\yuliusd\\Desktop\\SIP",
+        "EXE_PATH": "C:\\Program Files (x86)\\a5V12",
+        "VersionNumber": 4,
+        "__wphostname": "Internet Explorer",
+        "controls": [
+            {
+                "idInternal": "d5fbee76-53fb-4bce-af4f-bc34abb635aa",
+                "type": "Button",
+                "Name": "IMPORT",
+                "trailingSeparator": true,
+                "readDataFrom": "GridPart",
+                "actionJSAttribute": "/* actionJavascript:4aa2ca46-3147-45ab-b35b-301ef25b5a08 */\nFileUploadUserDefined_e0f5db0646e94447aee2b458314a5f18(this);",
+                "actionJSGlobal": "window['FileUploadUserDefined_e0f5db0646e94447aee2b458314a5f18'] = function(objEle) {\nvar rowNum = {grid.object}._selectedRow;\nvar rowId = $u.s.tran(rowNum,'-','_');\n\n\n\nvar bodyType = 'url';\nvar uploadFunc = function() {$(this.getWindowId('body')).contentWindow.A5.fileUpload.upload(); }\n\nif({grid.object}._embeddedMode) {\n\tvar componentType = {grid.object}._componentType;\n\tif(typeof componentType != 'undefined') { \n\t\tif(componentType == 'UX') {\n\t\t\talert('Notice. This action is not supported in Working Preview. Please use Live Preview');\n\t\t\treturn false;\n\t\t}\n\t}\n\tbodyType = 'static';\n\tuploadFunc = function() {A5.fileUpload.upload(); }\n}\n\n\n\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'] = {grid.object}.createWindow('{grid.componentName}_WINDOW_ACTIONBUTTON_IMPORT_eylnd','modal-url',\n{\theight: '3in',\n\twidth: '5in',\n\ttitle: {html: '<span id=\"___windowTitle\">Select File</span><span id=\"59af7793798c41e6b0fcc4ac81c5b3d2\"></span>' },\n\tbody: {content: {type: bodyType,\n\turl: 'about:blank'}},\n\tbuttons: {\n\t\titems: [\n\t\t\t{html: '<div style=\"width:1in;cursor:default;\">Upload</div>', width: '', name: 'UPLOAD', action: uploadFunc},\n\n\t\t\t{html: '<div style=\"width:1in;cursor:default;\">OK</div>', width: '', name: 'OK', action: function() {$(this.getWindowId('body')).contentWindow.okToSave(); }},\n\t\t\t{html: '<span id=\"____cancelbutton\"><span id=\"___cancelButton\">Cancel</span></span>',width: '', name: 'Cancel', action: function() { this.hide(); } }\n\t\t]\n\t},\n\tonHide: function() {   ; this.refresh(); }\n} \n);\n\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].clearTools();\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].setButtonDisplay('OK',false);\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].setButtonDisplay('UPLOAD',true);\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].getButton('Cancel').refresh();\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].show();\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].rowNumber = rowNum;\n\nvar data = {grid.object}._getRowKey(rowNum);\n\nvar fileUploadUrlQueryString \t= 'fileUploadUrl=' + urlencode({grid.object}.ajaxURL);\n\nvar queryString = '';\nqueryString = queryString + '&rowNumber=' + rowNum ;\nqueryString = queryString + '&part=G';\nqueryString = queryString + '&fileUploadAutoUpload=N';\nqueryString = queryString + '&fileUploadAllowMultiple=false';\n//queryString = queryString + '&uploadButtonLabel=Upload';\nqueryString = queryString + '&fileBoxWaterMark=Click%20button%20to%20select%20file%2e%2e%2e';\nqueryString = queryString + '&fileUploadWaitMessage=<img src=\"css/A5System/Images/wait.gif\" /> Uploading files...';\nqueryString = queryString + '&fileSelectImg=images/$$folder.open.png.a5image';\nqueryString = queryString + '&selectFileButtonImage=images/$$folder.open.png.a5image';\nqueryString = queryString + '&stylesheetName={grid.style}';\nqueryString = queryString + '&filePromptSingular=File%3a';\nqueryString = queryString + '&filePromptPlural=Files%3a';\nqueryString = queryString + '&removeButton=Remove';\nqueryString = queryString + '&GridFieldName={gridField}';\nqueryString = queryString + '&__xbfunction=FileUpload_d5cc8f0563634f50bba1451cae510960';\nqueryString = queryString + '&maxfilesize=1000000';\nqueryString = queryString + '&maxsizemsg=The%20file%20%27%7bfilename%7d%27%20exceeds%20the%20maximum%20allowed%20file%20size%20of%20%7bfilesize%7d%20bytes%2e';\nqueryString = queryString + '&fswindowname=59af7793798c41e6b0fcc4ac81c5b3d2';\nqueryString = queryString + '&__showProgress=yes';\nqueryString = queryString + '&maxFileSizeCombined=1000000';\nqueryString = queryString + '&maxFileSizeCombinedMsg=The combined file size of the file(s) you have selected exceeds the maximum allowed size of {filesize} bytes.';\nqueryString = queryString + '&uploadAbortMsg=Abort%20file%20upload';\nqueryString = queryString + '&abortButtonLabel=Abort';\nqueryString = queryString + '&progressBarType=A5';\nqueryString = queryString + '&_allowedFileTypes=.xls,.xlsx,.asc,.txt,.csv';\nqueryString = queryString + '&_invalidTypeMsg={filename} is not an allowed file type.';\nqueryString = queryString + '&' + data ;\n\n//queryString = queryString + '&' + $gvs('{grid.componentname}.STATEINFO') ;\n\nqueryString = queryString + '&__componentType=grid&__componentAlias=' + {grid.object}.gridId\n\nvar formActionQueryString \t\t= '&__formAction=UploadFileMultiple';\n\n\n\nif({grid.object}._embeddedMode) {\n\tvar windowDiv = window['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].getWindowId('body');\n\t{grid.Object}.ajaxCallback('G',rowNum,'a5GridHelper__a5WorkingPreviewUpload','','__xbfunctionMetaData=FileUpload_d5cc8f0563634f50bba1451cae510960&_getData=true&windowDiv='+windowDiv+'&'+ queryString);\n} else {\n\tvar callBackData = '';\n\tcallBackData = fileUploadUrlQueryString + queryString + formActionQueryString;\n\twindow._tempUploadVariables = $gvs('{grid.componentname}.STATEINFO')  ;\n\t$(window['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].getWindowId('body')).src = '__a5FileUploadMasterPage.a5w?' + callBackData;\n}\n\n\n\n\n}",
+                "actionXbasic": "function FileUpload_d5cc8f0563634f50bba1451cae510960 as p()\nDIM p as P\nDIM p.uploadProperties as P\nDIM p.uploadProperties.specialMode as C = \"ImportExcel\"\nDIM p.uploadProperties.allowedImageExtensions as C\nDIM p.uploadProperties.allowedFileExtensions as C = \".xls,.xlsx,.asc,.txt,.csv\"\nDIM p.uploadProperties.targetType as C = \"<External>\"\nDIM p.uploadProperties.external_type as C = \"SQL\"\nDIM p.uploadProperties.external_connectionstring as C = \"::Name::Pegawai\"\nDIM p.uploadProperties.external_tablename_sql as C = \"Penghargaan\"\nDIM p.uploadProperties.external_tablename_dbf as C\nDIM p.uploadProperties.honorGridEvents as L\nDIM p.uploadProperties.closeButtonLabel as C = \"Close\"\nDIM p.uploadProperties.confirmationWindowTitle as C = \"Import Records\"\nDIM p.uploadProperties.maxRecordsToProcess as N = 100\nDIM p.uploadProperties.messages as P\nDIM p.uploadProperties.messages.maxRecordsExceeded as C = \"The file you are processing has too many records. A maximum of {maxrecords} records can be imported at once. <br><br>The file you uploaded has {actualCount} records in it.\"\nDIM p.uploadProperties.messages.successMessage as C = \"Success - number of records imported: {recordsImported}\"\nDIM p.uploadProperties.messages.partialSuccess as C = \"Number of records imported: {recordsImported}.<br><br>Records not imported because of errors: {recordsWithErrors}.<br><br>{errorMessages}\"\nDIM p.uploadProperties.xbasicValidationFunction as C\nDIM p.uploadProperties.xbasicPreProcessUploadedFileFunction as C\nDIM p.uploadProperties.uploadFolder as C\nDIM p.uploadProperties.fileExistAction as C = \"Overwrite\"\nDIM p.uploadProperties.maxFileSize as C = \"1000000\"\nDIM p.uploadProperties.maxFileSizeExceededMessage as C = \"The file '{filename}' exceeds the maximum allowed file size of {filesize} bytes.\"\nDIM p.uploadProperties.disallowedfileextensions as C\nDIM p.uploadProperties.invalidExtensionErrorText as C = \"{filename} is not an allowed file type.\"\nDIM p.uploadProperties.title as C = \"Select File\"\nDIM p.uploadProperties.uploadButtonText as C = \"Upload\"\nDIM p.uploadProperties.fileBoxWaterMark as C = \"Click button to select file...\"\nDIM p.uploadProperties.selectFileButtonImage as C = \"images/$$folder.open.png.a5image\"\nDIM p.uploadProperties.prompt as C = \"File:\"\nDIM p.uploadProperties.promptForMultipleFiles as C = \"Files:\"\nDIM p.uploadProperties.removeFileButtonLabel as C = \"Remove\"\nDIM p.uploadProperties.height as C = \"3in\"\nDIM p.uploadProperties.width as C = \"5in\"\nDIM p.uploadProperties.autoUpload as L\nDIM p.uploadProperties.fileUploadWaitMessage as C = \"<img src=\\\"css/A5System/Images/wait.gif\\\" /> Uploading files...\"\nDIM p.uploadProperties.events as P\nDIM p.uploadProperties.events.serverside as P\nDIM p.uploadProperties.events.serverside.afterUpload as C\nDIM p.uploadProperties.events.clientSide as P\nDIM p.uploadProperties.events.clientSide.afterUpload as C\nDIM p.uploadProperties.events.clientSide.beforeUpload as C\nDIM p.uploadProperties.serverSideArrayOption as C = \"Filename\"\nDIM p.uploadProperties.showProgress as L = .T.\nDIM p.uploadProperties.uploadAbortMsg as C = \"Abort file upload\"\nDIM p.uploadProperties.abortButtonLabel as C = \"Abort\"\nDIM p.uploadProperties.maxFileSizeCombined as C = \"1000000\"\nDIM p.uploadProperties.maxFileSizeCombinedExceededMessage as C = \"The combined file size of the file(s) you have selected exceeds the maximum allowed size of {filesize} bytes.\"\nDIM p.uploadProperties.progressBarType as C = \"A5\"\nDIM p.uploadProperties.fileSelectWindowName as C = \"59af7793798c41e6b0fcc4ac81c5b3d2\"\n\nFileUpload_d5cc8f0563634f50bba1451cae510960= p\nend function",
+                "buttonStyle": "Text only",
+                "buttonClass": "[class.gridButton]",
+                "buttonClassHover": "[class.gridButtonHover]",
+                "buttonClassPressed": "[class.gridButtonPressed]",
+                "buttonClassDisabled": "[class.gridButtonDisabled]",
+                "buttonText": "IMPORT",
+                "hyperlinkClass": "[class.gridHyperlinkButton]",
+                "hyperlinkImagePosition": "None",
+                "readDataFromForClientSideExpns": "GridPart",
+                "precalc": {
+                    "buttonObjectJavascript": "window['{grid.componentName}_BUTTONS_IMPORT'] = new A5.Button({\n\tlayout: 'text',\n\tclassName: '[class.gridButton]',\n\thoverClassName: '[class.gridButtonHover]',\n\tpressedClassName: '[class.gridButtonPressed]',\n\tdisabledClassName: '[class.gridButtonDisabled]',\n\thtml: 'IMPORT',\n\tonClick: function() { /* actionJavascript:4aa2ca46-3147-45ab-b35b-301ef25b5a08 */\nFileUploadUserDefined_e0f5db0646e94447aee2b458314a5f18(this);\n},\n\ttheme: '{grid.style}'\n});",
+                    "objectHTML": "<button type=\"button\" id=\"{id}\"></button>&nbsp;",
+                    "objectName": "{grid.componentName}_BUTTONS_IMPORT",
+                    "bindJS": "{grid.componentName}_BUTTONS_IMPORT.bind({bindIdList});"
+                }
+            },
+            {
+                "idInternal": "a2ed0494-038b-46f9-9539-e687764d2096",
+                "type": "Button",
+                "Name": "EXPORT",
+                "trailingSeparator": true,
+                "readDataFrom": "GridPart",
+                "actionJSAttribute": "/* actionJavascript:81eb9003-c62c-4768-b1e2-efbb623c32a2 */\n{grid.componentName}_G_ACTIONBUTTON_EXPORT_1(this);",
+                "actionJSGlobal": "window['{grid.componentName}_G_ACTIONBUTTON_EXPORT_1'] = function(objEle) {\n\t\nvar rowNum = {grid.object}._selectedRow;\nvar rowId = $u.s.tran(rowNum,'-','_');\n\n\t\n\nvar placeHolderValues = '';\nvar arguments = '';\n\n\nvar callbackData = '_csfilename=%3cDefault%3e&_exportDataType=Excel&_recordSelection=Records%20in%20current%20query&_exportSource=4&_maxRecords=10000&_exportHiddenFields=Y&_useColHeadings=Y&_zip=N&_customType=SQL&_connectionstring=%3a%3aName%3a%3aPegawai&_sqlselect=SELECT%20%2a%20%20FROM%20Penghargaan';\ncallbackData = callbackData + '&_placeholderValues='+placeHolderValues + '&_arguments='+arguments;\n{grid.Object}.ajaxCallback('G',rowNum,'__a5systemfileExport','',callbackData);\n}",
+                "buttonStyle": "Text only",
+                "buttonClass": "[class.gridButton]",
+                "buttonClassHover": "[class.gridButtonHover]",
+                "buttonClassPressed": "[class.gridButtonPressed]",
+                "buttonClassDisabled": "[class.gridButtonDisabled]",
+                "buttonText": "EXPORT",
+                "hyperlinkClass": "[class.gridHyperlinkButton]",
+                "hyperlinkImagePosition": "None",
+                "readDataFromForClientSideExpns": "GridPart",
+                "precalc": {
+                    "buttonObjectJavascript": "window['{grid.componentName}_BUTTONS_EXPORT'] = new A5.Button({\n\tlayout: 'text',\n\tclassName: '[class.gridButton]',\n\thoverClassName: '[class.gridButtonHover]',\n\tpressedClassName: '[class.gridButtonPressed]',\n\tdisabledClassName: '[class.gridButtonDisabled]',\n\thtml: 'EXPORT',\n\tonClick: function() { /* actionJavascript:81eb9003-c62c-4768-b1e2-efbb623c32a2 */\n{grid.componentName}_G_ACTIONBUTTON_EXPORT_1(this);\n},\n\ttheme: '{grid.style}'\n});",
+                    "objectHTML": "<button type=\"button\" id=\"{id}\"></button>&nbsp;",
+                    "objectName": "{grid.componentName}_BUTTONS_EXPORT",
+                    "bindJS": "{grid.componentName}_BUTTONS_EXPORT.bind({bindIdList});"
+                }
+            }
+        ],
+        "CurrentSelectionActionButtons": "a2ed0494-038b-46f9-9539-e687764d2096",
+        "a_actionJavascript": [
+            {
+                "actionGuid": "4aa2ca46-3147-45ab-b35b-301ef25b5a08",
+                "scriptMetaData": "<a_ajs<[1]<display=\"{I:'$$file.import'}{F=Tahoma,10}{C=Dark Blue,White}{B=Blue White,Dark Blue}Import Data from Excel or Ascii file{T=4}{I:'a5_vertical_line'}\">\n<action=\"Import Data from Excel or Ascii file\">\n<icon=\"$$file.import\">\n<isCommentedOut=.F.>\n<comment=\"\">\n<builder=\"a5ajs_FileUploadUserDefined(v,wf,pv,dlg_mode,\\\"import\\\")\">\n<metaData=<<%str%\n<allowMultipleFileUpload=.F.>\n<uploadProperties<specialMode=\"ImportExcel\">\n<allowedImageExtensions=\"\">\n<allowedFileExtensions=\".xls,.xlsx,.asc,.txt,.csv\">\n<targetType=\"<External>\">\n<external_type=\"SQL\">\n<external_connectionstring=\"::Name::Pegawai\">\n<external_tablename_sql=\"Penghargaan\">\n<external_tablename_dbf=\"\">\n<honorGridEvents=.F.>\n<closeButtonLabel=\"Close\">\n<confirmationWindowTitle=\"Import Records\">\n<maxRecordsToProcess=100>\n<messages<maxRecordsExceeded=\"The file you are processing has too many records. A maximum of {maxrecords} records can be imported at once. <br><br>The file you uploaded has {actualCount} records in it.\">\n<successMessage=\"Success - number of records imported: {recordsImported}\">\n<partialSuccess=\"Number of records imported: {recordsImported}.<br><br>Records not imported because of errors: {recordsWithErrors}.<br><br>{errorMessages}\">\n>\n<xbasicValidationFunction=\"\">\n<xbasicPreProcessUploadedFileFunction=\"\">\n<uploadFolder=\"\">\n<fileExistAction=\"Overwrite\">\n<maxFileSize=\"1000000\">\n<maxFileSizeExceededMessage=\"The file '{filename}' exceeds the maximum allowed file size of {filesize} bytes.\">\n<disallowedfileextensions=\"\">\n<invalidExtensionErrorText=\"{filename} is not an allowed file type.\">\n<title=\"Select File\">\n<uploadButtonText=\"Upload\">\n<fileBoxWaterMark=\"Click button to select file...\">\n<selectFileButtonImage=\"images/$$folder.open.png.a5image\">\n<prompt=\"File:\">\n<promptForMultipleFiles=\"Files:\">\n<removeFileButtonLabel=\"Remove\">\n<height=\"3in\">\n<width=\"5in\">\n<autoUpload=.F.>\n<fileUploadWaitMessage=\"<img src=\\\"css/A5System/Images/wait.gif\\\" /> Uploading files...\">\n<events<serverside<afterUpload=\"\">\n>\n<clientSide<afterUpload=\"\">\n<beforeUpload=\"\">\n>\n>\n<serverSideArrayOption=\"Filename\">\n<showProgress=.T.>\n<uploadAbortMsg=\"Abort file upload\">\n<abortButtonLabel=\"Abort\">\n<maxFileSizeCombined=\"1000000\">\n<maxFileSizeCombinedExceededMessage=\"The combined file size of the file(s) you have selected exceeds the maximum allowed size of {filesize} bytes.\">\n<progressBarType=\"A5\">\n<fileSelectWindowName=\"59af7793798c41e6b0fcc4ac81c5b3d2\">\n>\n<ajaxWindowPositionAttribute=\"\">\n<ajaxWindowPositionAttributeEnglish=\"\">\n<cancelButtonLabel=\"Cancel\">\n<okButtonLabel=\"<div style=\\\"width:1in;cursor:default;\\\">OK</div>\">\n%str%>\n<javascriptAttribute=\"FileUploadUserDefined_e0f5db0646e94447aee2b458314a5f18(this);\">\n<Javascriptdeclarations_row=\"\">\n<Javascriptdeclarations_global=<<%str%\nwindow['FileUploadUserDefined_e0f5db0646e94447aee2b458314a5f18'] = function(objEle) {\nvar rowNum = {grid.object}._selectedRow;\nvar rowId = $u.s.tran(rowNum,'-','_');\n\n\n\nvar bodyType = 'url';\nvar uploadFunc = function() {$(this.getWindowId('body')).contentWindow.A5.fileUpload.upload(); }\n\nif({grid.object}._embeddedMode) {\n\tvar componentType = {grid.object}._componentType;\n\tif(typeof componentType != 'undefined') { \n\t\tif(componentType == 'UX') {\n\t\t\talert('Notice. This action is not supported in Working Preview. Please use Live Preview');\n\t\t\treturn false;\n\t\t}\n\t}\n\tbodyType = 'static';\n\tuploadFunc = function() {A5.fileUpload.upload(); }\n}\n\n\n\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'] = {grid.object}.createWindow('{grid.componentName}_WINDOW_ACTIONBUTTON_IMPORT_eylnd','modal-url',\n{\theight: '3in',\n\twidth: '5in',\n\ttitle: {html: '<span id=\"___windowTitle\">Select File</span><span id=\"59af7793798c41e6b0fcc4ac81c5b3d2\"></span>' },\n\tbody: {content: {type: bodyType,\n\turl: 'about:blank'}},\n\tbuttons: {\n\t\titems: [\n\t\t\t{html: '<div style=\"width:1in;cursor:default;\">Upload</div>', width: '', name: 'UPLOAD', action: uploadFunc},\n\n\t\t\t{html: '<div style=\"width:1in;cursor:default;\">OK</div>', width: '', name: 'OK', action: function() {$(this.getWindowId('body')).contentWindow.okToSave(); }},\n\t\t\t{html: '<span id=\"____cancelbutton\"><span id=\"___cancelButton\">Cancel</span></span>',width: '', name: 'Cancel', action: function() { this.hide(); } }\n\t\t]\n\t},\n\tonHide: function() {   ; this.refresh(); }\n} \n);\n\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].clearTools();\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].setButtonDisplay('OK',false);\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].setButtonDisplay('UPLOAD',true);\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].getButton('Cancel').refresh();\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].show();\nwindow['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].rowNumber = rowNum;\n\nvar data = {grid.object}._getRowKey(rowNum);\n\nvar fileUploadUrlQueryString \t= 'fileUploadUrl=' + urlencode({grid.object}.ajaxURL);\n\nvar queryString = '';\nqueryString = queryString + '&rowNumber=' + rowNum ;\nqueryString = queryString + '&part=G';\nqueryString = queryString + '&fileUploadAutoUpload=N';\nqueryString = queryString + '&fileUploadAllowMultiple=false';\n//queryString = queryString + '&uploadButtonLabel=Upload';\nqueryString = queryString + '&fileBoxWaterMark=Click%20button%20to%20select%20file%2e%2e%2e';\nqueryString = queryString + '&fileUploadWaitMessage=<img src=\"css/A5System/Images/wait.gif\" /> Uploading files...';\nqueryString = queryString + '&fileSelectImg=images/$$folder.open.png.a5image';\nqueryString = queryString + '&selectFileButtonImage=images/$$folder.open.png.a5image';\nqueryString = queryString + '&stylesheetName={grid.style}';\nqueryString = queryString + '&filePromptSingular=File%3a';\nqueryString = queryString + '&filePromptPlural=Files%3a';\nqueryString = queryString + '&removeButton=Remove';\nqueryString = queryString + '&GridFieldName={gridField}';\nqueryString = queryString + '&__xbfunction=FileUpload_d5cc8f0563634f50bba1451cae510960';\nqueryString = queryString + '&maxfilesize=1000000';\nqueryString = queryString + '&maxsizemsg=The%20file%20%27%7bfilename%7d%27%20exceeds%20the%20maximum%20allowed%20file%20size%20of%20%7bfilesize%7d%20bytes%2e';\nqueryString = queryString + '&fswindowname=59af7793798c41e6b0fcc4ac81c5b3d2';\nqueryString = queryString + '&__showProgress=yes';\nqueryString = queryString + '&maxFileSizeCombined=1000000';\nqueryString = queryString + '&maxFileSizeCombinedMsg=The combined file size of the file(s) you have selected exceeds the maximum allowed size of {filesize} bytes.';\nqueryString = queryString + '&uploadAbortMsg=Abort%20file%20upload';\nqueryString = queryString + '&abortButtonLabel=Abort';\nqueryString = queryString + '&progressBarType=A5';\nqueryString = queryString + '&_allowedFileTypes=.xls,.xlsx,.asc,.txt,.csv';\nqueryString = queryString + '&_invalidTypeMsg={filename} is not an allowed file type.';\nqueryString = queryString + '&' + data ;\n\n//queryString = queryString + '&' + $gvs('{grid.componentname}.STATEINFO') ;\n\nqueryString = queryString + '&__componentType=grid&__componentAlias=' + {grid.object}.gridId\n\nvar formActionQueryString \t\t= '&__formAction=UploadFileMultiple';\n\n\n\nif({grid.object}._embeddedMode) {\n\tvar windowDiv = window['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].getWindowId('body');\n\t{grid.Object}.ajaxCallback('G',rowNum,'a5GridHelper__a5WorkingPreviewUpload','','__xbfunctionMetaData=FileUpload_d5cc8f0563634f50bba1451cae510960&_getData=true&windowDiv='+windowDiv+'&'+ queryString);\n} else {\n\tvar callBackData = '';\n\tcallBackData = fileUploadUrlQueryString + queryString + formActionQueryString;\n\twindow._tempUploadVariables = $gvs('{grid.componentname}.STATEINFO')  ;\n\t$(window['{Grid.ComponentName}_ACTIONBUTTON_IMPORT_eylnd'].getWindowId('body')).src = '__a5FileUploadMasterPage.a5w?' + callBackData;\n}\n\n\n\n\n}\n%str%>\n<xbasicFunctions=<<%str%\nfunction FileUpload_d5cc8f0563634f50bba1451cae510960 as p()\nDIM p as P\nDIM p.uploadProperties as P\nDIM p.uploadProperties.specialMode as C = \"ImportExcel\"\nDIM p.uploadProperties.allowedImageExtensions as C\nDIM p.uploadProperties.allowedFileExtensions as C = \".xls,.xlsx,.asc,.txt,.csv\"\nDIM p.uploadProperties.targetType as C = \"<External>\"\nDIM p.uploadProperties.external_type as C = \"SQL\"\nDIM p.uploadProperties.external_connectionstring as C = \"::Name::Pegawai\"\nDIM p.uploadProperties.external_tablename_sql as C = \"Penghargaan\"\nDIM p.uploadProperties.external_tablename_dbf as C\nDIM p.uploadProperties.honorGridEvents as L\nDIM p.uploadProperties.closeButtonLabel as C = \"Close\"\nDIM p.uploadProperties.confirmationWindowTitle as C = \"Import Records\"\nDIM p.uploadProperties.maxRecordsToProcess as N = 100\nDIM p.uploadProperties.messages as P\nDIM p.uploadProperties.messages.maxRecordsExceeded as C = \"The file you are processing has too many records. A maximum of {maxrecords} records can be imported at once. <br><br>The file you uploaded has {actualCount} records in it.\"\nDIM p.uploadProperties.messages.successMessage as C = \"Success - number of records imported: {recordsImported}\"\nDIM p.uploadProperties.messages.partialSuccess as C = \"Number of records imported: {recordsImported}.<br><br>Records not imported because of errors: {recordsWithErrors}.<br><br>{errorMessages}\"\nDIM p.uploadProperties.xbasicValidationFunction as C\nDIM p.uploadProperties.xbasicPreProcessUploadedFileFunction as C\nDIM p.uploadProperties.uploadFolder as C\nDIM p.uploadProperties.fileExistAction as C = \"Overwrite\"\nDIM p.uploadProperties.maxFileSize as C = \"1000000\"\nDIM p.uploadProperties.maxFileSizeExceededMessage as C = \"The file '{filename}' exceeds the maximum allowed file size of {filesize} bytes.\"\nDIM p.uploadProperties.disallowedfileextensions as C\nDIM p.uploadProperties.invalidExtensionErrorText as C = \"{filename} is not an allowed file type.\"\nDIM p.uploadProperties.title as C = \"Select File\"\nDIM p.uploadProperties.uploadButtonText as C = \"Upload\"\nDIM p.uploadProperties.fileBoxWaterMark as C = \"Click button to select file...\"\nDIM p.uploadProperties.selectFileButtonImage as C = \"images/$$folder.open.png.a5image\"\nDIM p.uploadProperties.prompt as C = \"File:\"\nDIM p.uploadProperties.promptForMultipleFiles as C = \"Files:\"\nDIM p.uploadProperties.removeFileButtonLabel as C = \"Remove\"\nDIM p.uploadProperties.height as C = \"3in\"\nDIM p.uploadProperties.width as C = \"5in\"\nDIM p.uploadProperties.autoUpload as L\nDIM p.uploadProperties.fileUploadWaitMessage as C = \"<img src=\\\"css/A5System/Images/wait.gif\\\" /> Uploading files...\"\nDIM p.uploadProperties.events as P\nDIM p.uploadProperties.events.serverside as P\nDIM p.uploadProperties.events.serverside.afterUpload as C\nDIM p.uploadProperties.events.clientSide as P\nDIM p.uploadProperties.events.clientSide.afterUpload as C\nDIM p.uploadProperties.events.clientSide.beforeUpload as C\nDIM p.uploadProperties.serverSideArrayOption as C = \"Filename\"\nDIM p.uploadProperties.showProgress as L = .T.\nDIM p.uploadProperties.uploadAbortMsg as C = \"Abort file upload\"\nDIM p.uploadProperties.abortButtonLabel as C = \"Abort\"\nDIM p.uploadProperties.maxFileSizeCombined as C = \"1000000\"\nDIM p.uploadProperties.maxFileSizeCombinedExceededMessage as C = \"The combined file size of the file(s) you have selected exceeds the maximum allowed size of {filesize} bytes.\"\nDIM p.uploadProperties.progressBarType as C = \"A5\"\nDIM p.uploadProperties.fileSelectWindowName as C = \"59af7793798c41e6b0fcc4ac81c5b3d2\"\n\nFileUpload_d5cc8f0563634f50bba1451cae510960= p\nend function\n%str%>\n>\n>\n<flagRunSynchronously=.F.>\n"
+            },
+            {
+                "actionGuid": "81eb9003-c62c-4768-b1e2-efbb623c32a2",
+                "scriptMetaData": "<a_ajs<[1]<display=\"{I:'$$file.export'}{F=Tahoma,10}{C=Dark Blue,White}{B=Blue White,Dark Blue}Export to Excel or Ascii or Custom Format{T=4}{I:'a5_vertical_line'}\">\n<action=\"Export to Excel or Ascii or Custom Format\">\n<icon=\"$$file.export\">\n<isCommentedOut=.F.>\n<comment=\"\">\n<builder=\"a5ajs_fileExport(v,wf,pv,dlg_mode)\">\n<metaData=<<%str%\n<clientSideFilename=\"<Default>\">\n<zip=.F.>\n<javascriptEvent<canFileDownload=\"\">\n<afterFileDownload=\"\">\n>\n<exportDataType=\"Excel\">\n<recordSelection=\"Records in current query\">\n<exportSource=4>\n<exportFieldList=\"\">\n<exportHiddenFields=.T.>\n<useGridColumnHeadings=.T.>\n<customType=\"SQL\">\n<dbfTableName=\"\">\n<dbfFieldNames=\"\">\n<dbfFilter=\"\">\n<dbfOrder=\"\">\n<maxRecords=10000>\n<connectionstring=\"::Name::Pegawai\">\n<sqlSelect=\"SELECT *  FROM Penghargaan\">\n<sqlFilter=\"\">\n<sqlOrder=\"\">\n<localArguments=\"\">\n<argumentBindings=\"\">\n<events<clientSide<beforeExport=\"\">\n<afterExport=\"\">\n>\n<serverSide<afterExport=\"\">\n<customExport=\"\">\n>\n>\n%str%>\n<javascriptAttribute=\"{grid.componentName}_G_ACTIONBUTTON_EXPORT_{ACTIONNUMBER}(this);\">\n<Javascriptdeclarations_row=\"\">\n<Javascriptdeclarations_global=<<%str%\nwindow['{grid.componentName}_G_ACTIONBUTTON_EXPORT_{ACTIONNUMBER}'] = function(objEle) {\n\t\nvar rowNum = {grid.object}._selectedRow;\nvar rowId = $u.s.tran(rowNum,'-','_');\n\n\t\n\nvar placeHolderValues = '';\nvar arguments = '';\n\n\nvar callbackData = '_csfilename=%3cDefault%3e&_exportDataType=Excel&_recordSelection=Records%20in%20current%20query&_exportSource=4&_maxRecords=10000&_exportHiddenFields=Y&_useColHeadings=Y&_zip=N&_customType=SQL&_connectionstring=%3a%3aName%3a%3aPegawai&_sqlselect=SELECT%20%2a%20%20FROM%20Penghargaan';\ncallbackData = callbackData + '&_placeholderValues='+placeHolderValues + '&_arguments='+arguments;\n{grid.Object}.ajaxCallback('G',rowNum,'__a5systemfileExport','',callbackData);\n}\n%str%>\n<xbasicFunctions=\"\">\n>\n>\n<flagRunSynchronously=.F.>\n"
+            }
+        ],
+        "A5SaveTimeStamp": "20180207133506402"
+    }
+}

@@ -1,0 +1,1431 @@
+{
+    "$schema": "UX",
+    "$definition": {
+        "style_name": "DDSJava",
+        "style_type": "Alpha Five",
+        "resolveAbstractClassNames": true,
+        "builderVersionNumber": 1,
+        "overrideStyleName": "Default",
+        "FontSize": "Medium",
+        "LocalCss": "<style>\n\n\n\n.heading {\n    color: #000000 !important;\n    font-weight: 800;\n    padding: 2px 2px 2px 7px !important;\n    font-size: 125%;\n}\n\n\n\n\n\n\n</style>",
+        "A5ContainerClassPadding": "4px",
+        "cssIcons": "font-awesome",
+        "layoutType": "ControlWidth",
+        "pageTitle": "Informasi Pegawai",
+        "serverSideEvents": {
+            "onLogin": "function onLogin as v (e as p)\n'Fires when the user tries to login.\n'Variables in the 'e' object include:\n'e.username - user name entered by user to log in\n'e.loginSucceeded - either .t. or .f. depending on whether the user was successfully logged in or not.\n'e.flagUserWasAlreadyLoggedIn - if the user was already logged in when the page was initially loaded, this flag is .t. \n'e.errorText - error message if login failed\n'e.tmpl - definition of the TabbedUI component\t\n\n'Your event handler can set this variable\n'e.userNameFriendly - This is the value that will be used to replace the {userName} placeholder in the Logged In Message Template. If you do not set this property, the user name will be used.\n\n'You can optionally send Javascript back to the client by setting this property:\n'e.javascript\n\n\n'You can optionally send back data that will be available in the client-side 'afterLogin' event\n'For example:\n'e.eventDataObject = \"{userName: '\"+e.userName+\"', var2: 'some other value', timeOfLogin: '\"+js_escape(\"\" + now())+\"'}\"\n'In the client-side 'afterLogin' event you can refer to any value in the eventDataObject. For example, here is some Javascript you might have in the event handler:\n'alert('Welcome: ' + e.eventDataObject.userName );\n\nend function\n",
+            "onTabbedUIInitialize": ""
+        },
+        "activeLanguage": "<Default>",
+        "datePicker": {
+            "dayNames": "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+            "monthNames": "January,February,March,April,May,June,July,August,September,October,November,December",
+            "firstDayOfWeek": 1,
+            "todayButtonText": "Today",
+            "closeButtonText": "Close",
+            "OKButtonText": "OK"
+        },
+        "clientSideDateFormat": "MM/dd/yyyy",
+        "dataBinding": {
+            "additionalFieldsInEventsTable": ""
+        },
+        "info": {
+            "createdBy": "yuliusd",
+            "dateCreated": "2018-1-15",
+            "dateLastEdited": "2018-2-9"
+        },
+        "checkSessionEvery": 1,
+        "warningIntervalBeforeExpiration": 1,
+        "sessionTimeOutWarningMessage": "Your session will expire in {secondsToSessionEnd} seconds. Click the button to extend your session.",
+        "sessionExtendSessionButtonLabel": "Extend Session",
+        "sessionTimeoutWarningDialogTitle": "Warning",
+        "sessionHasExpiredMessage": "Your session has expired.",
+        "sessionHasExpiredButtonLabel": "OK",
+        "sessionHasExpiredAction": "Nothing",
+        "sessionHasExpiredRedirectPage": "<self>",
+        "sessionHasExpiredDialogTitle": "Notice",
+        "sessionHasExpiredOKButtonJavascript": "<ReloadThisPage>",
+        "login": {
+            "display": true,
+            "loginPrompt": "Login",
+            "logoutPrompt": "Logout",
+            "loginActionType": "FullReload",
+            "showPromptForCreateNewAccount": true,
+            "newAccountLinkLocation": "MenuBar",
+            "promptForCreateNewAccount": "Register",
+            "createNewAccountComponent": "register",
+            "createNewAccountWindowTitle": "Create New Account",
+            "customLeftMenuBarHTML": "",
+            "customCenterMenuBarHTML": "",
+            "loggedInMessageTemplate": "Logged in as: {userName}",
+            "dialog": {
+                "usernameLabel": "User Name",
+                "passwordLabel": "Password",
+                "hasFreeformLayout": false,
+                "freeformLayout": "",
+                "userNameLabelStyle": "",
+                "userNameFieldStyle": "",
+                "passwordLabelStyle": "",
+                "passwordFieldStyle": "",
+                "animation": true,
+                "animate": {
+                    "show": {
+                        "method": "slide",
+                        "speed": "slow"
+                    },
+                    "hide": {
+                        "method": "slide",
+                        "speed": "slow"
+                    }
+                },
+                "width": "",
+                "height": "",
+                "loginButtonLabel": "Login",
+                "loginButtonStyle": "",
+                "cancelButtonLabel": "Cancel",
+                "cancelButtonStyle": "",
+                "headerText": "",
+                "footerText": "",
+                "disableAutocompleteOnUsername": false,
+                "disableAutocompleteOnPassword": true
+            }
+        },
+        "page_fields": [
+            {
+                "controlType": "TabbedUIButton",
+                "display": "{B=White,Light Blue}{Data=cbc77c30-b751-4868-a915-043148fd41f9}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa fa-user fa-2x\"></i> Pegawai (Grid Component)] �",
+                "displayODFlat": "{Data=cbc77c30-b751-4868-a915-043148fd41f9}{I:'$$control.html.advButton'} [Tabbed UI Button: pegawai]",
+                "idInternal": "cbc77c30-b751-4868-a915-043148fd41f9",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=cbc77c30-b751-4868-a915-043148fd41f9}{I:'$$control.html.advButton'} [Tabbed UI Button: pegawai]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=cbc77c30-b751-4868-a915-043148fd41f9}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa fa-user fa-2x\"></i> Pegawai (Grid Component)] �",
+                "v": {
+                    "tabbedUI": {
+                        "buttonType": "Button",
+                        "buttonText": "<i class=\"fa fa-user fa-2x\"></i> Pegawai",
+                        "actionType": "Component",
+                        "paneTitle": "Pegawai",
+                        "canClosePane": true,
+                        "treeControl": {
+                            "controlNesting": "SameLevelAsPrevious",
+                            "outdentLevel": 1,
+                            "treeControlIndentLevel": -1,
+                            "icon": "<Auto>"
+                        },
+                        "header": {
+                            "className": "<Default>",
+                            "style": {
+                                "borderTopStyle": "none",
+                                "borderBottomStyle": "solid",
+                                "borderBottomColor": "#ddd",
+                                "borderBottomWidth": "1px",
+                                "padding": "0px"
+                            },
+                            "show": true,
+                            "canHide": true
+                        },
+                        "grid": {
+                            "gridName": "pegawai",
+                            "componentType": "Grid",
+                            "alias": "<DefaultAlias>",
+                            "useMasterStyle": true,
+                            "workingMessage": "<img src=\"css/A5System/Images/wait.gif\" /> Working..."
+                        },
+                        "report": {
+                            "workingMessage": "Working...",
+                            "printReportButtonLabel": "Print Report",
+                            "moreRecordsTemplate": "<hr />Showing first [DisplayRecords] of [TotalRecords] records in query",
+                            "moreRecordsStyle": "text-align: center;",
+                            "initialView": "PDF",
+                            "HTMLToolbar": {
+                                "buttons": {
+                                    "pdf": true,
+                                    "excel": true,
+                                    "printHTML": true,
+                                    "word": true,
+                                    "pdfButton": {
+                                        "text": "PDF",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.adobe.pdf.png.a5image",
+                                        "bubbleHelp": "Print report as a PDF document."
+                                    },
+                                    "excelButton": {
+                                        "text": "Excel",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.excel.png.a5image",
+                                        "bubbleHelp": "Export report to Excel."
+                                    },
+                                    "printHTMLButton": {
+                                        "text": "Print HTML",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$device.printer.png.a5image",
+                                        "bubbleHelp": "Print the HTML report."
+                                    },
+                                    "WordButton": {
+                                        "text": "Word",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.word.png.a5image",
+                                        "bubbleHelp": "Export report to Word."
+                                    },
+                                    "textButton": {
+                                        "text": "Text",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$control.text.png.a5image",
+                                        "bubbleHelp": "Export data in report to a text file."
+                                    },
+                                    "bookmarksButton": {
+                                        "buttonType": "Text",
+                                        "text": "Bookmarks",
+                                        "imageName": "images/$$generic.book.png.a5image"
+                                    }
+                                },
+                                "bookMarkPanelSize": "3in"
+                            }
+                        },
+                        "keyboardshortcutkey": ""
+                    },
+                    "class": "<Default>",
+                    "BreakType": "After",
+                    "breakHorizontalSpace": ".1in",
+                    "javascript": {
+                        "onclick": "action_{alias}_cbc77c30_b751_4868_a915_043148fd41f9(); return false;"
+                    },
+                    "sencha": {
+                        "animation": {
+                            "type": "slide",
+                            "duration": 500
+                        }
+                    },
+                    "pageLayoutPart": {
+                        "grid": {
+                            "onLoadCompleteJavascript": ""
+                        }
+                    }
+                },
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_cbc77c30_b751_4868_a915_043148fd41f9(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa fa-user fa-2x\"></i> Pegawai</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n\t",
+                    "tabbedUIButtonJavascript": "window['action_{alias}_cbc77c30_b751_4868_a915_043148fd41f9'] = function() {\n\t\n\t\n\tvar onCompleteCode = '';\n\tvar callbackId = A5.UUID();\n\tvar objx = tbiObj._ajaxCallbackCompleteCode;\n\tif(typeof objx == 'undefined') objx = {};\n\tobjx[callbackId] = Function(onCompleteCode);\n\t\n\n\n\tvar go = new Object();\n\tgo.gridName = 'pegawai';\n\tgo.alias = '{alias}_PEGAWAI_1666MSNT';\n\tgo.workingMessage = '<img src=\"css/A5System/Images/wait.gif\" /> Working...';\n\tgo.flagTimer = 'F';\n\tgo.flagQueryEcho = 'F';\n\tgo.flagDebugMode = 'F';\n\tgo.userFilter = '';\n\tgo.baseFilter = '';\n\tgo.userOrder = '';\n\tgo.overrideSettings = 'style_name=`{tabbedUI.style}`'+'||';\n\tgo.arguments = '';\n\t\n\t\n\tgo.localArguments = '';\n\tgo.linkDefinition = '';\n\tgo.placeHolderValues = '';\n\tgo.parameterBucket = $gvs('{alias}.PARAMETERBUCKET');\n\tgo.argumentValueBucket = $gvs('{alias}.ARGUMENTVALUES');\n\tgo.a5_default_path = '{tabbedUI.a5_default_path}';\n\tgo.onLoadCompleteJavascript = 'run:'+callbackId;\n\t\n\tgo._runningInMobilePreview = tbiObj._mobilePreview;\n\t\n\n\n\n\t\n\t{tabbedUI.alias}Obj.add({title: 'Pegawai',  name :'{alias}_PEGAWAI_1666MSNT', type:'grid', data: go , header: {\n\tclassName: '{tabbedUI.style}FooterTD',\n\tstyle: {\n\t\tborderTopStyle: 'none',\n\t\tborderBottomStyle: 'solid',\n\t\tborderBottomColor: '#ddd',\n\t\tborderBottomWidth: '1px',\n\t\tpadding: '0px'\n\t},\n\tshow: true,\n\thtml: '<div id=\"cbc77c30_b751_4868_a915_043148fd41f9\"><div></div></div>'\n}, autoRefresh: false  }); \n\t\n}\n"
+                },
+                "inPanelCard": false,
+                "inTreeControl": false
+            },
+            {
+                "controlType": "TabbedUIButton",
+                "display": "{B=White,Light Blue}{Data=6c4bef45-9fba-4036-bb69-37f37fd217aa}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa fa-users fa-2x\"></i>  Keluarga (Grid Component)] �",
+                "displayODFlat": "{Data=6c4bef45-9fba-4036-bb69-37f37fd217aa}{I:'$$control.html.advButton'} [Tabbed UI Button: Keluarga]",
+                "idInternal": "6c4bef45-9fba-4036-bb69-37f37fd217aa",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=6c4bef45-9fba-4036-bb69-37f37fd217aa}{I:'$$control.html.advButton'} [Tabbed UI Button: Keluarga]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=6c4bef45-9fba-4036-bb69-37f37fd217aa}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa fa-users fa-2x\"></i>  Keluarga (Grid Component)] �",
+                "v": {
+                    "tabbedUI": {
+                        "buttonType": "Button",
+                        "buttonText": "<i class=\"fa fa-users fa-2x\"></i>  Keluarga",
+                        "actionType": "Component",
+                        "paneTitle": "Keluarga",
+                        "canClosePane": true,
+                        "treeControl": {
+                            "controlNesting": "SameLevelAsPrevious",
+                            "outdentLevel": 1,
+                            "treeControlIndentLevel": -1,
+                            "icon": "<Auto>"
+                        },
+                        "header": {
+                            "className": "<Default>",
+                            "style": {
+                                "borderTopStyle": "none",
+                                "borderBottomStyle": "solid",
+                                "borderBottomColor": "#ddd",
+                                "borderBottomWidth": "1px",
+                                "padding": "0px"
+                            },
+                            "show": true,
+                            "canHide": true
+                        },
+                        "grid": {
+                            "gridName": "Keluarga",
+                            "componentType": "Grid",
+                            "alias": "<DefaultAlias>",
+                            "useMasterStyle": true,
+                            "workingMessage": "<img src=\"css/A5System/Images/wait.gif\" /> Working..."
+                        },
+                        "report": {
+                            "workingMessage": "Working...",
+                            "printReportButtonLabel": "Print Report",
+                            "moreRecordsTemplate": "<hr />Showing first [DisplayRecords] of [TotalRecords] records in query",
+                            "moreRecordsStyle": "text-align: center;",
+                            "initialView": "PDF",
+                            "HTMLToolbar": {
+                                "buttons": {
+                                    "pdf": true,
+                                    "excel": true,
+                                    "printHTML": true,
+                                    "word": true,
+                                    "pdfButton": {
+                                        "text": "PDF",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.adobe.pdf.png.a5image",
+                                        "bubbleHelp": "Print report as a PDF document."
+                                    },
+                                    "excelButton": {
+                                        "text": "Excel",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.excel.png.a5image",
+                                        "bubbleHelp": "Export report to Excel."
+                                    },
+                                    "printHTMLButton": {
+                                        "text": "Print HTML",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$device.printer.png.a5image",
+                                        "bubbleHelp": "Print the HTML report."
+                                    },
+                                    "WordButton": {
+                                        "text": "Word",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.word.png.a5image",
+                                        "bubbleHelp": "Export report to Word."
+                                    },
+                                    "textButton": {
+                                        "text": "Text",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$control.text.png.a5image",
+                                        "bubbleHelp": "Export data in report to a text file."
+                                    },
+                                    "bookmarksButton": {
+                                        "buttonType": "Text",
+                                        "text": "Bookmarks",
+                                        "imageName": "images/$$generic.book.png.a5image"
+                                    }
+                                },
+                                "bookMarkPanelSize": "3in"
+                            }
+                        },
+                        "keyboardshortcutkey": ""
+                    },
+                    "class": "<Default>",
+                    "BreakType": "After",
+                    "breakHorizontalSpace": ".1in",
+                    "javascript": {
+                        "onclick": "action_{alias}_6c4bef45_9fba_4036_bb69_37f37fd217aa(); return false;"
+                    },
+                    "sencha": {
+                        "animation": {
+                            "type": "slide",
+                            "duration": 500
+                        }
+                    },
+                    "pageLayoutPart": {
+                        "grid": {
+                            "onLoadCompleteJavascript": ""
+                        }
+                    }
+                },
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_6c4bef45_9fba_4036_bb69_37f37fd217aa(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa fa-users fa-2x\"></i>  Keluarga</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n\t",
+                    "tabbedUIButtonJavascript": "window['action_{alias}_6c4bef45_9fba_4036_bb69_37f37fd217aa'] = function() {\n\t\n\t\n\tvar onCompleteCode = '';\n\tvar callbackId = A5.UUID();\n\tvar objx = tbiObj._ajaxCallbackCompleteCode;\n\tif(typeof objx == 'undefined') objx = {};\n\tobjx[callbackId] = Function(onCompleteCode);\n\t\n\n\n\tvar go = new Object();\n\tgo.gridName = 'Keluarga';\n\tgo.alias = '{alias}_KELUARGA_16620KFKM';\n\tgo.workingMessage = '<img src=\"css/A5System/Images/wait.gif\" /> Working...';\n\tgo.flagTimer = 'F';\n\tgo.flagQueryEcho = 'F';\n\tgo.flagDebugMode = 'F';\n\tgo.userFilter = '';\n\tgo.baseFilter = '';\n\tgo.userOrder = '';\n\tgo.overrideSettings = 'style_name=`{tabbedUI.style}`'+'||';\n\tgo.arguments = '';\n\t\n\t\n\tgo.localArguments = '';\n\tgo.linkDefinition = '';\n\tgo.placeHolderValues = '';\n\tgo.parameterBucket = $gvs('{alias}.PARAMETERBUCKET');\n\tgo.argumentValueBucket = $gvs('{alias}.ARGUMENTVALUES');\n\tgo.a5_default_path = '{tabbedUI.a5_default_path}';\n\tgo.onLoadCompleteJavascript = 'run:'+callbackId;\n\t\n\tgo._runningInMobilePreview = tbiObj._mobilePreview;\n\t\n\n\n\n\t\n\t{tabbedUI.alias}Obj.add({title: 'Keluarga',  name :'{alias}_KELUARGA_16620KFKM', type:'grid', data: go , header: {\n\tclassName: '{tabbedUI.style}FooterTD',\n\tstyle: {\n\t\tborderTopStyle: 'none',\n\t\tborderBottomStyle: 'solid',\n\t\tborderBottomColor: '#ddd',\n\t\tborderBottomWidth: '1px',\n\t\tpadding: '0px'\n\t},\n\tshow: true,\n\thtml: '<div id=\"6c4bef45_9fba_4036_bb69_37f37fd217aa\"><div></div></div>'\n}, autoRefresh: false  }); \n\t\n}\n"
+                },
+                "inPanelCard": false,
+                "inTreeControl": false
+            },
+            {
+                "controlType": "TabbedUIButton",
+                "display": "{B=White,Light Blue}{Data=9dc1169c-bf27-49ad-9dfa-d71fd4b7e883}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa fa-graduation-cap fa-2x\"></i> Pendidikan (Grid Component)] �",
+                "displayODFlat": "{Data=9dc1169c-bf27-49ad-9dfa-d71fd4b7e883}{I:'$$control.html.advButton'} [Tabbed UI Button: pendidikan]",
+                "idInternal": "9dc1169c-bf27-49ad-9dfa-d71fd4b7e883",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=9dc1169c-bf27-49ad-9dfa-d71fd4b7e883}{I:'$$control.html.advButton'} [Tabbed UI Button: pendidikan]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=9dc1169c-bf27-49ad-9dfa-d71fd4b7e883}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa fa-graduation-cap fa-2x\"></i> Pendidikan (Grid Component)] �",
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_9dc1169c_bf27_49ad_9dfa_d71fd4b7e883(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa fa-graduation-cap fa-2x\"></i> Pendidikan</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n\t",
+                    "tabbedUIButtonJavascript": "window['action_{alias}_9dc1169c_bf27_49ad_9dfa_d71fd4b7e883'] = function() {\n\t\n\t\n\tvar onCompleteCode = '';\n\tvar callbackId = A5.UUID();\n\tvar objx = tbiObj._ajaxCallbackCompleteCode;\n\tif(typeof objx == 'undefined') objx = {};\n\tobjx[callbackId] = Function(onCompleteCode);\n\t\n\n\n\tvar go = new Object();\n\tgo.gridName = 'pendidikan';\n\tgo.alias = '{alias}_PENDIDIKAN_162838OIKO';\n\tgo.workingMessage = '<img src=\"css/A5System/Images/wait.gif\" /> Working...';\n\tgo.flagTimer = 'F';\n\tgo.flagQueryEcho = 'F';\n\tgo.flagDebugMode = 'F';\n\tgo.userFilter = '';\n\tgo.baseFilter = '';\n\tgo.userOrder = '';\n\tgo.overrideSettings = 'style_name=`{tabbedUI.style}`'+'||';\n\tgo.arguments = '';\n\t\n\t\n\tgo.localArguments = '';\n\tgo.linkDefinition = '';\n\tgo.placeHolderValues = '';\n\tgo.parameterBucket = $gvs('{alias}.PARAMETERBUCKET');\n\tgo.argumentValueBucket = $gvs('{alias}.ARGUMENTVALUES');\n\tgo.a5_default_path = '{tabbedUI.a5_default_path}';\n\tgo.onLoadCompleteJavascript = 'run:'+callbackId;\n\t\n\tgo._runningInMobilePreview = tbiObj._mobilePreview;\n\t\n\n\n\n\t\n\t{tabbedUI.alias}Obj.add({title: 'Pendidikan',  name :'{alias}_PENDIDIKAN_162838OIKO', type:'grid', data: go , header: {\n\tclassName: '{tabbedUI.style}FooterTD',\n\tstyle: {\n\t\tborderTopStyle: 'none',\n\t\tborderBottomStyle: 'solid',\n\t\tborderBottomColor: '#ddd',\n\t\tborderBottomWidth: '1px',\n\t\tpadding: '0px'\n\t},\n\tshow: true,\n\thtml: '<div id=\"9dc1169c_bf27_49ad_9dfa_d71fd4b7e883\"><div></div></div>'\n}, autoRefresh: false  }); \n\t\n}\n"
+                },
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "v": {
+                    "tabbedUI": {
+                        "buttonType": "Button",
+                        "buttonText": "<i class=\"fa fa-graduation-cap fa-2x\"></i> Pendidikan",
+                        "actionType": "Component",
+                        "paneTitle": "Pendidikan",
+                        "canClosePane": true,
+                        "keyboardshortcutkey": "",
+                        "treeControl": {
+                            "controlNesting": "SameLevelAsPrevious",
+                            "outdentLevel": 1,
+                            "treeControlIndentLevel": -1,
+                            "icon": "<Auto>"
+                        },
+                        "header": {
+                            "className": "<Default>",
+                            "style": {
+                                "borderTopStyle": "none",
+                                "borderBottomStyle": "solid",
+                                "borderBottomColor": "#ddd",
+                                "borderBottomWidth": "1px",
+                                "padding": "0px"
+                            },
+                            "show": true,
+                            "canHide": true
+                        },
+                        "grid": {
+                            "gridName": "pendidikan",
+                            "componentType": "Grid",
+                            "alias": "<DefaultAlias>",
+                            "useMasterStyle": true,
+                            "workingMessage": "<img src=\"css/A5System/Images/wait.gif\" /> Working..."
+                        },
+                        "report": {
+                            "workingMessage": "Working...",
+                            "printReportButtonLabel": "Print Report",
+                            "moreRecordsTemplate": "<hr />Showing first [DisplayRecords] of [TotalRecords] records in query",
+                            "moreRecordsStyle": "text-align: center;",
+                            "initialView": "PDF",
+                            "HTMLToolbar": {
+                                "buttons": {
+                                    "pdf": true,
+                                    "excel": true,
+                                    "printHTML": true,
+                                    "word": true,
+                                    "pdfButton": {
+                                        "text": "PDF",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.adobe.pdf.png.a5image",
+                                        "bubbleHelp": "Print report as a PDF document."
+                                    },
+                                    "excelButton": {
+                                        "text": "Excel",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.excel.png.a5image",
+                                        "bubbleHelp": "Export report to Excel."
+                                    },
+                                    "printHTMLButton": {
+                                        "text": "Print HTML",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$device.printer.png.a5image",
+                                        "bubbleHelp": "Print the HTML report."
+                                    },
+                                    "WordButton": {
+                                        "text": "Word",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.word.png.a5image",
+                                        "bubbleHelp": "Export report to Word."
+                                    },
+                                    "textButton": {
+                                        "text": "Text",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$control.text.png.a5image",
+                                        "bubbleHelp": "Export data in report to a text file."
+                                    },
+                                    "bookmarksButton": {
+                                        "buttonType": "Text",
+                                        "text": "Bookmarks",
+                                        "imageName": "images/$$generic.book.png.a5image"
+                                    }
+                                },
+                                "bookMarkPanelSize": "3in"
+                            }
+                        }
+                    },
+                    "class": "<Default>",
+                    "BreakType": "After",
+                    "breakHorizontalSpace": ".1in",
+                    "javascript": {
+                        "onclick": "action_{alias}_9dc1169c_bf27_49ad_9dfa_d71fd4b7e883(); return false;"
+                    },
+                    "sencha": {
+                        "animation": {
+                            "type": "slide",
+                            "duration": 500
+                        }
+                    },
+                    "pageLayoutPart": {
+                        "grid": {
+                            "onLoadCompleteJavascript": ""
+                        }
+                    }
+                }
+            },
+            {
+                "controlType": "TabbedUIButton",
+                "display": "{B=White,Light Blue}{Data=7cf0aaaf-96bd-4019-9955-de73fab201c1}{I:'$$control.html.advButton'} [Tabbed UI Button:  <i class=\"fa  fa-user-secret fa-2x\"></i> Jabatan (Grid Component)] �",
+                "displayODFlat": "{Data=7cf0aaaf-96bd-4019-9955-de73fab201c1}{I:'$$control.html.advButton'} [Tabbed UI Button: jabatan]",
+                "idInternal": "7cf0aaaf-96bd-4019-9955-de73fab201c1",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=7cf0aaaf-96bd-4019-9955-de73fab201c1}{I:'$$control.html.advButton'} [Tabbed UI Button: jabatan]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=7cf0aaaf-96bd-4019-9955-de73fab201c1}{I:'$$control.html.advButton'} [Tabbed UI Button:  <i class=\"fa  fa-user-secret fa-2x\"></i> Jabatan (Grid Component)] �",
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_7cf0aaaf_96bd_4019_9955_de73fab201c1(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  > <i class=\"fa  fa-user-secret fa-2x\"></i> Jabatan</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n\t",
+                    "tabbedUIButtonJavascript": "window['action_{alias}_7cf0aaaf_96bd_4019_9955_de73fab201c1'] = function() {\n\t\n\t\n\tvar onCompleteCode = '';\n\tvar callbackId = A5.UUID();\n\tvar objx = tbiObj._ajaxCallbackCompleteCode;\n\tif(typeof objx == 'undefined') objx = {};\n\tobjx[callbackId] = Function(onCompleteCode);\n\t\n\n\n\tvar go = new Object();\n\tgo.gridName = 'jabatan';\n\tgo.alias = '{alias}_JABATAN_162831EQAW';\n\tgo.workingMessage = '<img src=\"css/A5System/Images/wait.gif\" /> Working...';\n\tgo.flagTimer = 'F';\n\tgo.flagQueryEcho = 'F';\n\tgo.flagDebugMode = 'F';\n\tgo.userFilter = '';\n\tgo.baseFilter = '';\n\tgo.userOrder = '';\n\tgo.overrideSettings = 'style_name=`{tabbedUI.style}`'+'||';\n\tgo.arguments = '';\n\t\n\t\n\tgo.localArguments = '';\n\tgo.linkDefinition = '';\n\tgo.placeHolderValues = '';\n\tgo.parameterBucket = $gvs('{alias}.PARAMETERBUCKET');\n\tgo.argumentValueBucket = $gvs('{alias}.ARGUMENTVALUES');\n\tgo.a5_default_path = '{tabbedUI.a5_default_path}';\n\tgo.onLoadCompleteJavascript = 'run:'+callbackId;\n\t\n\tgo._runningInMobilePreview = tbiObj._mobilePreview;\n\t\n\n\n\n\t\n\t{tabbedUI.alias}Obj.add({title: 'Jabatan',  name :'{alias}_JABATAN_162831EQAW', type:'grid', data: go , header: {\n\tclassName: '{tabbedUI.style}FooterTD',\n\tstyle: {\n\t\tborderTopStyle: 'none',\n\t\tborderBottomStyle: 'solid',\n\t\tborderBottomColor: '#ddd',\n\t\tborderBottomWidth: '1px',\n\t\tpadding: '0px'\n\t},\n\tshow: true,\n\thtml: '<div id=\"7cf0aaaf_96bd_4019_9955_de73fab201c1\"><div></div></div>'\n}, autoRefresh: false  }); \n\t\n}\n"
+                },
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "v": {
+                    "tabbedUI": {
+                        "buttonType": "Button",
+                        "buttonText": " <i class=\"fa  fa-user-secret fa-2x\"></i> Jabatan",
+                        "actionType": "Component",
+                        "paneTitle": "Jabatan",
+                        "canClosePane": true,
+                        "keyboardshortcutkey": "",
+                        "treeControl": {
+                            "controlNesting": "SameLevelAsPrevious",
+                            "outdentLevel": 1,
+                            "treeControlIndentLevel": -1,
+                            "icon": "<Auto>"
+                        },
+                        "header": {
+                            "className": "<Default>",
+                            "style": {
+                                "borderTopStyle": "none",
+                                "borderBottomStyle": "solid",
+                                "borderBottomColor": "#ddd",
+                                "borderBottomWidth": "1px",
+                                "padding": "0px"
+                            },
+                            "show": true,
+                            "canHide": true
+                        },
+                        "grid": {
+                            "gridName": "jabatan",
+                            "componentType": "Grid",
+                            "alias": "<DefaultAlias>",
+                            "useMasterStyle": true,
+                            "workingMessage": "<img src=\"css/A5System/Images/wait.gif\" /> Working..."
+                        },
+                        "report": {
+                            "workingMessage": "Working...",
+                            "printReportButtonLabel": "Print Report",
+                            "moreRecordsTemplate": "<hr />Showing first [DisplayRecords] of [TotalRecords] records in query",
+                            "moreRecordsStyle": "text-align: center;",
+                            "initialView": "PDF",
+                            "HTMLToolbar": {
+                                "buttons": {
+                                    "pdf": true,
+                                    "excel": true,
+                                    "printHTML": true,
+                                    "word": true,
+                                    "pdfButton": {
+                                        "text": "PDF",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.adobe.pdf.png.a5image",
+                                        "bubbleHelp": "Print report as a PDF document."
+                                    },
+                                    "excelButton": {
+                                        "text": "Excel",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.excel.png.a5image",
+                                        "bubbleHelp": "Export report to Excel."
+                                    },
+                                    "printHTMLButton": {
+                                        "text": "Print HTML",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$device.printer.png.a5image",
+                                        "bubbleHelp": "Print the HTML report."
+                                    },
+                                    "WordButton": {
+                                        "text": "Word",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.word.png.a5image",
+                                        "bubbleHelp": "Export report to Word."
+                                    },
+                                    "textButton": {
+                                        "text": "Text",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$control.text.png.a5image",
+                                        "bubbleHelp": "Export data in report to a text file."
+                                    },
+                                    "bookmarksButton": {
+                                        "buttonType": "Text",
+                                        "text": "Bookmarks",
+                                        "imageName": "images/$$generic.book.png.a5image"
+                                    }
+                                },
+                                "bookMarkPanelSize": "3in"
+                            }
+                        }
+                    },
+                    "class": "<Default>",
+                    "BreakType": "After",
+                    "breakHorizontalSpace": ".1in",
+                    "javascript": {
+                        "onclick": "action_{alias}_7cf0aaaf_96bd_4019_9955_de73fab201c1(); return false;"
+                    },
+                    "sencha": {
+                        "animation": {
+                            "type": "slide",
+                            "duration": 500
+                        }
+                    },
+                    "pageLayoutPart": {
+                        "grid": {
+                            "onLoadCompleteJavascript": ""
+                        }
+                    }
+                }
+            },
+            {
+                "controlType": "TabbedUIButton",
+                "display": "{B=White,Light Blue}{Data=ffbc19f3-4add-402c-8604-cba182210c78}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa fa-book fa-2x\"></i> Pelatihan (Grid Component)] �",
+                "displayODFlat": "{Data=ffbc19f3-4add-402c-8604-cba182210c78}{I:'$$control.html.advButton'} [Tabbed UI Button: pelatihan]",
+                "idInternal": "ffbc19f3-4add-402c-8604-cba182210c78",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=ffbc19f3-4add-402c-8604-cba182210c78}{I:'$$control.html.advButton'} [Tabbed UI Button: pelatihan]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=ffbc19f3-4add-402c-8604-cba182210c78}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa fa-book fa-2x\"></i> Pelatihan (Grid Component)] �",
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_ffbc19f3_4add_402c_8604_cba182210c78(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa fa-book fa-2x\"></i> Pelatihan</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n\t",
+                    "tabbedUIButtonJavascript": "window['action_{alias}_ffbc19f3_4add_402c_8604_cba182210c78'] = function() {\n\t\n\t\n\tvar onCompleteCode = '';\n\tvar callbackId = A5.UUID();\n\tvar objx = tbiObj._ajaxCallbackCompleteCode;\n\tif(typeof objx == 'undefined') objx = {};\n\tobjx[callbackId] = Function(onCompleteCode);\n\t\n\n\n\tvar go = new Object();\n\tgo.gridName = 'pelatihan';\n\tgo.alias = '{alias}_PELATIHAN_162825SQGI';\n\tgo.workingMessage = '<img src=\"css/A5System/Images/wait.gif\" /> Working...';\n\tgo.flagTimer = 'F';\n\tgo.flagQueryEcho = 'F';\n\tgo.flagDebugMode = 'F';\n\tgo.userFilter = '';\n\tgo.baseFilter = '';\n\tgo.userOrder = '';\n\tgo.overrideSettings = 'style_name=`{tabbedUI.style}`'+'||';\n\tgo.arguments = '';\n\t\n\t\n\tgo.localArguments = '';\n\tgo.linkDefinition = '';\n\tgo.placeHolderValues = '';\n\tgo.parameterBucket = $gvs('{alias}.PARAMETERBUCKET');\n\tgo.argumentValueBucket = $gvs('{alias}.ARGUMENTVALUES');\n\tgo.a5_default_path = '{tabbedUI.a5_default_path}';\n\tgo.onLoadCompleteJavascript = 'run:'+callbackId;\n\t\n\tgo._runningInMobilePreview = tbiObj._mobilePreview;\n\t\n\n\n\n\t\n\t{tabbedUI.alias}Obj.add({title: 'Pelatihan',  name :'{alias}_PELATIHAN_162825SQGI', type:'grid', data: go , header: {\n\tclassName: '{tabbedUI.style}FooterTD',\n\tstyle: {\n\t\tborderTopStyle: 'none',\n\t\tborderBottomStyle: 'solid',\n\t\tborderBottomColor: '#ddd',\n\t\tborderBottomWidth: '1px',\n\t\tpadding: '0px'\n\t},\n\tshow: true,\n\thtml: '<div id=\"ffbc19f3_4add_402c_8604_cba182210c78\"><div></div></div>'\n}, autoRefresh: false  }); \n\t\n}\n"
+                },
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "v": {
+                    "tabbedUI": {
+                        "buttonType": "Button",
+                        "buttonText": "<i class=\"fa fa-book fa-2x\"></i> Pelatihan",
+                        "actionType": "Component",
+                        "paneTitle": "Pelatihan",
+                        "canClosePane": true,
+                        "keyboardshortcutkey": "",
+                        "treeControl": {
+                            "controlNesting": "SameLevelAsPrevious",
+                            "outdentLevel": 1,
+                            "treeControlIndentLevel": -1,
+                            "icon": "<Auto>"
+                        },
+                        "header": {
+                            "className": "<Default>",
+                            "style": {
+                                "borderTopStyle": "none",
+                                "borderBottomStyle": "solid",
+                                "borderBottomColor": "#ddd",
+                                "borderBottomWidth": "1px",
+                                "padding": "0px"
+                            },
+                            "show": true,
+                            "canHide": true
+                        },
+                        "grid": {
+                            "gridName": "pelatihan",
+                            "componentType": "Grid",
+                            "alias": "<DefaultAlias>",
+                            "useMasterStyle": true,
+                            "workingMessage": "<img src=\"css/A5System/Images/wait.gif\" /> Working..."
+                        },
+                        "report": {
+                            "workingMessage": "Working...",
+                            "printReportButtonLabel": "Print Report",
+                            "moreRecordsTemplate": "<hr />Showing first [DisplayRecords] of [TotalRecords] records in query",
+                            "moreRecordsStyle": "text-align: center;",
+                            "initialView": "PDF",
+                            "HTMLToolbar": {
+                                "buttons": {
+                                    "pdf": true,
+                                    "excel": true,
+                                    "printHTML": true,
+                                    "word": true,
+                                    "pdfButton": {
+                                        "text": "PDF",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.adobe.pdf.png.a5image",
+                                        "bubbleHelp": "Print report as a PDF document."
+                                    },
+                                    "excelButton": {
+                                        "text": "Excel",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.excel.png.a5image",
+                                        "bubbleHelp": "Export report to Excel."
+                                    },
+                                    "printHTMLButton": {
+                                        "text": "Print HTML",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$device.printer.png.a5image",
+                                        "bubbleHelp": "Print the HTML report."
+                                    },
+                                    "WordButton": {
+                                        "text": "Word",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.word.png.a5image",
+                                        "bubbleHelp": "Export report to Word."
+                                    },
+                                    "textButton": {
+                                        "text": "Text",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$control.text.png.a5image",
+                                        "bubbleHelp": "Export data in report to a text file."
+                                    },
+                                    "bookmarksButton": {
+                                        "buttonType": "Text",
+                                        "text": "Bookmarks",
+                                        "imageName": "images/$$generic.book.png.a5image"
+                                    }
+                                },
+                                "bookMarkPanelSize": "3in"
+                            }
+                        }
+                    },
+                    "class": "<Default>",
+                    "BreakType": "After",
+                    "breakHorizontalSpace": ".1in",
+                    "javascript": {
+                        "onclick": "action_{alias}_ffbc19f3_4add_402c_8604_cba182210c78(); return false;"
+                    },
+                    "sencha": {
+                        "animation": {
+                            "type": "slide",
+                            "duration": 500
+                        }
+                    },
+                    "pageLayoutPart": {
+                        "grid": {
+                            "onLoadCompleteJavascript": ""
+                        }
+                    }
+                }
+            },
+            {
+                "controlType": "TabbedUIButton",
+                "display": "{B=White,Light Blue}{Data=59e0f6ba-b1aa-435b-9146-3bf274176be6}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa  fa-plane fa-2x\"></i> Cuti (Grid Component)] �",
+                "displayODFlat": "{Data=59e0f6ba-b1aa-435b-9146-3bf274176be6}{I:'$$control.html.advButton'} [Tabbed UI Button: cuti]",
+                "idInternal": "59e0f6ba-b1aa-435b-9146-3bf274176be6",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=59e0f6ba-b1aa-435b-9146-3bf274176be6}{I:'$$control.html.advButton'} [Tabbed UI Button: cuti]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=59e0f6ba-b1aa-435b-9146-3bf274176be6}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa  fa-plane fa-2x\"></i> Cuti (Grid Component)] �",
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_59e0f6ba_b1aa_435b_9146_3bf274176be6(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa  fa-plane fa-2x\"></i> Cuti</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n\t",
+                    "tabbedUIButtonJavascript": "window['action_{alias}_59e0f6ba_b1aa_435b_9146_3bf274176be6'] = function() {\n\t\n\t\n\tvar onCompleteCode = '';\n\tvar callbackId = A5.UUID();\n\tvar objx = tbiObj._ajaxCallbackCompleteCode;\n\tif(typeof objx == 'undefined') objx = {};\n\tobjx[callbackId] = Function(onCompleteCode);\n\t\n\n\n\tvar go = new Object();\n\tgo.gridName = 'cuti';\n\tgo.alias = '{alias}_CUTI_162845NYLL';\n\tgo.workingMessage = '<img src=\"css/A5System/Images/wait.gif\" /> Working...';\n\tgo.flagTimer = 'F';\n\tgo.flagQueryEcho = 'F';\n\tgo.flagDebugMode = 'F';\n\tgo.userFilter = '';\n\tgo.baseFilter = '';\n\tgo.userOrder = '';\n\tgo.overrideSettings = 'style_name=`{tabbedUI.style}`'+'||';\n\tgo.arguments = '';\n\t\n\t\n\tgo.localArguments = '';\n\tgo.linkDefinition = '';\n\tgo.placeHolderValues = '';\n\tgo.parameterBucket = $gvs('{alias}.PARAMETERBUCKET');\n\tgo.argumentValueBucket = $gvs('{alias}.ARGUMENTVALUES');\n\tgo.a5_default_path = '{tabbedUI.a5_default_path}';\n\tgo.onLoadCompleteJavascript = 'run:'+callbackId;\n\t\n\tgo._runningInMobilePreview = tbiObj._mobilePreview;\n\t\n\n\n\n\t\n\t{tabbedUI.alias}Obj.add({title: 'Cuti',  name :'{alias}_CUTI_162845NYLL', type:'grid', data: go , header: {\n\tclassName: '{tabbedUI.style}FooterTD',\n\tstyle: {\n\t\tborderTopStyle: 'none',\n\t\tborderBottomStyle: 'solid',\n\t\tborderBottomColor: '#ddd',\n\t\tborderBottomWidth: '1px',\n\t\tpadding: '0px'\n\t},\n\tshow: true,\n\thtml: '<div id=\"59e0f6ba_b1aa_435b_9146_3bf274176be6\"><div></div></div>'\n}, autoRefresh: false  }); \n\t\n}\n"
+                },
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "v": {
+                    "tabbedUI": {
+                        "buttonType": "Button",
+                        "buttonText": "<i class=\"fa  fa-plane fa-2x\"></i> Cuti",
+                        "actionType": "Component",
+                        "paneTitle": "Cuti",
+                        "canClosePane": true,
+                        "keyboardshortcutkey": "",
+                        "treeControl": {
+                            "controlNesting": "SameLevelAsPrevious",
+                            "outdentLevel": 1,
+                            "treeControlIndentLevel": -1,
+                            "icon": "<Auto>"
+                        },
+                        "header": {
+                            "className": "<Default>",
+                            "style": {
+                                "borderTopStyle": "none",
+                                "borderBottomStyle": "solid",
+                                "borderBottomColor": "#ddd",
+                                "borderBottomWidth": "1px",
+                                "padding": "0px"
+                            },
+                            "show": true,
+                            "canHide": true
+                        },
+                        "grid": {
+                            "gridName": "cuti",
+                            "componentType": "Grid",
+                            "alias": "<DefaultAlias>",
+                            "useMasterStyle": true,
+                            "workingMessage": "<img src=\"css/A5System/Images/wait.gif\" /> Working..."
+                        },
+                        "report": {
+                            "workingMessage": "Working...",
+                            "printReportButtonLabel": "Print Report",
+                            "moreRecordsTemplate": "<hr />Showing first [DisplayRecords] of [TotalRecords] records in query",
+                            "moreRecordsStyle": "text-align: center;",
+                            "initialView": "PDF",
+                            "HTMLToolbar": {
+                                "buttons": {
+                                    "pdf": true,
+                                    "excel": true,
+                                    "printHTML": true,
+                                    "word": true,
+                                    "pdfButton": {
+                                        "text": "PDF",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.adobe.pdf.png.a5image",
+                                        "bubbleHelp": "Print report as a PDF document."
+                                    },
+                                    "excelButton": {
+                                        "text": "Excel",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.excel.png.a5image",
+                                        "bubbleHelp": "Export report to Excel."
+                                    },
+                                    "printHTMLButton": {
+                                        "text": "Print HTML",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$device.printer.png.a5image",
+                                        "bubbleHelp": "Print the HTML report."
+                                    },
+                                    "WordButton": {
+                                        "text": "Word",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.word.png.a5image",
+                                        "bubbleHelp": "Export report to Word."
+                                    },
+                                    "textButton": {
+                                        "text": "Text",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$control.text.png.a5image",
+                                        "bubbleHelp": "Export data in report to a text file."
+                                    },
+                                    "bookmarksButton": {
+                                        "buttonType": "Text",
+                                        "text": "Bookmarks",
+                                        "imageName": "images/$$generic.book.png.a5image"
+                                    }
+                                },
+                                "bookMarkPanelSize": "3in"
+                            }
+                        }
+                    },
+                    "class": "<Default>",
+                    "BreakType": "After",
+                    "breakHorizontalSpace": ".1in",
+                    "javascript": {
+                        "onclick": "action_{alias}_59e0f6ba_b1aa_435b_9146_3bf274176be6(); return false;"
+                    },
+                    "sencha": {
+                        "animation": {
+                            "type": "slide",
+                            "duration": 500
+                        }
+                    },
+                    "pageLayoutPart": {
+                        "grid": {
+                            "onLoadCompleteJavascript": ""
+                        }
+                    }
+                }
+            },
+            {
+                "controlType": "TabbedUIButton",
+                "display": "{B=White,Light Blue}{Data=e0bdd115-c96f-4b33-8066-6370c75767dd}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa fa-eye fa-2x\"></i> Penilaian (Grid Component)] �",
+                "displayODFlat": "{Data=e0bdd115-c96f-4b33-8066-6370c75767dd}{I:'$$control.html.advButton'} [Tabbed UI Button: penilaian]",
+                "idInternal": "e0bdd115-c96f-4b33-8066-6370c75767dd",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=e0bdd115-c96f-4b33-8066-6370c75767dd}{I:'$$control.html.advButton'} [Tabbed UI Button: penilaian]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=e0bdd115-c96f-4b33-8066-6370c75767dd}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa fa-eye fa-2x\"></i> Penilaian (Grid Component)] �",
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_e0bdd115_c96f_4b33_8066_6370c75767dd(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa fa-eye fa-2x\"></i> Penilaian</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n\t",
+                    "tabbedUIButtonJavascript": "window['action_{alias}_e0bdd115_c96f_4b33_8066_6370c75767dd'] = function() {\n\t\n\t\n\tvar onCompleteCode = '';\n\tvar callbackId = A5.UUID();\n\tvar objx = tbiObj._ajaxCallbackCompleteCode;\n\tif(typeof objx == 'undefined') objx = {};\n\tobjx[callbackId] = Function(onCompleteCode);\n\t\n\n\n\tvar go = new Object();\n\tgo.gridName = 'penilaian';\n\tgo.alias = '{alias}_PENILAIAN_162852BKAQ';\n\tgo.workingMessage = '<img src=\"css/A5System/Images/wait.gif\" /> Working...';\n\tgo.flagTimer = 'F';\n\tgo.flagQueryEcho = 'F';\n\tgo.flagDebugMode = 'F';\n\tgo.userFilter = '';\n\tgo.baseFilter = '';\n\tgo.userOrder = '';\n\tgo.overrideSettings = 'style_name=`{tabbedUI.style}`'+'||';\n\tgo.arguments = '';\n\t\n\t\n\tgo.localArguments = '';\n\tgo.linkDefinition = '';\n\tgo.placeHolderValues = '';\n\tgo.parameterBucket = $gvs('{alias}.PARAMETERBUCKET');\n\tgo.argumentValueBucket = $gvs('{alias}.ARGUMENTVALUES');\n\tgo.a5_default_path = '{tabbedUI.a5_default_path}';\n\tgo.onLoadCompleteJavascript = 'run:'+callbackId;\n\t\n\tgo._runningInMobilePreview = tbiObj._mobilePreview;\n\t\n\n\n\n\t\n\t{tabbedUI.alias}Obj.add({title: 'Penilaian',  name :'{alias}_PENILAIAN_162852BKAQ', type:'grid', data: go , header: {\n\tclassName: '{tabbedUI.style}FooterTD',\n\tstyle: {\n\t\tborderTopStyle: 'none',\n\t\tborderBottomStyle: 'solid',\n\t\tborderBottomColor: '#ddd',\n\t\tborderBottomWidth: '1px',\n\t\tpadding: '0px'\n\t},\n\tshow: true,\n\thtml: '<div id=\"e0bdd115_c96f_4b33_8066_6370c75767dd\"><div></div></div>'\n}, autoRefresh: false  }); \n\t\n}\n"
+                },
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "v": {
+                    "tabbedUI": {
+                        "buttonType": "Button",
+                        "buttonText": "<i class=\"fa fa-eye fa-2x\"></i> Penilaian",
+                        "actionType": "Component",
+                        "paneTitle": "Penilaian",
+                        "canClosePane": true,
+                        "keyboardshortcutkey": "",
+                        "treeControl": {
+                            "controlNesting": "SameLevelAsPrevious",
+                            "outdentLevel": 1,
+                            "treeControlIndentLevel": -1,
+                            "icon": "<Auto>"
+                        },
+                        "header": {
+                            "className": "<Default>",
+                            "style": {
+                                "borderTopStyle": "none",
+                                "borderBottomStyle": "solid",
+                                "borderBottomColor": "#ddd",
+                                "borderBottomWidth": "1px",
+                                "padding": "0px"
+                            },
+                            "show": true,
+                            "canHide": true
+                        },
+                        "grid": {
+                            "gridName": "penilaian",
+                            "componentType": "Grid",
+                            "alias": "<DefaultAlias>",
+                            "useMasterStyle": true,
+                            "workingMessage": "<img src=\"css/A5System/Images/wait.gif\" /> Working..."
+                        },
+                        "report": {
+                            "workingMessage": "Working...",
+                            "printReportButtonLabel": "Print Report",
+                            "moreRecordsTemplate": "<hr />Showing first [DisplayRecords] of [TotalRecords] records in query",
+                            "moreRecordsStyle": "text-align: center;",
+                            "initialView": "PDF",
+                            "HTMLToolbar": {
+                                "buttons": {
+                                    "pdf": true,
+                                    "excel": true,
+                                    "printHTML": true,
+                                    "word": true,
+                                    "pdfButton": {
+                                        "text": "PDF",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.adobe.pdf.png.a5image",
+                                        "bubbleHelp": "Print report as a PDF document."
+                                    },
+                                    "excelButton": {
+                                        "text": "Excel",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.excel.png.a5image",
+                                        "bubbleHelp": "Export report to Excel."
+                                    },
+                                    "printHTMLButton": {
+                                        "text": "Print HTML",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$device.printer.png.a5image",
+                                        "bubbleHelp": "Print the HTML report."
+                                    },
+                                    "WordButton": {
+                                        "text": "Word",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.word.png.a5image",
+                                        "bubbleHelp": "Export report to Word."
+                                    },
+                                    "textButton": {
+                                        "text": "Text",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$control.text.png.a5image",
+                                        "bubbleHelp": "Export data in report to a text file."
+                                    },
+                                    "bookmarksButton": {
+                                        "buttonType": "Text",
+                                        "text": "Bookmarks",
+                                        "imageName": "images/$$generic.book.png.a5image"
+                                    }
+                                },
+                                "bookMarkPanelSize": "3in"
+                            }
+                        }
+                    },
+                    "class": "<Default>",
+                    "BreakType": "After",
+                    "breakHorizontalSpace": ".1in",
+                    "javascript": {
+                        "onclick": "action_{alias}_e0bdd115_c96f_4b33_8066_6370c75767dd(); return false;"
+                    },
+                    "sencha": {
+                        "animation": {
+                            "type": "slide",
+                            "duration": 500
+                        }
+                    },
+                    "pageLayoutPart": {
+                        "grid": {
+                            "onLoadCompleteJavascript": ""
+                        }
+                    }
+                }
+            },
+            {
+                "controlType": "TabbedUIButton",
+                "display": "{B=White,Light Blue}{Data=fb0bfb9e-05e5-48a4-9275-7ed3bc9341d0}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa fa-star fa-2x\"></i> Penghargaan (Grid Component)] �",
+                "displayODFlat": "{Data=fb0bfb9e-05e5-48a4-9275-7ed3bc9341d0}{I:'$$control.html.advButton'} [Tabbed UI Button: penghargaan]",
+                "idInternal": "fb0bfb9e-05e5-48a4-9275-7ed3bc9341d0",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=fb0bfb9e-05e5-48a4-9275-7ed3bc9341d0}{I:'$$control.html.advButton'} [Tabbed UI Button: penghargaan]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=fb0bfb9e-05e5-48a4-9275-7ed3bc9341d0}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa fa-star fa-2x\"></i> Penghargaan (Grid Component)] �",
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_fb0bfb9e_05e5_48a4_9275_7ed3bc9341d0(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa fa-star fa-2x\"></i> Penghargaan</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n\t",
+                    "tabbedUIButtonJavascript": "window['action_{alias}_fb0bfb9e_05e5_48a4_9275_7ed3bc9341d0'] = function() {\n\t\n\t\n\tvar onCompleteCode = '';\n\tvar callbackId = A5.UUID();\n\tvar objx = tbiObj._ajaxCallbackCompleteCode;\n\tif(typeof objx == 'undefined') objx = {};\n\tobjx[callbackId] = Function(onCompleteCode);\n\t\n\n\n\tvar go = new Object();\n\tgo.gridName = 'penghargaan';\n\tgo.alias = '{alias}_PENGHARGAA_162859RNZL';\n\tgo.workingMessage = '<img src=\"css/A5System/Images/wait.gif\" /> Working...';\n\tgo.flagTimer = 'F';\n\tgo.flagQueryEcho = 'F';\n\tgo.flagDebugMode = 'F';\n\tgo.userFilter = '';\n\tgo.baseFilter = '';\n\tgo.userOrder = '';\n\tgo.overrideSettings = 'style_name=`{tabbedUI.style}`'+'||';\n\tgo.arguments = '';\n\t\n\t\n\tgo.localArguments = '';\n\tgo.linkDefinition = '';\n\tgo.placeHolderValues = '';\n\tgo.parameterBucket = $gvs('{alias}.PARAMETERBUCKET');\n\tgo.argumentValueBucket = $gvs('{alias}.ARGUMENTVALUES');\n\tgo.a5_default_path = '{tabbedUI.a5_default_path}';\n\tgo.onLoadCompleteJavascript = 'run:'+callbackId;\n\t\n\tgo._runningInMobilePreview = tbiObj._mobilePreview;\n\t\n\n\n\n\t\n\t{tabbedUI.alias}Obj.add({title: 'Penghargaan',  name :'{alias}_PENGHARGAA_162859RNZL', type:'grid', data: go , header: {\n\tclassName: '{tabbedUI.style}FooterTD',\n\tstyle: {\n\t\tborderTopStyle: 'none',\n\t\tborderBottomStyle: 'solid',\n\t\tborderBottomColor: '#ddd',\n\t\tborderBottomWidth: '1px',\n\t\tpadding: '0px'\n\t},\n\tshow: true,\n\thtml: '<div id=\"fb0bfb9e_05e5_48a4_9275_7ed3bc9341d0\"><div></div></div>'\n}, autoRefresh: false  }); \n\t\n}\n"
+                },
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "v": {
+                    "tabbedUI": {
+                        "buttonType": "Button",
+                        "buttonText": "<i class=\"fa fa-star fa-2x\"></i> Penghargaan",
+                        "actionType": "Component",
+                        "paneTitle": "Penghargaan",
+                        "canClosePane": true,
+                        "keyboardshortcutkey": "",
+                        "treeControl": {
+                            "controlNesting": "SameLevelAsPrevious",
+                            "outdentLevel": 1,
+                            "treeControlIndentLevel": -1,
+                            "icon": "<Auto>"
+                        },
+                        "header": {
+                            "className": "<Default>",
+                            "style": {
+                                "borderTopStyle": "none",
+                                "borderBottomStyle": "solid",
+                                "borderBottomColor": "#ddd",
+                                "borderBottomWidth": "1px",
+                                "padding": "0px"
+                            },
+                            "show": true,
+                            "canHide": true
+                        },
+                        "grid": {
+                            "gridName": "penghargaan",
+                            "componentType": "Grid",
+                            "alias": "<DefaultAlias>",
+                            "useMasterStyle": true,
+                            "workingMessage": "<img src=\"css/A5System/Images/wait.gif\" /> Working..."
+                        },
+                        "report": {
+                            "workingMessage": "Working...",
+                            "printReportButtonLabel": "Print Report",
+                            "moreRecordsTemplate": "<hr />Showing first [DisplayRecords] of [TotalRecords] records in query",
+                            "moreRecordsStyle": "text-align: center;",
+                            "initialView": "PDF",
+                            "HTMLToolbar": {
+                                "buttons": {
+                                    "pdf": true,
+                                    "excel": true,
+                                    "printHTML": true,
+                                    "word": true,
+                                    "pdfButton": {
+                                        "text": "PDF",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.adobe.pdf.png.a5image",
+                                        "bubbleHelp": "Print report as a PDF document."
+                                    },
+                                    "excelButton": {
+                                        "text": "Excel",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.excel.png.a5image",
+                                        "bubbleHelp": "Export report to Excel."
+                                    },
+                                    "printHTMLButton": {
+                                        "text": "Print HTML",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$device.printer.png.a5image",
+                                        "bubbleHelp": "Print the HTML report."
+                                    },
+                                    "WordButton": {
+                                        "text": "Word",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.word.png.a5image",
+                                        "bubbleHelp": "Export report to Word."
+                                    },
+                                    "textButton": {
+                                        "text": "Text",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$control.text.png.a5image",
+                                        "bubbleHelp": "Export data in report to a text file."
+                                    },
+                                    "bookmarksButton": {
+                                        "buttonType": "Text",
+                                        "text": "Bookmarks",
+                                        "imageName": "images/$$generic.book.png.a5image"
+                                    }
+                                },
+                                "bookMarkPanelSize": "3in"
+                            }
+                        }
+                    },
+                    "class": "<Default>",
+                    "BreakType": "After",
+                    "breakHorizontalSpace": ".1in",
+                    "javascript": {
+                        "onclick": "action_{alias}_fb0bfb9e_05e5_48a4_9275_7ed3bc9341d0(); return false;"
+                    },
+                    "sencha": {
+                        "animation": {
+                            "type": "slide",
+                            "duration": 500
+                        }
+                    },
+                    "pageLayoutPart": {
+                        "grid": {
+                            "onLoadCompleteJavascript": ""
+                        }
+                    }
+                }
+            },
+            {
+                "controlType": "TabbedUIButton",
+                "display": "{B=White,Light Blue}{Data=86828153-a4c3-492b-980d-ab29056a18e9}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa fa-legal fa-2x\"></i> Hukuman (Grid Component)] �",
+                "displayODFlat": "{Data=86828153-a4c3-492b-980d-ab29056a18e9}{I:'$$control.html.advButton'} [Tabbed UI Button: hukuman]",
+                "idInternal": "86828153-a4c3-492b-980d-ab29056a18e9",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=86828153-a4c3-492b-980d-ab29056a18e9}{I:'$$control.html.advButton'} [Tabbed UI Button: hukuman]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=86828153-a4c3-492b-980d-ab29056a18e9}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa fa-legal fa-2x\"></i> Hukuman (Grid Component)] �",
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_86828153_a4c3_492b_980d_ab29056a18e9(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa fa-legal fa-2x\"></i> Hukuman</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n\t",
+                    "tabbedUIButtonJavascript": "window['action_{alias}_86828153_a4c3_492b_980d_ab29056a18e9'] = function() {\n\t\n\t\n\tvar onCompleteCode = '';\n\tvar callbackId = A5.UUID();\n\tvar objx = tbiObj._ajaxCallbackCompleteCode;\n\tif(typeof objx == 'undefined') objx = {};\n\tobjx[callbackId] = Function(onCompleteCode);\n\t\n\n\n\tvar go = new Object();\n\tgo.gridName = 'hukuman';\n\tgo.alias = '{alias}_HUKUMAN_16296DGHF';\n\tgo.workingMessage = '<img src=\"css/A5System/Images/wait.gif\" /> Working...';\n\tgo.flagTimer = 'F';\n\tgo.flagQueryEcho = 'F';\n\tgo.flagDebugMode = 'F';\n\tgo.userFilter = '';\n\tgo.baseFilter = '';\n\tgo.userOrder = '';\n\tgo.overrideSettings = 'style_name=`{tabbedUI.style}`'+'||';\n\tgo.arguments = '';\n\t\n\t\n\tgo.localArguments = '';\n\tgo.linkDefinition = '';\n\tgo.placeHolderValues = '';\n\tgo.parameterBucket = $gvs('{alias}.PARAMETERBUCKET');\n\tgo.argumentValueBucket = $gvs('{alias}.ARGUMENTVALUES');\n\tgo.a5_default_path = '{tabbedUI.a5_default_path}';\n\tgo.onLoadCompleteJavascript = 'run:'+callbackId;\n\t\n\tgo._runningInMobilePreview = tbiObj._mobilePreview;\n\t\n\n\n\n\t\n\t{tabbedUI.alias}Obj.add({title: 'Hukuman',  name :'{alias}_HUKUMAN_16296DGHF', type:'grid', data: go , header: {\n\tclassName: '{tabbedUI.style}FooterTD',\n\tstyle: {\n\t\tborderTopStyle: 'none',\n\t\tborderBottomStyle: 'solid',\n\t\tborderBottomColor: '#ddd',\n\t\tborderBottomWidth: '1px',\n\t\tpadding: '0px'\n\t},\n\tshow: true,\n\thtml: '<div id=\"86828153_a4c3_492b_980d_ab29056a18e9\"><div></div></div>'\n}, autoRefresh: false  }); \n\t\n}\n"
+                },
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "v": {
+                    "tabbedUI": {
+                        "buttonType": "Button",
+                        "buttonText": "<i class=\"fa fa-legal fa-2x\"></i> Hukuman",
+                        "actionType": "Component",
+                        "paneTitle": "Hukuman",
+                        "canClosePane": true,
+                        "keyboardshortcutkey": "",
+                        "treeControl": {
+                            "controlNesting": "SameLevelAsPrevious",
+                            "outdentLevel": 1,
+                            "treeControlIndentLevel": -1,
+                            "icon": "<Auto>"
+                        },
+                        "header": {
+                            "className": "<Default>",
+                            "style": {
+                                "borderTopStyle": "none",
+                                "borderBottomStyle": "solid",
+                                "borderBottomColor": "#ddd",
+                                "borderBottomWidth": "1px",
+                                "padding": "0px"
+                            },
+                            "show": true,
+                            "canHide": true
+                        },
+                        "grid": {
+                            "gridName": "hukuman",
+                            "componentType": "Grid",
+                            "alias": "<DefaultAlias>",
+                            "useMasterStyle": true,
+                            "workingMessage": "<img src=\"css/A5System/Images/wait.gif\" /> Working..."
+                        },
+                        "report": {
+                            "workingMessage": "Working...",
+                            "printReportButtonLabel": "Print Report",
+                            "moreRecordsTemplate": "<hr />Showing first [DisplayRecords] of [TotalRecords] records in query",
+                            "moreRecordsStyle": "text-align: center;",
+                            "initialView": "PDF",
+                            "HTMLToolbar": {
+                                "buttons": {
+                                    "pdf": true,
+                                    "excel": true,
+                                    "printHTML": true,
+                                    "word": true,
+                                    "pdfButton": {
+                                        "text": "PDF",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.adobe.pdf.png.a5image",
+                                        "bubbleHelp": "Print report as a PDF document."
+                                    },
+                                    "excelButton": {
+                                        "text": "Excel",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.excel.png.a5image",
+                                        "bubbleHelp": "Export report to Excel."
+                                    },
+                                    "printHTMLButton": {
+                                        "text": "Print HTML",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$device.printer.png.a5image",
+                                        "bubbleHelp": "Print the HTML report."
+                                    },
+                                    "WordButton": {
+                                        "text": "Word",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.word.png.a5image",
+                                        "bubbleHelp": "Export report to Word."
+                                    },
+                                    "textButton": {
+                                        "text": "Text",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$control.text.png.a5image",
+                                        "bubbleHelp": "Export data in report to a text file."
+                                    },
+                                    "bookmarksButton": {
+                                        "buttonType": "Text",
+                                        "text": "Bookmarks",
+                                        "imageName": "images/$$generic.book.png.a5image"
+                                    }
+                                },
+                                "bookMarkPanelSize": "3in"
+                            }
+                        }
+                    },
+                    "class": "<Default>",
+                    "BreakType": "After",
+                    "breakHorizontalSpace": ".1in",
+                    "javascript": {
+                        "onclick": "action_{alias}_86828153_a4c3_492b_980d_ab29056a18e9(); return false;"
+                    },
+                    "sencha": {
+                        "animation": {
+                            "type": "slide",
+                            "duration": 500
+                        }
+                    },
+                    "pageLayoutPart": {
+                        "grid": {
+                            "onLoadCompleteJavascript": ""
+                        }
+                    }
+                }
+            },
+            {
+                "controlType": "TabbedUIButton",
+                "display": "{B=White,Light Blue}{Data=2083f37a-ec1a-4f2b-a2f2-8842dbd7f452}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa fa-id-card fa-2x\"></i> Karyawan (Grid Component)] �",
+                "displayODFlat": "{Data=2083f37a-ec1a-4f2b-a2f2-8842dbd7f452}{I:'$$control.html.advButton'} [Tabbed UI Button: karyawan]",
+                "idInternal": "2083f37a-ec1a-4f2b-a2f2-8842dbd7f452",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=2083f37a-ec1a-4f2b-a2f2-8842dbd7f452}{I:'$$control.html.advButton'} [Tabbed UI Button: karyawan]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=2083f37a-ec1a-4f2b-a2f2-8842dbd7f452}{I:'$$control.html.advButton'} [Tabbed UI Button: <i class=\"fa fa-id-card fa-2x\"></i> Karyawan (Grid Component)] �",
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_2083f37a_ec1a_4f2b_a2f2_8842dbd7f452(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa fa-id-card fa-2x\"></i> Karyawan</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n\t",
+                    "tabbedUIButtonJavascript": "window['action_{alias}_2083f37a_ec1a_4f2b_a2f2_8842dbd7f452'] = function() {\n\t\n\t\n\tvar onCompleteCode = '';\n\tvar callbackId = A5.UUID();\n\tvar objx = tbiObj._ajaxCallbackCompleteCode;\n\tif(typeof objx == 'undefined') objx = {};\n\tobjx[callbackId] = Function(onCompleteCode);\n\t\n\n\n\tvar go = new Object();\n\tgo.gridName = 'karyawan';\n\tgo.alias = '{alias}_KARYAWAN_162915UACF';\n\tgo.workingMessage = '<img src=\"css/A5System/Images/wait.gif\" /> Working...';\n\tgo.flagTimer = 'F';\n\tgo.flagQueryEcho = 'F';\n\tgo.flagDebugMode = 'F';\n\tgo.userFilter = '';\n\tgo.baseFilter = '';\n\tgo.userOrder = '';\n\tgo.overrideSettings = 'style_name=`{tabbedUI.style}`'+'||';\n\tgo.arguments = '';\n\t\n\t\n\tgo.localArguments = '';\n\tgo.linkDefinition = '';\n\tgo.placeHolderValues = '';\n\tgo.parameterBucket = $gvs('{alias}.PARAMETERBUCKET');\n\tgo.argumentValueBucket = $gvs('{alias}.ARGUMENTVALUES');\n\tgo.a5_default_path = '{tabbedUI.a5_default_path}';\n\tgo.onLoadCompleteJavascript = 'run:'+callbackId;\n\t\n\tgo._runningInMobilePreview = tbiObj._mobilePreview;\n\t\n\n\n\n\t\n\t{tabbedUI.alias}Obj.add({title: 'Karyawan',  name :'{alias}_KARYAWAN_162915UACF', type:'grid', data: go , header: {\n\tclassName: '{tabbedUI.style}FooterTD',\n\tstyle: {\n\t\tborderTopStyle: 'none',\n\t\tborderBottomStyle: 'solid',\n\t\tborderBottomColor: '#ddd',\n\t\tborderBottomWidth: '1px',\n\t\tpadding: '0px'\n\t},\n\tshow: true,\n\thtml: '<div id=\"2083f37a_ec1a_4f2b_a2f2_8842dbd7f452\"><div></div></div>'\n}, autoRefresh: false  }); \n\t\n}\n"
+                },
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "v": {
+                    "tabbedUI": {
+                        "buttonType": "Button",
+                        "buttonText": "<i class=\"fa fa-id-card fa-2x\"></i> Karyawan",
+                        "actionType": "Component",
+                        "paneTitle": "Karyawan",
+                        "canClosePane": true,
+                        "keyboardshortcutkey": "",
+                        "treeControl": {
+                            "controlNesting": "SameLevelAsPrevious",
+                            "outdentLevel": 1,
+                            "treeControlIndentLevel": -1,
+                            "icon": "<Auto>"
+                        },
+                        "header": {
+                            "className": "<Default>",
+                            "style": {
+                                "borderTopStyle": "none",
+                                "borderBottomStyle": "solid",
+                                "borderBottomColor": "#ddd",
+                                "borderBottomWidth": "1px",
+                                "padding": "0px"
+                            },
+                            "show": true,
+                            "canHide": true
+                        },
+                        "grid": {
+                            "gridName": "karyawan",
+                            "componentType": "Grid",
+                            "alias": "<DefaultAlias>",
+                            "useMasterStyle": true,
+                            "workingMessage": "<img src=\"css/A5System/Images/wait.gif\" /> Working..."
+                        },
+                        "report": {
+                            "workingMessage": "Working...",
+                            "printReportButtonLabel": "Print Report",
+                            "moreRecordsTemplate": "<hr />Showing first [DisplayRecords] of [TotalRecords] records in query",
+                            "moreRecordsStyle": "text-align: center;",
+                            "initialView": "PDF",
+                            "HTMLToolbar": {
+                                "buttons": {
+                                    "pdf": true,
+                                    "excel": true,
+                                    "printHTML": true,
+                                    "word": true,
+                                    "pdfButton": {
+                                        "text": "PDF",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.adobe.pdf.png.a5image",
+                                        "bubbleHelp": "Print report as a PDF document."
+                                    },
+                                    "excelButton": {
+                                        "text": "Excel",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.excel.png.a5image",
+                                        "bubbleHelp": "Export report to Excel."
+                                    },
+                                    "printHTMLButton": {
+                                        "text": "Print HTML",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$device.printer.png.a5image",
+                                        "bubbleHelp": "Print the HTML report."
+                                    },
+                                    "WordButton": {
+                                        "text": "Word",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.word.png.a5image",
+                                        "bubbleHelp": "Export report to Word."
+                                    },
+                                    "textButton": {
+                                        "text": "Text",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$control.text.png.a5image",
+                                        "bubbleHelp": "Export data in report to a text file."
+                                    },
+                                    "bookmarksButton": {
+                                        "buttonType": "Text",
+                                        "text": "Bookmarks",
+                                        "imageName": "images/$$generic.book.png.a5image"
+                                    }
+                                },
+                                "bookMarkPanelSize": "3in"
+                            }
+                        }
+                    },
+                    "class": "<Default>",
+                    "BreakType": "After",
+                    "breakHorizontalSpace": ".1in",
+                    "javascript": {
+                        "onclick": "action_{alias}_2083f37a_ec1a_4f2b_a2f2_8842dbd7f452(); return false;"
+                    },
+                    "sencha": {
+                        "animation": {
+                            "type": "slide",
+                            "duration": 500
+                        }
+                    },
+                    "pageLayoutPart": {
+                        "grid": {
+                            "onLoadCompleteJavascript": ""
+                        }
+                    }
+                }
+            }
+        ],
+        "builderType": "TabbedUI",
+        "guid": "017f1cda-3d56-41e0-80e6-fe247c3296e4",
+        "componentName": "tabbesuibackup",
+        "componentFilename": "C:\\Users\\yuliusd\\Desktop\\SIP\\SIP.WebProjects\\Default.WebProject\\tabbesuibackup.a5wcmp",
+        "_style_versionNumber": 4,
+        "_style_hasSassOverrides": false,
+        "_style_hasCSSTweaks": false,
+        "_style_hasCSS_or_subtheme_tweaks": false,
+        "useCompactTheme": false,
+        "SVGLinkedFiles": "",
+        "localsvg": "<svg width=\"0\" heigth=\"0\">\n\t<defs>\n\t\t<symbol viewbox = \"0 0 47.001 47.001\" id = \"logologo\" > \n\t\t<g>\n\t\t\t<g id=\"Layer_1_120_\">\n\t\t\t\t<g>\n\t\t\t\t\t<g>\n\t\t\t\t\t\t<path d=\"M31.736,10.307c-0.111-0.112-0.249-0.193-0.398-0.24l-8.975-2.818c-3.589-1.127-5.924,0.839-6.553,1.47\n\t\t\t\t\t\t\tc-0.367,0.367-0.648,0.754-0.792,1.091l-3.998,9.404c-0.229,0.538-0.151,1.255,0.208,1.97c0.514,1.021,1.44,1.757,2.547,2.022\n\t\t\t\t\t\t\tc1.239,0.297,2.524-0.106,3.53-1.111c0.263-0.263,0.487-0.553,0.619-0.799l1.344-2.493c0.221-0.413,0.542-0.841,0.88-1.179\n\t\t\t\t\t\t\tc1.153-1.154,1.701-0.626,1.934-0.402c2.011,1.941,12.554,12.529,12.554,12.529c0.375,0.375,0.297,1.086-0.172,1.554\n\t\t\t\t\t\t\tc-0.468,0.467-1.18,0.547-1.554,0.174l-2.962-2.961c-0.382-0.383-0.998-0.383-1.38,0c-0.382,0.379-0.382,0.998,0,1.379\n\t\t\t\t\t\t\tl2.962,2.963c0.374,0.373,0.296,1.084-0.172,1.551c-0.468,0.469-1.181,0.547-1.553,0.174l-2.963-2.961\n\t\t\t\t\t\t\tc-0.382-0.382-1-0.382-1.38,0c-0.382,0.379-0.382,0.998,0,1.38l2.962,2.962c0.374,0.374,0.293,1.085-0.174,1.553\n\t\t\t\t\t\t\tc-0.467,0.467-1.178,0.547-1.553,0.172l-2.962-2.961c-0.38-0.381-0.999-0.381-1.38,0c-0.38,0.381-0.38,1,0,1.379l2.962,2.963\n\t\t\t\t\t\t\tc0.375,0.375,0.295,1.086-0.172,1.554c-0.47,0.468-1.181,0.547-1.554,0.173l-3.606-3.609c0.515-0.774,0.375-1.897-0.389-2.664\n\t\t\t\t\t\t\tc-0.856-0.855-2.173-0.934-2.935-0.17c0.762-0.763,0.687-2.078-0.171-2.935c-0.858-0.856-2.172-0.935-2.934-0.173\n\t\t\t\t\t\t\tc0.762-0.762,0.685-2.076-0.174-2.932c-0.856-0.858-2.17-0.936-2.934-0.174c0.764-0.762,0.685-2.076-0.172-2.935\n\t\t\t\t\t\t\tc-0.802-0.802-1.997-0.911-2.774-0.3l-5.839-5.839c-0.381-0.382-1-0.382-1.381,0c-0.38,0.38-0.38,0.999,0,1.381l5.824,5.823\n\t\t\t\t\t\t\tl-1.727,1.727c-0.762,0.761-0.685,2.075,0.174,2.934c0.856,0.856,2.17,0.935,2.933,0.172c-0.763,0.763-0.685,2.076,0.173,2.934\n\t\t\t\t\t\t\tc0.856,0.855,2.171,0.936,2.934,0.173c-0.763,0.763-0.686,2.076,0.172,2.933c0.858,0.858,2.172,0.936,2.934,0.174\n\t\t\t\t\t\t\tc-0.762,0.761-0.685,2.074,0.173,2.933c0.857,0.856,2.17,0.935,2.934,0.172l1.824-1.823l3.581,3.58\n\t\t\t\t\t\t\tc1.143,1.143,3.076,1.063,4.314-0.173c0.603-0.603,0.925-1.373,0.97-2.135c0.762-0.045,1.533-0.368,2.135-0.972\n\t\t\t\t\t\t\tc0.604-0.603,0.928-1.373,0.974-2.135c0.761-0.045,1.529-0.367,2.135-0.971c0.603-0.604,0.926-1.373,0.97-2.136\n\t\t\t\t\t\t\tc0.763-0.044,1.533-0.366,2.137-0.972c1.236-1.236,1.312-3.172,0.172-4.313l-1.51-1.511l6.2-6.199\n\t\t\t\t\t\t\tc0.381-0.38,0.381-0.999,0-1.38L31.736,10.307z\"/>\n\t\t\t\t\t</g>\n\t\t\t\t\t<g>\n\t\t\t\t\t\t<path d=\"M46.43,12.489l-7.901-7.901c-0.762-0.763-1.999-0.763-2.762,0l-2.762,2.76c-0.762,0.762-0.762,1.999,0,2.761\n\t\t\t\t\t\t\tl7.902,7.903c0.763,0.762,2,0.762,2.762,0l2.761-2.761C47.191,14.488,47.191,13.251,46.43,12.489z M42.283,16.513\n\t\t\t\t\t\t\tc-0.884,0-1.602-0.717-1.602-1.602c0-0.885,0.718-1.603,1.602-1.603c0.885,0,1.603,0.717,1.603,1.603\n\t\t\t\t\t\t\tC43.885,15.795,43.168,16.513,42.283,16.513z\"/>\n\t\t\t\t\t</g>\n\t\t\t\t</g>\n\t\t\t</g>\n\t\t</g>\n\t\t</symbol>\n\n\n\t</defs>\n</svg>\n",
+        "saveFileType": "Formatted JSON",
+        "keyboardShortcutsJSON": "",
+        "selected": "2083f37a-ec1a-4f2b-a2f2-8842dbd7f452\n",
+        "designPaneIndex": 1,
+        "masterPaneC": "controls",
+        "serverSideEventIndex": 2,
+        "clientSideEventIndex": 1,
+        "clientSideEventIndexC": "1",
+        "__WPhostName": "Internet Explorer",
+        "embeddedMode": false,
+        "_style_hassubthemeTweaks": false,
+        "repeatingSectionsAreDirty": true,
+        "flagDropdownCascadingChanged": false,
+        "toolBox_value": "layout_directive_Image",
+        "addinBuildNumber": "5018",
+        "addinBuildNumberHighestUsed": "5018",
+        "alphaFiveBuildNumber": "12",
+        "openedFromTemplate": false,
+        "builtWithVersionNumer": 1,
+        "_buildCount": "183",
+        "securityEnabled": false,
+        "showHideIsUsed": false,
+        "precalc": {
+            "usesSystemSVG": false,
+            "buttonPanel": {
+                "HTML": "<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_cbc77c30_b751_4868_a915_043148fd41f9(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa fa-user fa-2x\"></i> Pegawai</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_6c4bef45_9fba_4036_bb69_37f37fd217aa(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa fa-users fa-2x\"></i>  Keluarga</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_9dc1169c_bf27_49ad_9dfa_d71fd4b7e883(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa fa-graduation-cap fa-2x\"></i> Pendidikan</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_7cf0aaaf_96bd_4019_9955_de73fab201c1(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  > <i class=\"fa  fa-user-secret fa-2x\"></i> Jabatan</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_ffbc19f3_4add_402c_8604_cba182210c78(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa fa-book fa-2x\"></i> Pelatihan</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_59e0f6ba_b1aa_435b_9146_3bf274176be6(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa  fa-plane fa-2x\"></i> Cuti</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_e0bdd115_c96f_4b33_8066_6370c75767dd(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa fa-eye fa-2x\"></i> Penilaian</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_fb0bfb9e_05e5_48a4_9275_7ed3bc9341d0(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa fa-star fa-2x\"></i> Penghargaan</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_86828153_a4c3_492b_980d_ab29056a18e9(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa fa-legal fa-2x\"></i> Hukuman</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5container\">\n\t<button type=\"button\" class=\"[class.dialogButton]\" style=\"\" title=\"\"  onclick=\"action_{alias}_2083f37a_ec1a_4f2b_a2f2_8842dbd7f452(); return false;\" onmousedown=\"A5._btn(this,'onmousedown','{grid.style}'); $e.preventDefault(event);\" onmouseup=\"A5._btn(this,'onmouseup','{grid.style}');\" onmouseover=\"A5._btn(this,'onmouseover','{grid.style}');\" onmouseout=\"A5._btn(this,'onmouseout','{grid.style}');\"  ><i class=\"fa fa-id-card fa-2x\"></i> Karyawan</button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->",
+                "JS": ""
+            },
+            "treeControlJS": "",
+            "hompePageJavascript": "var homePageHTML = '__homePageHtml__';\ntbiObj.add({title: '{tabbedUI.homePageTitle}', type: 'static', html: homePageHTML , close: false});\n",
+            "PageSetupJavascript": "\nvar tbiObj = new A5.TabbedInterfaceComponentHelper('{tabbedUI.alias}',__tabSettings__);\ntbiObj._functions = {};\ntbiObj._buttons = [];\nvar homePageHTML = '__homePageHtml__';\ntbiObj.add({title: '{tabbedUI.homePageTitle}', type: 'static', html: homePageHTML , close: false});\n\n\n\n\ntbiObj.showTabbedUIMenuPanel = function(flag) { \tif(typeof flag == 'undefined') flag = true;\n\tif(typeof jQuery != 'undefined' && flag) {\n\t\tvar ele = $('tbi.MENUPANEL');\n\t\tele.style.display = '';\n\t\t$('tbi.EXPANDBAR').style.display = 'none';\n\t\tjQuery(ele).animate({width:$ga(ele,'A5OLDWIDTH') }, tbiObj._showAnimationSpeed,'');\n\t\ttbiObj.refreshLayout();\n\t} else {\n\t\t$('tbi.MENUPANEL').style.display=''; $('tbi.EXPANDBAR').style.display = 'none'; tbiObj.refreshLayout();\n\t}\n\n\t}\ntbiObj.hideTabbedUIMenuPanel = function(flag) { \tif(typeof flag == 'undefined') flag = true;\n\tif(typeof arguments[1] != 'undefined') flagShowExpandBar = arguments[1] ;\n\telse flagShowExpandBar = true;\n\tvar ele = $('tbi.MENUPANEL');\n\tif($ga(ele,'A5OLDWIDTH') == '' || $ga(ele,'A5OLDWIDTH') == null) $sa(ele,'A5OLDWIDTH',ele.style.width);\n\tif(typeof jQuery != 'undefined' && flag) {\n\t\tjQuery(ele).animate({width:22}, tbiObj._hideAnimationSpeed,'',function() {\n\t\t    var mele = $('tbi.MENUPANEL');\n\t\t    mele.style.display='none';\n\n\t\t    if(flagShowExpandBar) $('tbi.EXPANDBAR').style.display = '';\n\t\t});\n\n\t} else {\n\t\t$('tbi.MENUPANEL').style.display='none';\n\t\tif(flagShowExpandBar) $('tbi.EXPANDBAR').style.display = '';\n\t}\n\n\n\t}\n\n\ntbiObj._defaultWindowSettings = new Object();\ntbiObj._defaultWindowSettings['dropdown'] = {\n\ttype: 'popup',\n\ttheme: this.styleName,\n\ttitle: {html: 'Null',show: false},\n\tbody:  {content: {type: 'blank'}}\n};\n\n\ntbiObj._defaultWindowSettings['modal'] = {\n\ttype: 'modal', autoPosition: 'in-view',\n\ttheme: this.styleName,\n\ttitle: {html: 'Customer Grid',\n\t\ttools: {items: [{action: 'close',name: 'Close',image: 'images/$$window.button.close.png.a5image'}],\n\t\t\tdummy: false\n\t\t}},\n\tbody: {content: {type: 'blank'}}\n};\n\ntbiObj._defaultWindowSettings['modeless'] = {\n\ttype: 'modeless', autoPosition: 'in-view',\n\ttheme: this.styleName,\n\ttitle: {html: 'Customer Grid',\n\t\ttools: {items: [{action: 'close',name: 'Close',image: 'images/$$window.button.close.png.a5image'}],\n\t\t\tdummy: false\n\t\t}},\n\tbody: {content: {type: 'blank'}}\n};\n\ntbiObj._genericWindow = new Object();\n\n\ntbiObj.getCurrentPaneIndex = function() {\n\treturn tbiObj._tbObj._curTabIndx;\n}\n\ntbiObj.getCurrentPaneName = function() {\n\treturn tbiObj._tbObj._items[tbiObj._tbObj._curTabIndx].name;\n}\n\ntbiObj.getCurrentPaneLabel = function() {\n\treturn tbiObj._tbObj._items[tbiObj._tbObj._curTabIndx].html;\n}\n\n\ntbiObj.selectPaneByIndex = function(index) {\n\ttbiObj._tbObj.select(index);\n}\n\n\ntbiObj.createWindow =  function(name,settings) {\n\tif(!this.getWindow(name)) {\n\t\tif(typeof settings == 'string') {\n\t\t\tvar parts = settings.split('-');\n\t\t\tsettings = new Object();\n\t\t\t$u.o.assign(settings , this._defaultWindowSettings[parts.shift()]);\n\t\t\tfor(var i=0;i<parts.length;i++){\n\t\t\t\tif(parts[i] == 'url'){\n\t\t\t\t\tsettings.body.content.type = 'url';\n\t\t\t\t\tsettings.body.content.url = 'about:blank';\n\t\t\t\t} else if(parts[i] == 'resizable'){\n\t\t\t\t\tsettings.resize = 'both';\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tif(typeof arguments[2] == 'object') $u.o.assign(settings,arguments[2]);\n\t\tthis._genericWindow[name] = new A5.Window(settings);\n\t}\n\treturn this._genericWindow[name];\n}\n\ntbiObj.getWindow =  function(name) {\n\tif(typeof this._genericWindow[name] != 'undefined' ) return this._genericWindow[name];\n\treturn false;\n}\n\n\n\ntbiObj.ajaxCallback = function(xbasicFunction,data) {\n\tvar callbackURL = tbiObj.ajaxURL;\n\tvar data2 = '_callbackType=genericAjaxCallback&_xbasicFunction=' + xbasicFunction + '&' + data;\n\tA5.ajax.callback(callbackURL,data2);\n}\n\ntbiObj._timeToSessionTimeout = function(units) {\n\tif(isNaN($a.lastCallback)) return 9999999999999999;\n\tvar t = (Date.now() - $a.lastCallback);\n\tvar tte = (tbiObj._sessionTimeoutInMSeconds - t);\n\tif(units == 's') return (tte/1000);\n\tif(units == 'm') return (tte/60000);\n\tif(units == 'ms') return (tte);\n\treturn tte\n}\n\n\n\ntbiObj._executeEvent = function(eventName) {\n\tvar result = true;\n\tvar targs = new Array();\n\tfor(var i = 1; i < arguments.length; i++) targs.push(arguments[i]);\n\tvar tresult = false;\n\tif(typeof this[eventName] != 'undefined'  ) {\n\n\t\tif(this[eventName].constructor == Function) {\n\t\t\ttresult = this[eventName].apply(this,targs);\n\t\t\tif(typeof tresult == 'boolean') result = tresult;\n\t\t}\n\t}\n\tif(typeof this['_' +eventName] != 'undefined' ) {\n\t\tif(this['_'+eventName].constructor == Function) {\n\t\t\ttresult = this['_'+eventName].apply(this,targs);\n\t\t\tif(typeof tresult == 'boolean') result = result && tresult;\n\t\t}\n\n\t}\n\treturn result;\n}\n\n\n\n\n\ntbiObj._hideAnimationSpeed = 600;\ntbiObj._showAnimationSpeed = 600;;\n;\n;\n\nA5.msgBox.theme = '{grid.style}';;\n//systemOnRenderComplete\ntbiObj._executeEvent('onRenderComplete',{});",
+            "TabbedUIMasterTemplate": "<iframe style=\"display:none;\" id=\"TBIOBJ.__IFRAME1\"></iframe>\n<input type=\"hidden\" value=\"{parameterBucket}\" id=\"{alias}.PARAMETERBUCKET\"/>\n<input type=\"hidden\" value=\"{savedArgValues}\" id=\"{alias}.ARGUMENTVALUES\"/>\n\n\n<div class=\"[theme:tabbedUI.base.headerClassName]\" style=\"overflow:hidden;\">\n{tabbedUI.header}\n</div>\n<table\n\tid=\"{tabbedUI.alias}\"\n\tclass=\"[class.tabbedUI]\"\n\tcellpadding=\"0\"\n\tcellspacing=\"0\"\n\tstyle=\"table-layout: fixed; width: 100%; border-left: none; border-right: none;\">\n\t<tr>\n\t\t<td \tid=\"{tabbedUI.alias}.EXPANDBAR\"\n\t\t\t\tclass=\"[theme:tabbedUI.base.menu.left.collapsedClassName|class.tabbedUIMenuCollapsed]\"\n\t\t\t\tstyle=\"display:none; width: [theme:tabbedUI.base.menu.left.collapsedSize|'20px'];\"\n\t\t\t\tvalign=\"top\"\n\t\t\t\tonclick=\"tbiObj.showTabbedUIMenuPanel();\"\n\t\t\t\t>\n\t\t\t\t<img id=\"{tabbedUI.alias}.EXPANDBAR_IMAGE\" src=\"***leftExpand***\" style=\"cursor:pointer;\"/>\n\n\t\t</td>\n\t\t<td \tid=\"{tabbedUI.alias}.MENUPANEL\"\n\t\t\t\tclass=\"[theme:tabbedUI.base.menu.left.className|class.tabbedUIMenuPanel]\"\n\t\t\t\tstyle=\"{tabbedUI.buttonsPaneStyle}; ;\"\n\t\t\t\tvAlign=\"top\"><!--TD for the Buttons Pane (which contains the action buttons)-->\n\t\t\t<div id=\"{tabbedUI.alias}.MENUPANEL_HEADER\" class=\"[theme:tabbedUI.base.menu.left.headerClassName|class.TabbedUIMenuPanelHeader]\" style=\"\">\n\t\t\t\t<table cellspacing=\"0\" cellpadding=\"0\">\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td\t\tid=\"{tabbedUI.alias}.MENUPANEL_EMPTYCELL\"\n\t\t\t\t\t\t\t\tstyle=\"width: 100%;\">\n\t\t\t\t\t\t&nbsp;\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<img src=\"***leftCollapse***\" id=\"{tabbedUI.alias}.MENUPANEL_IMAGE\" style=\"cursor:pointer;\" onclick=\"tbiObj.hideTabbedUIMenuPanel()\" />\n\t\t\t\t\t\t</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</table>\n\t\t\t</div>\n\t\t\t<div \tid=\"{tabbedUI.alias}.MENU\"\n\t\t\t\t\tstyle=\"{tabbedUI.buttonsPadding}\">\n\n\n\t\t\t\t{tabbedUI.buttonsPane}\n\t\t\t</div>\n\t\t</td><!--End TD for Buttons Pane-->\n\t\t<td id=\"{tabbedUI.alias}.DIVIDER\" class=\"[theme:tabbedUI.base.menu.left.separatorClassName|class.tabbedUIDivider]\" style=\"width: 4px; font: 0pt Arial;padding: 0px;\">\n\t\t\t&nbsp;\n\t\t</td>\n\t\t<td \tclass=\"[theme:tabbedUI.base.bodyClassName|class.tabbedUIPanel]\"\n\t\t\t\tid=\"{tabbedUI.alias}.CONTENTPANEL\"\n\t\t\t\tvAlign=\"top\"\n\t\t\t\tstyle=\"padding: 0px; \">\n\t\t\t<div \tid=\"{tabbedUI.alias}.TABBAND\"\n\t\t\t\t\tstyle=\"border-top: none; border-left: none; border-right: none;\">\n\t\t\t</div>\n\t\t\t<div id=\"{tabbedUI.alias}.PANES\" style=\"position:relative;\">\n\t\t\t</div>\n\t\t</td>\n\t</tr>\n</table>\n<div class=\"[theme:tabbedUI.base.footerClassName]\" style=\"overflow:hidden;\">\n{tabbedUI.footer}\n</div>\n"
+        },
+        "componentType": "TabbedUI",
+        "version": 1,
+        "alias": "tbi",
+        "linkedResources": "",
+        "A5SaveTimeStamp": "20180209162916518",
+        "Livepreview_permissions": "",
+        "_flagDoTreeview": true,
+        "livePreview_permissions_friendly": "Administrators\n",
+        "minimumBuildNumber": "",
+        "headerHTML": "<p align=\"center\"><font size=\"5\"><strong> <img src=\"/SIP/image/logo.svg\"> Karyawan Manajemen</strong></font></p>",
+        "footerHTML": "",
+        "buttonPanel": {
+            "Location": "Left",
+            "Style": "width: 2.5in;",
+            "paddingLeft": ".25in",
+            "paddingRight": "",
+            "paddingTop": ".25in",
+            "setPaddingOffIfHasTree": true
+        },
+        "homePage": {
+            "TabTitle": "Home",
+            "HTML": "Specify the HTML for the Home page.",
+            "source": "Local",
+            "autoRefresh": false,
+            "URL": ""
+        },
+        "ContainerA5WPageName": "<Default>",
+        "NavigateAwayMessageDirty": "{pane.title} contains unsaved data.",
+        "NavigateAwayMessageClean": "",
+        "promptWhenUserNavigatesFromTabbedUIPage": true,
+        "canCollapseButtonPane": true,
+        "buttonPaneInitialState": "Open",
+        "nocriptContent": "",
+        "closeTabImage": "<Default>",
+        "closeTabHoverImage": "<Default>",
+        "scrollTabsPrevImage": "<Default>",
+        "scrollTabsPrevDisabledImage": "<Default>",
+        "scrollTabsNextImage": "<Default>",
+        "scrollTabsNextDisabledImage": "<Default>",
+        "collapseButtonPanelLeft": "cssIcon=fa fa-chevron-circle-left fa-2x {color: #fff;}",
+        "collapseButtonPanelRight": "<Specified by Style>",
+        "expandButtonPanelLeft": "cssIcon=fa fa-chevron-circle-right fa-2x {color: #fff;}",
+        "expandButtonPanelRight": "<Specified by Style>",
+        "classNameTabBand": "<Default>",
+        "classNameTabBandSeparator": "<Default>",
+        "classNameTabOff": "<Default>",
+        "classNameTabOn": "<Default>",
+        "classNameTabDisabled": "<Default>",
+        "classNameTabBandLeftScroll": "<Default>",
+        "classNameTabBandRightScroll": "<Default>",
+        "classNameTabBandLeftScrollDisabled": "<Default>",
+        "classNameTabBandRightScrollDisabled": "<Default>",
+        "userDefinedHeadContent": "",
+        "noscriptcontent": "",
+        "JavascriptToRunOnStartup": "",
+        "MasterTemplate": "",
+        "componentWidth": "800px",
+        "componentBorderClassName": "{tabbedUI.style}Edit",
+        "componentBorderInlineStyle": "padding: 0px;",
+        "animateShowHideButtons": true,
+        "animate": {
+            "Hide": {
+                "speed": "Slow"
+            },
+            "Show": {
+                "speed": "Slow"
+            }
+        },
+        "hideTabbedUIElements": false,
+        "layout": {
+            "hideTabButtons": false,
+            "layoutMode": "DesktopBrowser",
+            "MobileModeMenuButtonText": "Menu",
+            "mobileDisplayHomePage": false,
+            "MobileMenuTitle": "Menu"
+        },
+        "hasSearchFeature": false,
+        "searchLabel": "Search",
+        "searchFieldWatermark": "Enter search string",
+        "searchResultsClass": "",
+        "searchPartClass": "",
+        "searchInputClass": "",
+        "nosearchResults": "No results found",
+        "searchResultsButtonClass": "",
+        "minimumHeight": 0,
+        "defaultView": "DesktopBrowser",
+        "autoHideButtonPanel": false,
+        "autoHideDelay": 500,
+        "hideButtonPanePermanenly": false,
+        "legacyThemeJS": "A5.themes.add('{tabbedUI.style}',{\n\ttabBand: {\n\t\tbase: {\n\t\t\tclassName: '{grid.style}FormTABLE {grid.style}ColumnTD A5TabBand',\n\t\t\tseparator:{\n\t\t\t\tclassName: '{grid.style}DataTD A5TabBandSeparator'\n\t\t\t},\n\t\t\ttab: {\n\t\t\t\tclassName: '{grid.style}FormTABLE {grid.style}AltDataTD A5TabBandTabOff',\n\t\t\t\tselectedClassName: '{grid.style}FormTABLE {grid.style}DataTD A5TabBandTabOn',\n\t\t\t\tdisabledClassName: '{grid.style}FormTABLE {grid.style}AltDataTD A5TabBandTabDisabled',\n\t\t\t\tcloseIcon: 'css/A5System/Images/tabclose.png',\n\t\t\t\tcloseIconHover: 'css/A5System/Images/tabcloseHover.png'\n\t\t\t},\n\t\t\tscrollButtons: {\n\t\t\t\tprevClassName: '{grid.style}FormTABLE {grid.style}AltDataTD  A5TabBandLeftScroll',\n\t\t\t\tprevDisabledClassName: '{grid.style}FormTABLE {grid.style}AltDataTD  A5TabBandLeftScroll',\n\t\t\t\tprevImage: 'css/{grid.style}/PrevOn.png',\n\t\t\t\tprevDisabledImage: 'css/{grid.style}/PrevOff.png',\n\t\t\t\tnextClassName: '{grid.style}FormTABLE {grid.style}AltDataTD  A5TabBandRightScroll',\n\t\t\t\tnextDisabledClassName: '{grid.style}FormTABLE {grid.style}AltDataTD  A5TabBandRightScroll',\n\t\t\t\tnextImage: 'css/{grid.style}/NextOn.png',\n\t\t\t\tnextDisabledImage: 'css/{grid.style}/NextOff.png'\n\t\t\t}\n\t\t}\n\t}\n});\n",
+        "ie8workaround": true
+    }
+}
